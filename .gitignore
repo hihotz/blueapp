@@ -1,0 +1,7 @@
+blueapp/bin/
+
+blueapp/obj/
+
+blueapp/Resources/Config/ApiConfig.xml
+
+blueapp/blueapp.keystore

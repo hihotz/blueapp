@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="blueapp.Views.Splash.SplashPage"
+             Title="SplashPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:resources="clr-namespace:blueapp.Resources.Localization"
+             xmlns:vm="clr-namespace:blueapp.ViewModels"
+             x:DataType="vm:LoginViewModel"
+             BackgroundColor="#a0e2ff">
+
+    <VerticalStackLayout>
+        <Image Source="todo.png" WidthRequest="400" HeightRequest="200"/>
+        <VerticalStackLayout>
+            <!-- 로딩 인디케이터 추가 -->
+            <Label x:Name="statusLabel" Text="앱 초기화 중..." FontSize="Medium" HorizontalTextAlignment="Center" />
+            <ActivityIndicator IsRunning="True" Color="Black" />
+        </VerticalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <ApiSettings>
+    <BaseUrl>api 주소</BaseUrl>
+    <LoginEndpoint>api/user/login</LoginEndpoint>
+    <RegisterEndpoint>api/user/register</RegisterEndpoint>
+  </ApiSettings>
+</configuration>
+<!--속성 - 빌드 작업 : 포함 리소스-->
