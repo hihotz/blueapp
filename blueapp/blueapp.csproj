@@ -80,6 +80,9 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>AppResources.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\Splash\RegisterPage.xaml.cs">
+	    <DependentUpon>RegisterPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\Splash\SplashPage.xaml.cs">
 	    <DependentUpon>SplashPage.xaml</DependentUpon>
 	  </Compile>
@@ -100,6 +103,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Splash\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Splash\RegisterPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Splash\SplashPage.xaml">

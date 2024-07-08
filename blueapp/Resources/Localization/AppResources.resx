@@ -129,6 +129,9 @@
   <data name="failed" xml:space="preserve">
     <value>실패</value>
   </data>
+  <data name="go_back" xml:space="preserve">
+    <value>돌아가기</value>
+  </data>
   <data name="home" xml:space="preserve">
     <value>홈</value>
   </data>

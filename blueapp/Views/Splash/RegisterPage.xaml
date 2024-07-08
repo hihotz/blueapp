@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="blueapp.Views.Splash.RegisterPage"
+             Title="RegisterPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:resources="clr-namespace:blueapp.Resources.Localization"
+             xmlns:vm="clr-namespace:blueapp.ViewModels"
+             x:DataType="vm:LoginViewModel"
+             BackgroundColor="#a0e2ff">
+
+    <Grid>
+        <VerticalStackLayout VerticalOptions="Center" Padding="20">
+            <!--회원가입-->
+            <Frame MaximumWidthRequest="350">
+                <VerticalStackLayout Spacing="18">
+                    <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
+                        <Entry x:Name="UsernameEntry" Placeholder="{x:Static resources:AppResources.id}"/>
+                    </Frame>
+                    <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
+                        <Entry x:Name="PasswordEntry" Placeholder="{x:Static resources:AppResources.password}" IsPassword="True" BackgroundColor="Transparent"/>
+                    </Frame>
+
+                    <StackLayout Orientation="Horizontal" Spacing="5" HeightRequest="50" HorizontalOptions="FillAndExpand">
+                        <Frame CornerRadius="4" HasShadow="True" Padding="0" BorderColor="{AppThemeBinding Dark=Gray, Light=Gray}"
+                               BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" HorizontalOptions="StartAndExpand">
+                            <StackLayout Orientation="Horizontal" Spacing="10" Padding="15" >
+                                <StackLayout.Behaviors>
+                                    <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
+                                                       PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnRegisterClicked"/>
+                                </StackLayout.Behaviors>
+                                <Label Text="{x:Static resources:AppResources.register}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                       FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame CornerRadius="4" HasShadow="True" Padding="0" BorderColor="{AppThemeBinding Dark=Gray, Light=Gray}"
+                               BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" HorizontalOptions="EndAndExpand">
+                            <StackLayout Orientation="Horizontal" Spacing="10" Padding="15" >
+                                <StackLayout.Behaviors>
+                                    <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
+                                                           PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnGoBackClicked"/>
+                                </StackLayout.Behaviors>
+                                <Label Text="{x:Static resources:AppResources.go_back}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                       FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+        <!-- 로딩 인디케이터 및 반투명 오버레이 -->
+        <Grid x:Name="LoadingOverlay" BackgroundColor="Black" Opacity="0.6" IsVisible="False">
+            <ActivityIndicator IsRunning="True" VerticalOptions="Center" HorizontalOptions="Center" Color="White"/>
+        </Grid>
+    </Grid>
+</ContentPage>
+
+
+             

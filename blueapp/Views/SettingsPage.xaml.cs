@@ -1,13 +1,16 @@
 using blueapp.Resources.Localization;
+using blueapp.ViewModels;
 using blueapp.Views.Splash;
 
 namespace blueapp.Views;
 
 public partial class SettingsPage : ContentPage
 {
+    LoginViewModel _loginviewmodel;
     public SettingsPage()
     {
         InitializeComponent();
+        _loginviewmodel = new LoginViewModel();
     }
 
     private async void OnLooutClicked(object sender, EventArgs e)
@@ -15,8 +18,7 @@ public partial class SettingsPage : ContentPage
         try
         {
             // 로그아웃 처리
-            SecureStorage.Remove("UserPW");
-            Preferences.Remove("AutoLogin");
+            _loginviewmodel.Logout();
             // 페이지 전환 이벤트
             if (Application.Current != null)
             {

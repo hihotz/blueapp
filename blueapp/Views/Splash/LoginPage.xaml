@@ -39,9 +39,9 @@
                             </StackLayout>
                         </VerticalStackLayout>
 
-                        <StackLayout Orientation="Horizontal" Spacing="5" HeightRequest="50">
+                        <StackLayout Orientation="Horizontal" Spacing="5" HeightRequest="50" HorizontalOptions="FillAndExpand">
                             <Frame CornerRadius="4" HasShadow="True" Padding="0" BorderColor="{AppThemeBinding Dark=Gray, Light=Gray}"
-                               BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
+                               BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" HorizontalOptions="Start">
                                 <StackLayout Orientation="Horizontal" Spacing="10" Padding="15" >
                                     <StackLayout.Behaviors>
                                         <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
@@ -52,7 +52,7 @@
                                 </StackLayout>
                             </Frame>
                             <Frame CornerRadius="4" HasShadow="True" Padding="0" BorderColor="{AppThemeBinding Dark=Gray, Light=Gray}"
-                               BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
+                               BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" HorizontalOptions="EndAndExpand">
                                 <StackLayout Orientation="Horizontal" Spacing="10" Padding="15" >
                                     <StackLayout.Behaviors>
                                         <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 

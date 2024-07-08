@@ -2,6 +2,7 @@ using blackapi.Models;
 using blueapp.Resources.Localization;
 using blueapp.ViewModels;
 using CommunityToolkit.Maui.Alerts;
+using CommunityToolkit.Maui.Views;
 
 namespace blueapp.Views.Splash;
 
@@ -154,15 +155,21 @@ public partial class LoginPage : ContentPage
     #region 회원가입
     private async void OnRegisterClicked(object sender, EventArgs e)
     {
-        // // 페이지 전환 이벤트
-        // if (Application.Current != null)
-        // {
-        //     var registerPage = new RegisterPage();
-        //     await this.FadeTo(0, 100);
-        //     Application.Current.MainPage = registerPage;
-        //     await registerPage.FadeTo(1, 100);
-        // }
-        await Toast.Make("asdf").Show();
+        try
+        {
+            // 페이지 전환 이벤트
+            if (Application.Current != null)
+            {
+                var registerPage = new RegisterPage();
+                await this.FadeTo(0, 100);
+                Application.Current.MainPage = registerPage;
+                await registerPage.FadeTo(1, 100);
+            }
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert(AppResources.error, AppResources.error + " : " + ex.Message, AppResources.ok);
+        }
     }
     #endregion
 

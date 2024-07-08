@@ -97,6 +97,15 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   돌아가기과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string go_back {
+            get {
+                return ResourceManager.GetString("go_back", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   홈과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string home {
