@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
+using System.Xml.Linq;
 
 namespace blueapp.ViewModels
 {
@@ -38,6 +39,11 @@ namespace blueapp.ViewModels
         {
             try
             {
+                // name, pw 값이 비어있는지 확인
+                if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(pw))
+                {
+                    return new ApiResponse { StatusCode = 0, Message = AppResources.error + " : " + AppResources.text_is_empty };
+                }
                 var loginData = new
                 {
                     username = name,
@@ -94,6 +100,11 @@ namespace blueapp.ViewModels
         {
             try
             {
+                // name, pw 값이 비어있는지 확인
+                if(string.IsNullOrEmpty(name) || string.IsNullOrEmpty(pw))
+                {
+                    return new ApiResponse { StatusCode = 0, Message = AppResources.error + " : " + AppResources.text_is_empty };
+                }
                 var loginData = new
                 {
                     username = name,
@@ -153,5 +164,6 @@ namespace blueapp.ViewModels
             Preferences.Remove("AutoLogin");
         }
         #endregion
+
     }
 }

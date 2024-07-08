@@ -20,20 +20,33 @@ public partial class SplashPage : ContentPage
     {
         try
         {
+            // 앱 로드 중 메시지 표시
+            statusLabel.Text = AppResources.loading;
             await _splashviewmodel.Loading();
 
+            statusLabel.Text = AppResources.server + " " + AppResources.check;
+            await _splashviewmodel.ServerCheck();
+
+            statusLabel.Text = AppResources.db + " " + AppResources.check;
+            await _splashviewmodel.DBCheck();
+
+            statusLabel.Text = AppResources.update + " " + AppResources.check;
+            await _splashviewmodel.UpdateCheck();
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert(AppResources.error, ex.Message, AppResources.ok);
+        }
+        finally
+        {
             // 페이지 전환 이벤트
             if (Application.Current != null)
             {
                 var loginPage = new LoginPage();
                 await this.FadeTo(0, 100);
                 Application.Current.MainPage = loginPage;
-                await loginPage.FadeTo(1, 100); 
+                await loginPage.FadeTo(1, 100);
             }
-        }
-        catch (Exception ex)
-        {
-            await DisplayAlert(AppResources.error, ex.Message, AppResources.ok);
         }
     }
 }

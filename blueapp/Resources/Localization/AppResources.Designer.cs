@@ -79,6 +79,24 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   확인과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string check {
+            get {
+                return ResourceManager.GetString("check", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   데이터베이스과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string db {
+            get {
+                return ResourceManager.GetString("db", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   에러과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string error {
@@ -120,6 +138,15 @@ namespace blueapp.Resources.Localization {
         internal static string id {
             get {
                 return ResourceManager.GetString("id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   로딩중과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string loading {
+            get {
+                return ResourceManager.GetString("loading", resourceCulture);
             }
         }
         
@@ -187,6 +214,15 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   서버과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string server {
+            get {
+                return ResourceManager.GetString("server", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   설정과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string setting {
@@ -201,6 +237,24 @@ namespace blueapp.Resources.Localization {
         internal static string success {
             get {
                 return ResourceManager.GetString("success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   텍스트가 비어있음과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string text_is_empty {
+            get {
+                return ResourceManager.GetString("text_is_empty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   업데이트과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string update {
+            get {
+                return ResourceManager.GetString("update", resourceCulture);
             }
         }
     }

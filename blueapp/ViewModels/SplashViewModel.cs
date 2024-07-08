@@ -21,19 +21,67 @@ namespace blueapp.ViewModels
         {
             _databaseService = new DatabaseService();
         }
-
+        
+        #region 앱 로딩에 필요한 작업 예시
+        // 앱 로딩
         public async Task<bool> Loading()
         {
             // 로딩에 필요한 작업을 수행하도록 수정해야합니다.
             bool service = true;
             if (service)
             {
-                // 초기 로드 시간 임의 설정
-                await Task.Delay(2000);
+                // 작업 수행 시간 임의 설정됨
+                await Task.Delay(1000);
                 return true;
             }
             else
                 return false;
         }
+        
+        // 서버 체크
+        public async Task<bool> ServerCheck()
+        {
+            // 로딩에 필요한 작업을 수행하도록 수정해야합니다.
+            bool service = true;
+            if (service)
+            {
+                // 작업 수행 시간 임의 설정됨
+                await Task.Delay(1000);
+                return true;
+            }
+            else
+                return false;
+        }
+
+        // db 체크
+        public async Task<bool> DBCheck()
+        {
+            // 로딩에 필요한 작업을 수행하도록 수정해야합니다.
+            bool service = true;
+            if (service)
+            {
+                // 작업 수행 시간 임의 설정됨
+                await Task.Delay(1000);
+                return true;
+            }
+            else
+                return false;
+        }
+
+        // 업데이트 체크
+        public async Task<bool> UpdateCheck()
+        {
+            // 로딩에 필요한 작업을 수행하도록 수정해야합니다.
+            bool service = true;
+            if (service)
+            {
+                // 작업 수행 시간 임의 설정됨
+                await Task.Delay(1000);
+                return true;
+            }
+            else
+                return false;
+        }
+        #endregion
     }
 }

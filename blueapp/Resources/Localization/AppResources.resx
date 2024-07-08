@@ -123,6 +123,12 @@
   <data name="auto_login" xml:space="preserve">
     <value>자동 로그인</value>
   </data>
+  <data name="check" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="db" xml:space="preserve">
+    <value>데이터베이스</value>
+  </data>
   <data name="error" xml:space="preserve">
     <value>에러</value>
   </data>
@@ -137,6 +143,9 @@
   </data>
   <data name="id" xml:space="preserve">
     <value>아이디</value>
+  </data>
+  <data name="loading" xml:space="preserve">
+    <value>로딩중</value>
   </data>
   <data name="login" xml:space="preserve">
     <value>로그인</value>
@@ -159,10 +168,19 @@
   <data name="save_id" xml:space="preserve">
     <value>아이디 저장</value>
   </data>
+  <data name="server" xml:space="preserve">
+    <value>서버</value>
+  </data>
   <data name="setting" xml:space="preserve">
     <value>설정</value>
   </data>
   <data name="success" xml:space="preserve">
     <value>성공</value>
+  </data>
+  <data name="text_is_empty" xml:space="preserve">
+    <value>텍스트가 비어있음</value>
+  </data>
+  <data name="update" xml:space="preserve">
+    <value>업데이트</value>
   </data>
 </root>

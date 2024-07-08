@@ -13,7 +13,7 @@
         <Image Source="todo.png" WidthRequest="400" HeightRequest="200"/>
         <VerticalStackLayout>
             <!-- 로딩 인디케이터 추가 -->
-            <Label x:Name="statusLabel" Text="앱 초기화 중..." FontSize="Medium" HorizontalTextAlignment="Center" />
+            <Label x:Name="statusLabel" Text="" FontSize="Medium" HorizontalTextAlignment="Center" />
             <ActivityIndicator IsRunning="True" Color="Black" />
         </VerticalStackLayout>
 
