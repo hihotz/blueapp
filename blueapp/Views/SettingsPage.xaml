@@ -2,11 +2,20 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="blueapp.Views.SettingsPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:resources="clr-namespace:blueapp.Resources.Localization"
+             xmlns:vm="clr-namespace:blueapp.ViewModels"
+             x:DataType="vm:LoginViewModel"
              Title="SettingsPage">
+
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <StackLayout Orientation="Horizontal" Spacing="10" Padding="15" >
+            <StackLayout.Behaviors>
+                <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
+                                       PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
+            </StackLayout.Behaviors>
+            <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                   FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
     </VerticalStackLayout>
 </ContentPage>
