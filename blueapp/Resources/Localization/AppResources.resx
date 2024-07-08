@@ -123,6 +123,9 @@
   <data name="failed" xml:space="preserve">
     <value>실패</value>
   </data>
+  <data name="home" xml:space="preserve">
+    <value>홈</value>
+  </data>
   <data name="id" xml:space="preserve">
     <value>아이디</value>
   </data>
@@ -140,6 +143,9 @@
   </data>
   <data name="register" xml:space="preserve">
     <value>회원가입</value>
+  </data>
+  <data name="setting" xml:space="preserve">
+    <value>설정</value>
   </data>
   <data name="success" xml:space="preserve">
     <value>성공</value>

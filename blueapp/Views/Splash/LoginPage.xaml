@@ -11,8 +11,8 @@
 
     <VerticalStackLayout VerticalOptions="Center" Padding="20">
         <!--로그인-->
-        <Frame MaximumWidthRequest="300" Padding="15" >
-            <VerticalStackLayout Spacing="15" >
+        <Frame MaximumWidthRequest="300">
+            <VerticalStackLayout Spacing="18" >
                 <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
                     <Entry x:Name="UsernameEntry" Placeholder="{x:Static resources:AppResources.id}"/>
                 </Frame>
@@ -21,14 +21,14 @@
                 </Frame>
 
                 <Frame CornerRadius="4" HasShadow="True" Padding="0" BorderColor="{AppThemeBinding Dark=Gray, Light=Gray}"
-               BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
+                       BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
                     <StackLayout Orientation="Horizontal" Spacing="10" Padding="15" >
                         <StackLayout.Behaviors>
                             <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
-                       PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLoginClicked"/>
+                                                   PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLoginClicked"/>
                         </StackLayout.Behaviors>
                         <Label Text="{x:Static resources:AppResources.login}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
-                   FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                               FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                     </StackLayout>
                 </Frame>
             </VerticalStackLayout>

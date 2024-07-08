@@ -21,10 +21,14 @@ public partial class SplashPage : ContentPage
         try
         {
             await _splashviewmodel.Loading();
-            // 메인 페이지로 전환
+
+            // 페이지 전환 이벤트
             if (Application.Current != null)
             {
-                Application.Current.MainPage = new LoginPage();
+                var loginPage = new LoginPage();
+                await this.FadeTo(0, 100);
+                Application.Current.MainPage = loginPage;
+                await loginPage.FadeTo(1, 100); 
             }
         }
         catch (Exception ex)

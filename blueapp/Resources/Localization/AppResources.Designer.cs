@@ -79,6 +79,15 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   홈과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string home {
+            get {
+                return ResourceManager.GetString("home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   아이디과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string id {
@@ -129,6 +138,15 @@ namespace blueapp.Resources.Localization {
         internal static string register {
             get {
                 return ResourceManager.GetString("register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   설정과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string setting {
+            get {
+                return ResourceManager.GetString("setting", resourceCulture);
             }
         }
         

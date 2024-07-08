@@ -1,3 +1,4 @@
+using blackapi.Models;
 using blueapp.Resources.Localization;
 using blueapp.ViewModels;
 
@@ -12,43 +13,28 @@ public partial class LoginPage : ContentPage
         _loginviewmodel = new LoginViewModel();
     }
 
-    private void OnLoginClicked(object sender, EventArgs e)
+    private async void OnLoginClicked(object sender, EventArgs e)
     {
-        DisplayAlert("hello", "world", "ok");
-        //string username = UsernameEntry.Text;
-        //string password = PasswordEntry.Text;
-        //
-        //bool loginSuccess = await _loginviewmodel.LoginAsync(username, password);
-        //
-        //if (loginSuccess)
-        //{
-        //    // 로그인 성공 메시지
-        //    await Toast.Make(AppResources.login + AppResources.success, ToastDuration.Long).Show();
-        //}
-        //else
-        //{
-        //    // 로그인 실패 메시지 (MainViewModel에서 처리한 에러 메시지를 사용합니다.)
-        //    await Toast.Make(AppResources.login + AppResources.failed, ToastDuration.Long).Show();
-        //}
-    }
+        string username = UsernameEntry.Text;
+        string password = PasswordEntry.Text;
 
-    private async void InitializeApp()
-    {
-        try
+        ApiResponse apiResponse = await _loginviewmodel.LoginAsync(username, password);
+
+        if (apiResponse.StatusCode == 200)
         {
-            
-        }
-        catch (Exception ex)
-        {
-            await DisplayAlert(AppResources.error, ex.Message, AppResources.ok);
-        }
-        finally
-        {
-            // 메인 페이지로 전환
+            // 페이지 전환 이벤트
             if (Application.Current != null)
             {
-                Application.Current.MainPage = new AppShell();
+                var appShell = new AppShell();
+                await this.FadeTo(0, 100);
+                Application.Current.MainPage = appShell;
+                await appShell.FadeTo(1, 100);
             }
+        }
+        else
+        {
+            // 로그인 실패시 DisplayAlert로 사용자에게 알림 표시 : 로그인 실패, 에러메시지, 확인
+            await DisplayAlert(AppResources.login + " ", apiResponse.Message, AppResources.ok);
         }
     }
 }
