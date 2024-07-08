@@ -101,11 +101,16 @@ public partial class LoginPage : ContentPage
     {
         try
         {
+            LoadingOverlay.IsVisible = true; // 로딩 오버레이 표시
             await Login();
         }
         catch (Exception ex)
         {
             await DisplayAlert(AppResources.error, AppResources.error + " : " + ex.Message, AppResources.ok);
+        }
+        finally
+        {
+            LoadingOverlay.IsVisible = false; // 로딩 오버레이 숨기기
         }
     }
 

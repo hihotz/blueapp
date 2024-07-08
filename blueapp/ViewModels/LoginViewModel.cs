@@ -43,7 +43,9 @@ namespace blueapp.ViewModels
                     username = name,
                     password = pw
                 };
-                var client = new HttpClient();
+
+                // 타임아웃 5초
+                var client = new HttpClient { Timeout = TimeSpan.FromSeconds(5) };
                 var json = JsonSerializer.Serialize(loginData);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
