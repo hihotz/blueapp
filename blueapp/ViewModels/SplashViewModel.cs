@@ -28,7 +28,8 @@ namespace blueapp.ViewModels
             bool service = true;
             if (service)
             {
-                await Task.Delay(5000);
+                // 초기 로드 시간 임의 설정
+                await Task.Delay(1000);
                 return true;
             }
             else

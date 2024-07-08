@@ -61,6 +61,24 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   자동과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string auto {
+            get {
+                return ResourceManager.GetString("auto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   자동 로그인과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string auto_login {
+            get {
+                return ResourceManager.GetString("auto_login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   에러과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string error {
@@ -138,6 +156,24 @@ namespace blueapp.Resources.Localization {
         internal static string register {
             get {
                 return ResourceManager.GetString("register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   저장과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string save {
+            get {
+                return ResourceManager.GetString("save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   아이디 저장과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string save_id {
+            get {
+                return ResourceManager.GetString("save_id", resourceCulture);
             }
         }
         
