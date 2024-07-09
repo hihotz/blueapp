@@ -88,6 +88,15 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   취소과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string cancel {
+            get {
+                return ResourceManager.GetString("cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   비밀번호 변경과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string change_password {
@@ -228,6 +237,15 @@ namespace blueapp.Resources.Localization {
         internal static string logout {
             get {
                 return ResourceManager.GetString("logout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   아이디를 삭제하시겠습니까?과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string msg_deleteid_confirm {
+            get {
+                return ResourceManager.GetString("msg_deleteid_confirm", resourceCulture);
             }
         }
         

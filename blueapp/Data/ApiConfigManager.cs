@@ -7,7 +7,7 @@ namespace blueapp.Data
 {
     public static class ApiConfigManager
     {
-        public static (string BaseUrl, string LoginEndpoint, string RegisterEndpoint) LoadApiConfig()
+        public static (string BaseUrl, string LoginEndpoint, string RegisterEndpoint, string DeleteIDEndpoint) LoadApiConfig()
         {
             var assembly = typeof(ApiConfigManager).GetTypeInfo().Assembly;
             var resourceName = "blueapp.Resources.Config.ApiConfig.xml";
@@ -20,8 +20,8 @@ namespace blueapp.Data
             var baseUrl = apiSettings.Element("BaseUrl")?.Value ?? string.Empty;
             var loginEndpoint = apiSettings.Element("LoginEndpoint")?.Value ?? string.Empty;
             var RegisterEndpoint = apiSettings.Element("RegisterEndpoint")?.Value ?? string.Empty;
-
-            return (baseUrl, loginEndpoint, RegisterEndpoint);
+            var DeleteIDEndpoint = apiSettings.Element("DeleteIDEndpoint")?.Value ?? string.Empty;
+            return (baseUrl, loginEndpoint, RegisterEndpoint, DeleteIDEndpoint);
         }
     }
 }

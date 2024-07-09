@@ -58,6 +58,7 @@
 	<ItemGroup>
 	  <None Remove="Resources\AppIcon\appicon.png" />
 	  <None Remove="Resources\Config\ApiConfig.xml" />
+	  <None Remove="Resources\Images\sample.png" />
 	  <None Remove="Resources\Images\todo.png" />
 	</ItemGroup>
 
@@ -84,6 +85,9 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>AppResources.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\Settings\DeleteIDPopup.xaml.cs">
+	    <DependentUpon>DeleteIDPopup.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\Splash\RegisterPage.xaml.cs">
 	    <DependentUpon>RegisterPage.xaml</DependentUpon>
 	  </Compile>
@@ -104,6 +108,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SettingsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Settings\DeleteIDPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Settings\InfoPopup.xaml">

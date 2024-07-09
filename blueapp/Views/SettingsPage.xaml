@@ -20,9 +20,8 @@
                     <!-- 4*4 1개-->
                     <Frame HorizontalOptions="StartAndExpand" WidthRequest="500" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
                         <StackLayout Orientation="Horizontal" Spacing="15">
-                            <Frame WidthRequest="120" HeightRequest="140" VerticalOptions="Center" CornerRadius="5" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
-                                <Label Text="{x:Static resources:AppResources.image}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
-                                       FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                            <Frame WidthRequest="140" HeightRequest="140" VerticalOptions="Center" CornerRadius="5" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
+                                <Image Source="sample.png" Aspect="AspectFill" HeightRequest="140" WidthRequest="120"/>
                             </Frame>
                             <VerticalStackLayout Spacing="5">
                                 <Label>

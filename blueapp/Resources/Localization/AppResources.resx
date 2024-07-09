@@ -126,6 +126,9 @@
   <data name="auto_login" xml:space="preserve">
     <value>자동 로그인</value>
   </data>
+  <data name="cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
   <data name="change_password" xml:space="preserve">
     <value>비밀번호 변경</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="logout" xml:space="preserve">
     <value>로그아웃</value>
+  </data>
+  <data name="msg_deleteid_confirm" xml:space="preserve">
+    <value>아이디를 삭제하시겠습니까?</value>
   </data>
   <data name="ok" xml:space="preserve">
     <value>확인</value>

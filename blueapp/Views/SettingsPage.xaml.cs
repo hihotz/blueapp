@@ -35,11 +35,11 @@ public partial class SettingsPage : ContentPage
     }
 
     // È¸¿øÅ»Åð
-    private void OnDeleteIDClicked(object sender, EventArgs e)
+    private async void OnDeleteIDClicked(object sender, EventArgs e)
     {
-        // È¸¿øÅ»Åð ÆäÀÌÁö·Î ÀÌµ¿
-        // var deleteIDPopup = new DeleteIDPopup();
-        // await this.ShowPopupAsync(deleteIDPopup);
+        // È¸¿øÅ»Åð ÆË¾÷ È£Ãâ
+        var deleteIDPopup = new DeleteIDPopup(_loginviewmodel);
+        await this.ShowPopupAsync(deleteIDPopup);
     }
 
     // ·Î±×¾Æ¿ô

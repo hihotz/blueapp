@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               x:Class="blueapp.Views.Settings.DeleteIDPopup"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               xmlns:resources="clr-namespace:blueapp.Resources.Localization"
+               Color="{x:Static Colors.Transparent}">
+
+    <Border Padding="20" BackgroundColor="{AppThemeBinding Dark=#1c1c1c, Light=#ffffff}">
+        <!-- Border를 사용하여 모서리를 둥글게 설정 -->
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="5"/>
+        </Border.StrokeShape>
+
+        <VerticalStackLayout Spacing="5">
+            <Label Text="{x:Static resources:AppResources.delete_id}" HorizontalOptions="Center" LineBreakMode="WordWrap" />
+            <ScrollView MaximumWidthRequest="200" MaximumHeightRequest="100">
+                <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
+                    <Label x:Name="maintext" Text="{x:Static resources:AppResources.msg_deleteid_confirm}" LineBreakMode="WordWrap" />
+                </Frame>
+            </ScrollView>
+
+            <VerticalStackLayout Spacing="3">
+                <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
+                    <Label x:Name="UsernameEntry" BackgroundColor="Transparent"/>
+                </Frame>
+                <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
+                    <Entry x:Name="PasswordEntry" Placeholder="{x:Static resources:AppResources.password}" BackgroundColor="Transparent"
+                           IsPassword="True" Completed="OnOkClicked"/>
+                </Frame>
+            </VerticalStackLayout>
+
+            <Grid ColumnDefinitions="*,Auto,*,Auto,*" RowDefinitions="Auto" Padding="0" ColumnSpacing="0" HorizontalOptions="FillAndExpand">
+                <Button Text="{x:Static resources:AppResources.ok}" Clicked="OnOkClicked" Grid.Column="1" HorizontalOptions="StartAndExpand"/>
+                <Button Text="{x:Static resources:AppResources.cancel}" Clicked="OnCancleClicked" Grid.Column="3" HorizontalOptions="EndAndExpand"/>
+            </Grid>
+        </VerticalStackLayout>
+    </Border>
+
+</toolkit:Popup>
