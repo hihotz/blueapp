@@ -43,7 +43,7 @@ public partial class DeleteIDPopup : Popup
             }
             else
             {
-                maintext.Text = AppResources.error + " : " + apiResponse.Message;
+                maintext.Text = apiResponse.Message;
             }
         }
         catch (Exception ex)
