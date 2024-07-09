@@ -8,14 +8,130 @@
              x:DataType="vm:LoginViewModel"
              Title="SettingsPage">
 
+    <!--여유공간 30, 좌측/우측 항목 크기 500-->
     <VerticalStackLayout>
-        <StackLayout Orientation="Horizontal" Spacing="10" Padding="15" >
-            <StackLayout.Behaviors>
-                <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
+        <Frame HorizontalOptions="Center" WidthRequest="1060">
+            <VerticalStackLayout Spacing="20">
+
+                <!--상단 시작지점-->
+                <StackLayout Orientation="Horizontal" HeightRequest="160" Spacing="30" >
+
+                    <Frame HorizontalOptions="StartAndExpand" WidthRequest="500">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" >
+                            <StackLayout.Behaviors>
+                                <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
+                                                       PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
+                            </StackLayout.Behaviors>
+                            <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                   FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <VerticalStackLayout Spacing="19" WidthRequest="500">
+
+                        <StackLayout Orientation="Horizontal" HeightRequest="70" Spacing="20">
+                            <Frame HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout.Behaviors>
+                                        <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
                                        PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
-            </StackLayout.Behaviors>
-            <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
-                   FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
-        </StackLayout>
+                                    </StackLayout.Behaviors>
+                                    <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                           FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout.Behaviors>
+                                        <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
+                                       PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
+                                    </StackLayout.Behaviors>
+                                    <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                           FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" HeightRequest="70" Spacing="20">
+                            <Frame HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout.Behaviors>
+                                        <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
+                                                               PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
+                                    </StackLayout.Behaviors>
+                                    <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                           FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout.Behaviors>
+                                        <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
+                                                               PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
+                                    </StackLayout.Behaviors>
+                                    <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                           FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+                    </VerticalStackLayout>
+                </StackLayout>
+                <!--상단 종료지점-->
+
+                <!--하단 시작지점-->
+                <StackLayout Orientation="Horizontal" HeightRequest="160" Spacing="30" >
+
+                    <StackLayout Orientation="Horizontal" HeightRequest="160" Spacing="20" HorizontalOptions="FillAndExpand">
+                        <Frame HorizontalOptions="FillAndExpand">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" >
+                                <StackLayout.Behaviors>
+                                    <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
+                                   PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
+                                </StackLayout.Behaviors>
+                                <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                   FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame HorizontalOptions="FillAndExpand">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" >
+                                <StackLayout.Behaviors>
+                                    <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
+                                                               PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
+                                </StackLayout.Behaviors>
+                                <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                           FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <VerticalStackLayout HorizontalOptions="EndAndExpand" Spacing="19">
+                            <Frame HorizontalOptions="EndAndExpand" WidthRequest="500" HeightRequest="70">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" >
+                                    <StackLayout.Behaviors>
+                                        <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
+                                                               PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
+                                    </StackLayout.Behaviors>
+                                    <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                           FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame HorizontalOptions="EndAndExpand" WidthRequest="500" HeightRequest="70">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" >
+                                    <StackLayout.Behaviors>
+                                        <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
+                                                               PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
+                                    </StackLayout.Behaviors>
+                                    <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                           FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                                </StackLayout>
+                            </Frame>
+                        </VerticalStackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </VerticalStackLayout>
+            <!--하단 종료지점-->
+        </Frame>
     </VerticalStackLayout>
 </ContentPage>
