@@ -1,16 +1,23 @@
 using blueapp.Resources.Localization;
 using blueapp.ViewModels;
+using blueapp.Views.Settings;
 using blueapp.Views.Splash;
+using CommunityToolkit.Maui.Views;
 
 namespace blueapp.Views;
 
 public partial class SettingsPage : ContentPage
 {
     LoginViewModel _loginviewmodel;
+    SettingViewModel _settingviewmodel;
     public SettingsPage()
     {
         InitializeComponent();
         _loginviewmodel = new LoginViewModel();
+        _settingviewmodel = new SettingViewModel();
+
+        // 다크모드를 구현하기 위해 BindingContext 사용
+        this.BindingContext = _settingviewmodel;
     }
 
     private async void OnLooutClicked(object sender, EventArgs e)
@@ -32,5 +39,19 @@ public partial class SettingsPage : ContentPage
         {
             await DisplayAlert(AppResources.error, ex.Message, AppResources.ok);
         }
+    }
+
+    // 다크모드 토글 
+    private void OnDarkModeTouchGestureCompleted(object sender, EventArgs e)
+    {
+        // Switch의 현재 상태를 반전하여 토글 상태를 변경합니다.
+        DarkModeToggle.IsToggled = !DarkModeToggle.IsToggled;
+    }
+
+    private async void OnInfoClicked(object sender, EventArgs e)
+    {
+        // 정보 페이지로 이동
+        var infoPopup = new InfoPopup();
+        await this.ShowPopupAsync(infoPopup);
     }
 }

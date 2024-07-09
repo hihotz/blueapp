@@ -126,6 +126,9 @@
   <data name="check" xml:space="preserve">
     <value>확인</value>
   </data>
+  <data name="darkmode" xml:space="preserve">
+    <value>다크모드</value>
+  </data>
   <data name="db" xml:space="preserve">
     <value>데이터베이스</value>
   </data>
@@ -143,6 +146,9 @@
   </data>
   <data name="id" xml:space="preserve">
     <value>아이디</value>
+  </data>
+  <data name="info" xml:space="preserve">
+    <value>정보</value>
   </data>
   <data name="loading" xml:space="preserve">
     <value>로딩중</value>

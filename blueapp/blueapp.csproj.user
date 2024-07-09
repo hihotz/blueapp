@@ -12,6 +12,9 @@
     <MauiXaml Update="Views\SettingsPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Views\Settings\InfoPopup.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Views\Splash\LoginPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

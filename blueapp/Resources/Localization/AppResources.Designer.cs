@@ -88,6 +88,15 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   다크모드과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string darkmode {
+            get {
+                return ResourceManager.GetString("darkmode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   데이터베이스과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string db {
@@ -138,6 +147,15 @@ namespace blueapp.Resources.Localization {
         internal static string id {
             get {
                 return ResourceManager.GetString("id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   정보과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string info {
+            get {
+                return ResourceManager.GetString("info", resourceCulture);
             }
         }
         

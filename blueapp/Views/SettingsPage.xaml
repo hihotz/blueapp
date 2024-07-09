@@ -5,17 +5,19 @@
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:resources="clr-namespace:blueapp.Resources.Localization"
              xmlns:vm="clr-namespace:blueapp.ViewModels"
-             x:DataType="vm:LoginViewModel"
-             Title="SettingsPage">
+             x:DataType="vm:SettingViewModel"
+             Title="SettingsPage"
+             BackgroundColor="{DynamicResource DefaultPageBackgroundColor}">
 
     <!--여유공간 30, 좌측/우측 항목 크기 500-->
     <VerticalStackLayout>
-        <Frame HorizontalOptions="Center" WidthRequest="1060">
-            <VerticalStackLayout Spacing="20">
+        <Frame HorizontalOptions="Center" WidthRequest="1060" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
+            <VerticalStackLayout Spacing="20" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
 
                 <!--상단 시작지점-->
                 <StackLayout Orientation="Horizontal" HeightRequest="160" Spacing="30" >
 
+                    <!-- 4*4 1개-->
                     <Frame HorizontalOptions="StartAndExpand" WidthRequest="500">
                         <Frame.Behaviors>
                             <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
@@ -25,8 +27,8 @@
                                    FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                     </Frame>
 
+                    <!-- 1*1 4개 -->
                     <VerticalStackLayout Spacing="19" WidthRequest="500">
-
                         <StackLayout Orientation="Horizontal" HeightRequest="70" Spacing="20">
                             <Frame HorizontalOptions="FillAndExpand">
                                 <Frame.Behaviors>
@@ -39,10 +41,13 @@
                             <Frame HorizontalOptions="FillAndExpand">
                                 <Frame.Behaviors>
                                     <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
-                                                           PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
+                                                           PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnDarkModeTouchGestureCompleted"/>
                                 </Frame.Behaviors>
-                                <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
-                                       FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center" Padding="-10">
+                                    <Label Text="{x:Static resources:AppResources.darkmode}" TextColor="{AppThemeBinding Dark=White, Light=Black}"           
+                                           FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                                    <Switch x:Name="DarkModeToggle" HorizontalOptions="EndAndExpand" IsToggled="{Binding IsDarkMode}" ThumbColor="DeepSkyBlue"/>
+                                </StackLayout>
                             </Frame>
                         </StackLayout>
 
@@ -72,6 +77,7 @@
                 <!--하단 시작지점-->
                 <StackLayout Orientation="Horizontal" HeightRequest="160" Spacing="30" >
 
+                    <!-- 1*2 2개 -->
                     <StackLayout Orientation="Horizontal" HeightRequest="160" Spacing="20" HorizontalOptions="FillAndExpand">
                         <Frame HorizontalOptions="FillAndExpand">
                             <Frame.Behaviors>
@@ -91,12 +97,13 @@
                         </Frame>
                     </StackLayout>
 
+                    <!-- 2*1 2개 -->
                     <StackLayout>
                         <VerticalStackLayout HorizontalOptions="EndAndExpand" Spacing="19">
                             <Frame HorizontalOptions="EndAndExpand" WidthRequest="500" HeightRequest="70">
                                 <Frame.Behaviors>
                                     <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
-                                                           PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
+                                                           PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnDarkModeTouchGestureCompleted"/>
                                 </Frame.Behaviors>
                                 <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
                                        FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
@@ -104,9 +111,9 @@
                             <Frame HorizontalOptions="EndAndExpand" WidthRequest="500" HeightRequest="70">
                                 <Frame.Behaviors>
                                     <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
-                                                           PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
+                                                           PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnInfoClicked"/>
                                 </Frame.Behaviors>
-                                <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                <Label Text="{x:Static resources:AppResources.info}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
                                        FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                             </Frame>
                         </VerticalStackLayout>

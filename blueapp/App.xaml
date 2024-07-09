@@ -8,6 +8,7 @@
         <ResourceDictionary>
             <conv:InverseBooleanConverter x:Key="InverseBooleanConverter" />
             <conv:SuccessToColorConverter x:Key="SuccessToColorConverter" />
+            <Color x:Key="DefaultPageBackgroundColor">White</Color>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
