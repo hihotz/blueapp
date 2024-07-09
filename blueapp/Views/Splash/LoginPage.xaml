@@ -15,14 +15,15 @@
             <Frame MaximumWidthRequest="350">
 
                 <VerticalStackLayout Spacing="10">
-
+                    
                     <!--아이디/비밀번호 입력-->
                     <VerticalStackLayout Spacing="18">
                         <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
-                            <Entry x:Name="UsernameEntry" Placeholder="{x:Static resources:AppResources.id}"/>
+                            <Entry x:Name="UsernameEntry" Placeholder="{x:Static resources:AppResources.id}" BackgroundColor="Transparent"/>
                         </Frame>
                         <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
-                            <Entry x:Name="PasswordEntry" Placeholder="{x:Static resources:AppResources.password}" IsPassword="True" BackgroundColor="Transparent"/>
+                            <Entry x:Name="PasswordEntry" Placeholder="{x:Static resources:AppResources.password}" BackgroundColor="Transparent"
+                                   IsPassword="True" Completed="OnLoginClicked"/>
                         </Frame>
                     </VerticalStackLayout>
 
@@ -41,25 +42,25 @@
 
                         <StackLayout Orientation="Horizontal" Spacing="5" HeightRequest="50" HorizontalOptions="FillAndExpand">
                             <Frame CornerRadius="4" HasShadow="True" Padding="0" BorderColor="{AppThemeBinding Dark=Gray, Light=Gray}"
-                               BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" HorizontalOptions="Start">
+                                   BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" HorizontalOptions="Start">
                                 <StackLayout Orientation="Horizontal" Spacing="10" Padding="15" >
                                     <StackLayout.Behaviors>
                                         <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
                                                            PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLoginClicked"/>
                                     </StackLayout.Behaviors>
                                     <Label Text="{x:Static resources:AppResources.login}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
-                                       FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                                           FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                                 </StackLayout>
                             </Frame>
                             <Frame CornerRadius="4" HasShadow="True" Padding="0" BorderColor="{AppThemeBinding Dark=Gray, Light=Gray}"
-                               BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" HorizontalOptions="EndAndExpand">
+                                   BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" HorizontalOptions="EndAndExpand">
                                 <StackLayout Orientation="Horizontal" Spacing="10" Padding="15" >
                                     <StackLayout.Behaviors>
                                         <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
                                                            PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnRegisterClicked"/>
                                     </StackLayout.Behaviors>
                                     <Label Text="{x:Static resources:AppResources.register}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
-                                       FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                                           FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                                 </StackLayout>
                             </Frame>
                         </StackLayout>
