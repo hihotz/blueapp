@@ -13,14 +13,37 @@ public partial class SettingsPage : ContentPage
     public SettingsPage()
     {
         InitializeComponent();
+        InitializeApp();
         _loginviewmodel = new LoginViewModel();
-        _settingviewmodel = new SettingViewModel();
-
+        _settingviewmodel = new SettingViewModel(); 
         // 다크모드를 구현하기 위해 BindingContext 사용
         this.BindingContext = _settingviewmodel;
+        
+    }
+    public async void InitializeApp()
+    {
+        UserName.Text = await SecureStorage.GetAsync("UserName");
     }
 
-    private async void OnLooutClicked(object sender, EventArgs e)
+    #region 회원정보 관련(비밀번호변경, 회원탈퇴, 로그아웃)
+    // 비밀번호변경
+    private void OnChangePasswordClicked(object sender, EventArgs e)
+    {
+        // 비밀번호 변경 페이지로 이동
+        // var changePasswordPopup = new ChangePasswordPopup();
+        // await this.ShowPopupAsync(changePasswordPopup);
+    }
+
+    // 회원탈퇴
+    private void OnDeleteIDClicked(object sender, EventArgs e)
+    {
+        // 회원탈퇴 페이지로 이동
+        // var deleteIDPopup = new DeleteIDPopup();
+        // await this.ShowPopupAsync(deleteIDPopup);
+    }
+
+    // 로그아웃
+    private async void OnLogoutClicked(object sender, EventArgs e)
     {
         try
         {
@@ -40,6 +63,7 @@ public partial class SettingsPage : ContentPage
             await DisplayAlert(AppResources.error, ex.Message, AppResources.ok);
         }
     }
+    #endregion
 
     // 다크모드 토글 
     private void OnDarkModeTouchGestureCompleted(object sender, EventArgs e)

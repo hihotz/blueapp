@@ -61,6 +61,15 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   앱 이름과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string appname {
+            get {
+                return ResourceManager.GetString("appname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   자동과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string auto {
@@ -75,6 +84,15 @@ namespace blueapp.Resources.Localization {
         internal static string auto_login {
             get {
                 return ResourceManager.GetString("auto_login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   비밀번호 변경과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string change_password {
+            get {
+                return ResourceManager.GetString("change_password", resourceCulture);
             }
         }
         
@@ -106,6 +124,15 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   회원탈퇴과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string delete_id {
+            get {
+                return ResourceManager.GetString("delete_id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   에러과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string error {
@@ -120,6 +147,15 @@ namespace blueapp.Resources.Localization {
         internal static string failed {
             get {
                 return ResourceManager.GetString("failed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   프레임워크과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string framework {
+            get {
+                return ResourceManager.GetString("framework", resourceCulture);
             }
         }
         
@@ -147,6 +183,15 @@ namespace blueapp.Resources.Localization {
         internal static string id {
             get {
                 return ResourceManager.GetString("id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   사진과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string image {
+            get {
+                return ResourceManager.GetString("image", resourceCulture);
             }
         }
         
@@ -273,6 +318,15 @@ namespace blueapp.Resources.Localization {
         internal static string update {
             get {
                 return ResourceManager.GetString("update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   사용자과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string user {
+            get {
+                return ResourceManager.GetString("user", resourceCulture);
             }
         }
     }

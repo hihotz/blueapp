@@ -117,11 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="appname" xml:space="preserve">
+    <value>앱 이름</value>
+  </data>
   <data name="auto" xml:space="preserve">
     <value>자동</value>
   </data>
   <data name="auto_login" xml:space="preserve">
     <value>자동 로그인</value>
+  </data>
+  <data name="change_password" xml:space="preserve">
+    <value>비밀번호 변경</value>
   </data>
   <data name="check" xml:space="preserve">
     <value>확인</value>
@@ -132,11 +138,17 @@
   <data name="db" xml:space="preserve">
     <value>데이터베이스</value>
   </data>
+  <data name="delete_id" xml:space="preserve">
+    <value>회원탈퇴</value>
+  </data>
   <data name="error" xml:space="preserve">
     <value>에러</value>
   </data>
   <data name="failed" xml:space="preserve">
     <value>실패</value>
+  </data>
+  <data name="framework" xml:space="preserve">
+    <value>프레임워크</value>
   </data>
   <data name="go_back" xml:space="preserve">
     <value>돌아가기</value>
@@ -146,6 +158,9 @@
   </data>
   <data name="id" xml:space="preserve">
     <value>아이디</value>
+  </data>
+  <data name="image" xml:space="preserve">
+    <value>사진</value>
   </data>
   <data name="info" xml:space="preserve">
     <value>정보</value>
@@ -188,5 +203,8 @@
   </data>
   <data name="update" xml:space="preserve">
     <value>업데이트</value>
+  </data>
+  <data name="user" xml:space="preserve">
+    <value>사용자</value>
   </data>
 </root>

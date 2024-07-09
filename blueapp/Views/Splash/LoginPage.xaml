@@ -31,11 +31,11 @@
 
                         <VerticalStackLayout Spacing="-15" >
                             <StackLayout Orientation="Horizontal" VerticalOptions="Center">
-                                <CheckBox x:Name="SaveUserNameCheck" VerticalOptions="Center"/>
+                                <CheckBox x:Name="SaveUserNameCheck" VerticalOptions="Center" Color="Blue"/>
                                 <Label Text="{x:Static resources:AppResources.save_id}" VerticalOptions="Center"/>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal" VerticalOptions="Center">
-                                <CheckBox x:Name="AutoLoginCheck" VerticalOptions="Center"/>
+                                <CheckBox x:Name="AutoLoginCheck" VerticalOptions="Center" Color="Blue"/>
                                 <Label Text="{x:Static resources:AppResources.auto_login}" VerticalOptions="Center"/>
                             </StackLayout>
                         </VerticalStackLayout>

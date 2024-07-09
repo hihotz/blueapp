@@ -14,30 +14,47 @@
         <Frame HorizontalOptions="Center" WidthRequest="1060" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
             <VerticalStackLayout Spacing="20" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
 
-                <!--상단 시작지점-->
+                <!-- 상단 시작지점 -->
                 <StackLayout Orientation="Horizontal" HeightRequest="160" Spacing="30" >
 
                     <!-- 4*4 1개-->
-                    <Frame HorizontalOptions="StartAndExpand" WidthRequest="500">
-                        <Frame.Behaviors>
-                            <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
-                                                   PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
-                        </Frame.Behaviors>
-                        <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
-                                   FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                    <Frame HorizontalOptions="StartAndExpand" WidthRequest="500" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
+                        <StackLayout Orientation="Horizontal" Spacing="15">
+                            <Frame WidthRequest="120" HeightRequest="140" VerticalOptions="Center" CornerRadius="5" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
+                                <Label Text="{x:Static resources:AppResources.image}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                       FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                            </Frame>
+                            <VerticalStackLayout Spacing="5">
+                                <Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{x:Static resources:AppResources.user}" FontAttributes="Bold"/>
+                                            <Span Text=" : " FontAttributes="Bold" />
+                                            <Span x:Name="UserName" FontAttributes="Bold" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <Label Text="예시 : 생년월일"/>
+                                <Label Text="예시 : 성별"/>
+                                <Label Text="예시 : 주소"/>
+                                <Label Text="예시 : 최종 로그인 시간"/>
+                            </VerticalStackLayout>
+                        </StackLayout>
                     </Frame>
 
                     <!-- 1*1 4개 -->
                     <VerticalStackLayout Spacing="19" WidthRequest="500">
                         <StackLayout Orientation="Horizontal" HeightRequest="70" Spacing="20">
+                            <!-- 비밀번호 변경 -->
                             <Frame HorizontalOptions="FillAndExpand">
                                 <Frame.Behaviors>
                                     <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
-                                                           PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
+                                                           PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnChangePasswordClicked"/>
                                 </Frame.Behaviors>
-                                <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
-                                       FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                                <Label Text="{x:Static resources:AppResources.change_password}" TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                                       FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" />
                             </Frame>
+                            <!-- 다크모드 -->
                             <Frame HorizontalOptions="FillAndExpand">
                                 <Frame.Behaviors>
                                     <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
@@ -52,18 +69,20 @@
                         </StackLayout>
 
                         <StackLayout Orientation="Horizontal" HeightRequest="70" Spacing="20">
+                            <!-- 회원탈퇴 -->
                             <Frame HorizontalOptions="FillAndExpand">
                                 <Frame.Behaviors>
                                     <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
-                                                           PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
+                                                           PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnDeleteIDClicked"/>
                                 </Frame.Behaviors>
-                                <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                <Label Text="{x:Static resources:AppResources.delete_id}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
                                        FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                             </Frame>
+                            <!-- 로그아웃 -->
                             <Frame HorizontalOptions="FillAndExpand">
                                 <Frame.Behaviors>
                                     <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
-                                                           PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
+                                                           PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLogoutClicked"/>
                                 </Frame.Behaviors>
                                 <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
                                        FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
@@ -72,9 +91,9 @@
 
                     </VerticalStackLayout>
                 </StackLayout>
-                <!--상단 종료지점-->
+                <!-- 상단 종료지점 -->
 
-                <!--하단 시작지점-->
+                <!-- 하단 시작지점 -->
                 <StackLayout Orientation="Horizontal" HeightRequest="160" Spacing="30" >
 
                     <!-- 1*2 2개 -->
@@ -82,7 +101,7 @@
                         <Frame HorizontalOptions="FillAndExpand">
                             <Frame.Behaviors>
                                 <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
-                                                       PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
+                                                       PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLogoutClicked"/>
                             </Frame.Behaviors>
                             <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
                                    FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
@@ -90,7 +109,7 @@
                         <Frame HorizontalOptions="FillAndExpand">
                             <Frame.Behaviors>
                                 <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
-                                                       PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLooutClicked"/>
+                                                       PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLogoutClicked"/>
                             </Frame.Behaviors>
                             <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
                                    FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
@@ -103,7 +122,7 @@
                             <Frame HorizontalOptions="EndAndExpand" WidthRequest="500" HeightRequest="70">
                                 <Frame.Behaviors>
                                     <toolkit:TouchBehavior DefaultAnimationDuration="250" DefaultBackgroundColor="Transparent" 
-                                                           PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnDarkModeTouchGestureCompleted"/>
+                                                           PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLogoutClicked"/>
                                 </Frame.Behaviors>
                                 <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
                                        FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
