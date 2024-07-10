@@ -41,6 +41,18 @@ public partial class DeleteIDPopup : Popup
                     Application.Current.MainPage = loginPage;
                     await loginPage.FadeTo(1, 100);
                 }
+                
+                // È¸¿øÅ»Åð ¼º°ø ÆË¾÷¾Ë¸²
+                var alertPopup = new AlertPopup()
+                {
+                    MainText = AppResources.delete_id + AppResources.success,
+                    OkText = AppResources.ok
+                };
+                if (Application.Current?.MainPage !=null)
+                {                     
+                    await Application.Current.MainPage.ShowPopupAsync(alertPopup);
+                }
+
                 await CloseAsync();
             }
             else
