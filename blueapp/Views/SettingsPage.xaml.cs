@@ -27,11 +27,11 @@ public partial class SettingsPage : ContentPage
 
     #region 회원정보 관련(비밀번호변경, 회원탈퇴, 로그아웃)
     // 비밀번호변경
-    private void OnChangePasswordClicked(object sender, EventArgs e)
+    private async void OnChangePasswordClicked(object sender, EventArgs e)
     {
-        // 비밀번호 변경 페이지로 이동
-        // var changePasswordPopup = new ChangePasswordPopup();
-        // await this.ShowPopupAsync(changePasswordPopup);
+        // 비밀번호 변경 팝업 호출
+        var changePWPopup = new ChangePWPopup(_loginviewmodel);
+        await this.ShowPopupAsync(changePWPopup);
     }
 
     // 회원탈퇴

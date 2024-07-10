@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               x:Class="blueapp.Views.Settings.ChangePWPopup"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               xmlns:resources="clr-namespace:blueapp.Resources.Localization"
+               Color="{x:Static Colors.Transparent}">
+
+    <Border Padding="20" BackgroundColor="{AppThemeBinding Dark=#1c1c1c, Light=#ffffff}">
+        <!-- Border를 사용하여 모서리를 둥글게 설정 -->
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="5"/>
+        </Border.StrokeShape>
+
+        <VerticalStackLayout>
+            <Label Text="{x:Static resources:AppResources.delete_id}" HorizontalOptions="Center" LineBreakMode="WordWrap" />
+            <Grid Padding="20" RowSpacing="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ScrollView Grid.Row="0" MaximumWidthRequest="200" MaximumHeightRequest="150">
+                    <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
+                        <Label x:Name="maintext" Text="{x:Static resources:AppResources.msg_changepw_confirm}" LineBreakMode="WordWrap" />
+                    </Frame>
+                </ScrollView>
+
+                <VerticalStackLayout Grid.Row="2" Spacing="3">
+                    <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
+                        <Entry x:Name="OldPasswordEntry" Placeholder="{x:Static resources:AppResources.password}" BackgroundColor="Transparent"
+                               IsPassword="True" />
+                    </Frame>
+                    <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
+                        <Entry x:Name="NewPasswordEntry" Placeholder="{x:Static resources:AppResources.password}" BackgroundColor="Transparent"
+                               IsPassword="True" />
+                    </Frame>
+                    <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
+                        <Entry x:Name="NewPasswordCheckEntry" Placeholder="{x:Static resources:AppResources.password}" BackgroundColor="Transparent"
+                               IsPassword="True" Completed="OnOkClicked"/>
+                    </Frame>
+                </VerticalStackLayout>
+
+                <Grid Grid.Row="3" ColumnDefinitions="*,Auto,*,Auto,*" RowDefinitions="Auto" Padding="0" ColumnSpacing="0" HorizontalOptions="FillAndExpand">
+                    <Button Text="{x:Static resources:AppResources.ok}" Clicked="OnOkClicked" Grid.Column="1" HorizontalOptions="StartAndExpand"/>
+                    <Button Text="{x:Static resources:AppResources.cancel}" Clicked="OnCancleClicked" Grid.Column="3" HorizontalOptions="EndAndExpand"/>
+                </Grid>
+            </Grid>
+
+            <ActivityIndicator x:Name="LoadingOverlay" IsVisible="False" IsRunning="True" VerticalOptions="Center" HorizontalOptions="Center" Color="{AppThemeBinding Dark=#ffffff, Light=#2c2c2c}"/>
+        </VerticalStackLayout>
+
+    </Border>
+
+
+</toolkit:Popup>
+    

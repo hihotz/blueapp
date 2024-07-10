@@ -177,6 +177,9 @@
   <data name="logout" xml:space="preserve">
     <value>로그아웃</value>
   </data>
+  <data name="msg_changepw_confirm" xml:space="preserve">
+    <value>비밀번호를 변경하시겠습니까?</value>
+  </data>
   <data name="msg_deleteid_confirm" xml:space="preserve">
     <value>아이디를 삭제하시겠습니까?</value>
   </data>
@@ -185,6 +188,9 @@
   </data>
   <data name="password" xml:space="preserve">
     <value>비밀번호</value>
+  </data>
+  <data name="pw_not_match" xml:space="preserve">
+    <value>패스워드가 일치하지 않습니다</value>
   </data>
   <data name="register" xml:space="preserve">
     <value>회원가입</value>

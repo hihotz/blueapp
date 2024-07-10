@@ -5,6 +5,7 @@
     <LoginEndpoint>api/user/login</LoginEndpoint>
     <RegisterEndpoint>api/user/register</RegisterEndpoint>
     <DeleteIDEndpoint>api/user/deleteid</DeleteIDEndpoint>
+    <ChangePWEndpoint>api/user/changepassword</ChangePWEndpoint>
   </ApiSettings>
 </configuration>
 <!--속성 - 빌드 작업 : 포함 리소스-->

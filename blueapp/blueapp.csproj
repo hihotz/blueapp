@@ -113,6 +113,9 @@
 	  <MauiXaml Update="Views\SettingsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Settings\ChangePWPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Settings\DeleteIDPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

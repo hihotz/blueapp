@@ -78,6 +78,7 @@ public partial class LoginPage : ContentPage
         {
             try
             {
+                // 체크박스 모두 미체크시 앱 실행할때 유저이름 삭제
                 SecureStorage.Remove("UserName");
             }
             catch (Exception ex)

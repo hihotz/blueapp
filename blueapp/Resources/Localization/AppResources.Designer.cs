@@ -241,6 +241,15 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   비밀번호를 변경하시겠습니까?과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string msg_changepw_confirm {
+            get {
+                return ResourceManager.GetString("msg_changepw_confirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   아이디를 삭제하시겠습니까?과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string msg_deleteid_confirm {
@@ -264,6 +273,15 @@ namespace blueapp.Resources.Localization {
         internal static string password {
             get {
                 return ResourceManager.GetString("password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   패스워드가 일치하지 않습니다과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string pw_not_match {
+            get {
+                return ResourceManager.GetString("pw_not_match", resourceCulture);
             }
         }
         
