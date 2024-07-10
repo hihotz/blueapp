@@ -20,6 +20,8 @@ public partial class LoginPage : ContentPage
         LoadSavedUserName();
     }
 
+    #region 테스트 코드
+    // 테스트 코드
     private async void OnTestClicked(object sender, EventArgs e)
     {
         // AppShell로 페이지 전환
@@ -32,6 +34,7 @@ public partial class LoginPage : ContentPage
             await appShell.FadeTo(1, 100);
         }
     }
+    #endregion
 
     #region 체크박스 유무에 따른 동작
     private async void LoadSavedUserName()

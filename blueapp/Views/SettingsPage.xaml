@@ -55,7 +55,7 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- 비밀번호 변경 -->
-                <Frame Grid.Row="0" Grid.Column="0" Padding="0" BorderColor="Gray"  BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" >
+                <Frame Grid.Row="0" Grid.Column="0" Padding="0" BorderColor="Gray"  BackgroundColor="{AppThemeBinding Dark=#7388bb, Light=#cad9fe}" >
                     <StackLayout Orientation="Horizontal">
                         <StackLayout.Behaviors>
                             <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#93aeee" 
@@ -67,7 +67,7 @@
                 </Frame>
 
                 <!-- 다크모드 -->
-                <Frame Grid.Row="0" Grid.Column="1" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" >
+                <Frame Grid.Row="0" Grid.Column="1" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#7388bb, Light=#cad9fe}" >
                     <StackLayout Orientation="Horizontal">
                         <StackLayout.Behaviors>
                             <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#93aeee" 
@@ -82,7 +82,7 @@
                 </Frame>
 
                 <!-- 회원탈퇴 -->
-                <Frame Grid.Row="1" Grid.Column="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" >
+                <Frame Grid.Row="1" Grid.Column="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#7388bb, Light=#cad9fe}" >
                     <StackLayout Orientation="Horizontal">
                         <StackLayout.Behaviors>
                             <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#93aeee" 
@@ -94,7 +94,7 @@
                 </Frame>
 
                 <!-- 로그아웃 -->
-                <Frame Grid.Row="1" Grid.Column="1" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
+                <Frame Grid.Row="1" Grid.Column="1" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#7388bb, Light=#cad9fe}">
                     <StackLayout Orientation="Horizontal">
                         <StackLayout.Behaviors>
                             <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#93aeee" 
@@ -114,7 +114,7 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- 왼쪽 아래 로그아웃 -->
-                <Frame Grid.Column="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" >
+                <Frame Grid.Column="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#9280a3, Light=#e6d9f4}" >
                     <StackLayout Orientation="Horizontal">
                         <StackLayout.Behaviors>
                             <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#c0a9d7" 
@@ -126,7 +126,7 @@
                 </Frame>
 
                 <!-- 오른쪽 아래 로그아웃 -->
-                <Frame Grid.Column="1" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
+                <Frame Grid.Column="1" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#9280a3, Light=#e6d9f4}">
                     <StackLayout Orientation="Horizontal">
                         <StackLayout.Behaviors>
                             <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#c0a9d7" 
@@ -146,7 +146,7 @@
                 </Grid.RowDefinitions>
 
                 <!-- 오른쪽 아래 로그아웃 -->
-                <Frame Grid.Row="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
+                <Frame Grid.Row="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#969174, Light=#fff6c7}">
                     <StackLayout Orientation="Horizontal">
                         <StackLayout.Behaviors>
                             <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#d9ce95" 
@@ -158,7 +158,7 @@
                 </Frame>
 
                 <!-- 오른쪽 아래 정보 -->
-                <Frame Grid.Row="1" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
+                <Frame Grid.Row="1" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#969174, Light=#fff6c7}">
                     <StackLayout Orientation="Horizontal">
                         <StackLayout.Behaviors>
                             <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#d9ce95" 
