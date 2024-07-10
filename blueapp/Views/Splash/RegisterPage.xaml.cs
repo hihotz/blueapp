@@ -9,10 +9,10 @@ public partial class RegisterPage : ContentPage
 {
     private LoginViewModel _loginviewmodel;
 
-    public RegisterPage()
+    public RegisterPage(LoginViewModel loginviewmodel)
 	{
 		InitializeComponent();
-        _loginviewmodel = new LoginViewModel();
+        _loginviewmodel = loginviewmodel;
     }
 
 	private async void OnRegisterClicked(object sender, EventArgs e)

@@ -68,7 +68,11 @@
                     </StackLayout>
                 </VerticalStackLayout>
             </Frame>
+            <VerticalStackLayout>
+                <Button Text="테스트 버튼" Clicked="OnTestClicked" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
         </VerticalStackLayout>
+        
         <!-- 로딩 인디케이터 및 반투명 오버레이 -->
         <Grid x:Name="LoadingOverlay" BackgroundColor="Black" Opacity="0.6" IsVisible="False">
             <ActivityIndicator IsRunning="True" VerticalOptions="Center" HorizontalOptions="Center" Color="White"/>

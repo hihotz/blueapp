@@ -27,6 +27,8 @@ public partial class DeleteIDPopup : Popup
     {
         try
         {
+            LoadingOverlay.IsVisible = true; // 로딩 오버레이 표시LoadingOverlay.IsVisible = true; // 로딩 오버레이 표시
+            
             ApiResponse apiResponse = await _loginviewmodel.DeleteIDAsync(UsernameEntry.Text, PasswordEntry.Text);
 
             // 회원탈퇴 성공시
@@ -49,6 +51,10 @@ public partial class DeleteIDPopup : Popup
         catch (Exception ex)
         {
             maintext.Text = AppResources.error + " : " + ex.Message;
+        }
+        finally
+        {
+            LoadingOverlay.IsVisible = false; // 로딩 오버레이 숨기기
         }
     }
     #endregion

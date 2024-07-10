@@ -19,6 +19,19 @@ public partial class LoginPage : ContentPage
         LoadSavedUserName();
     }
 
+    private async void OnTestClicked(object sender, EventArgs e)
+    {
+        // AppShell로 페이지 전환
+        // 페이지 전환 이벤트
+        if (Application.Current != null)
+        {
+            var appShell = new AppShell();
+            await this.FadeTo(0, 100);
+            Application.Current.MainPage = appShell;
+            await appShell.FadeTo(1, 100);
+        }
+    }
+
     #region 체크박스 유무에 따른 동작
     private async void LoadSavedUserName()
     {
@@ -102,16 +115,11 @@ public partial class LoginPage : ContentPage
     {
         try
         {
-            LoadingOverlay.IsVisible = true; // 로딩 오버레이 표시
             await Login();
         }
         catch (Exception ex)
         {
             await DisplayAlert(AppResources.error, AppResources.error + " : " + ex.Message, AppResources.ok);
-        }
-        finally
-        {
-            LoadingOverlay.IsVisible = false; // 로딩 오버레이 숨기기
         }
     }
 
@@ -119,6 +127,7 @@ public partial class LoginPage : ContentPage
     {
         try
         {
+            LoadingOverlay.IsVisible = true; // 로딩 오버레이 표시LoadingOverlay.IsVisible = true; // 로딩 오버레이 표시
             string username = UsernameEntry.Text;
             string password = PasswordEntry.Text;
 
@@ -149,10 +158,14 @@ public partial class LoginPage : ContentPage
         {
             await DisplayAlert(AppResources.error, AppResources.error + " : " + ex.Message, AppResources.ok);
         }
+        finally
+        {
+            LoadingOverlay.IsVisible = false; // 로딩 오버레이 숨기기
+        }
     }
     #endregion
-
-    #region 회원가입
+    
+    #region 회원가입 페이지로 이동
     private async void OnRegisterClicked(object sender, EventArgs e)
     {
         try
@@ -160,7 +173,7 @@ public partial class LoginPage : ContentPage
             // 페이지 전환 이벤트
             if (Application.Current != null)
             {
-                var registerPage = new RegisterPage();
+                var registerPage = new RegisterPage(_loginviewmodel);
                 await this.FadeTo(0, 100);
                 Application.Current.MainPage = registerPage;
                 await registerPage.FadeTo(1, 100);
@@ -173,6 +186,7 @@ public partial class LoginPage : ContentPage
     }
     #endregion
 
+    #region 창 종료시 체크박스 저장
     protected override void OnDisappearing()
     {
         base.OnDisappearing();
@@ -180,4 +194,5 @@ public partial class LoginPage : ContentPage
         Preferences.Set("SaveUserName", SaveUserNameCheck.IsChecked);
         Preferences.Set("AutoLogin", AutoLoginCheck.IsChecked);
     }
+    #endregion
 }
