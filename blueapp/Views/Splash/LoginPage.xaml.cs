@@ -3,6 +3,7 @@ using blueapp.Resources.Localization;
 using blueapp.ViewModels;
 using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Views;
+using System.Xml.Linq;
 
 namespace blueapp.Views.Splash;
 
@@ -44,6 +45,15 @@ public partial class LoginPage : ContentPage
                 UsernameEntry.Text = await SecureStorage.GetAsync("UserName");
                 PasswordEntry.Text = await SecureStorage.GetAsync("UserPW");
 
+                // 앱 실행시 체크박스 체크되었지만, id, pw가 없을 경우 체크박스 해제
+                if (string.IsNullOrEmpty(UsernameEntry.Text) || string.IsNullOrEmpty(PasswordEntry.Text))
+                {
+                    SaveUserNameCheck.IsChecked = false;
+                    AutoLoginCheck.IsChecked = false;
+                    return;
+                }
+
+                // 체크박스 체크 및 id, pw가 있을 경우 자동 로그인
                 await Login();
             }
             catch (Exception ex)
@@ -128,16 +138,14 @@ public partial class LoginPage : ContentPage
         try
         {
             LoadingOverlay.IsVisible = true; // 로딩 오버레이 표시LoadingOverlay.IsVisible = true; // 로딩 오버레이 표시
-            string username = UsernameEntry.Text;
-            string password = PasswordEntry.Text;
 
-            ApiResponse apiResponse = await _loginviewmodel.LoginAsync(username, password);
+            ApiResponse apiResponse = await _loginviewmodel.LoginAsync(UsernameEntry.Text, PasswordEntry.Text);
 
             // 로그인 성공시
             if (apiResponse.StatusCode == 200)
             {
                 // 로그인 성공시에만 체크박스 기능 동작
-                await CheckBox_Check(username, password);
+                await CheckBox_Check(UsernameEntry.Text, PasswordEntry.Text);
 
                 // 페이지 전환 이벤트
                 if (Application.Current != null)

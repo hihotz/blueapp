@@ -26,7 +26,7 @@ namespace blueapp
             var currentTheme = isDarkMode ? AppTheme.Dark : AppTheme.Light;
             UserAppTheme = currentTheme;
             
-            var backgroundColor = isDarkMode ? Color.FromArgb("#121212") : Color.FromArgb("#fafafa");
+            var backgroundColor = isDarkMode ? Color.FromArgb("#286692") : Color.FromArgb("#cbe9ff");
             if(Resources.TryGetValue("DefaultPageBackgroundColor", out var resources))
             {
                 Resources["DefaultPageBackgroundColor"] = backgroundColor;
