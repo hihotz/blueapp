@@ -13,18 +13,21 @@
         </Border.StrokeShape>
 
         <VerticalStackLayout>
-            <VerticalStackLayout Spacing="5">
-                <Label Text="{x:Static resources:AppResources.delete_id}" HorizontalOptions="Center" LineBreakMode="WordWrap" />
-                <ScrollView MaximumWidthRequest="200" MaximumHeightRequest="100">
+            <Label Text="{x:Static resources:AppResources.delete_id}" HorizontalOptions="Center" LineBreakMode="WordWrap" />
+            <Grid Padding="20" RowSpacing="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ScrollView Grid.Row="0" MaximumWidthRequest="200" MaximumHeightRequest="150">
                     <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
                         <Label x:Name="maintext" Text="{x:Static resources:AppResources.msg_deleteid_confirm}" LineBreakMode="WordWrap" />
                     </Frame>
                 </ScrollView>
 
-                <VerticalStackLayout Spacing="3">
-                    <Grid x:Name="LoadingOverlay" BackgroundColor="Black" Opacity="0.6" IsVisible="False">
-                        <ActivityIndicator IsRunning="True" VerticalOptions="Center" HorizontalOptions="Center" Color="White"/>
-                    </Grid>
+                <VerticalStackLayout Grid.Row="2" Spacing="3">
                     <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
                         <Label x:Name="UsernameEntry" BackgroundColor="Transparent"/>
                     </Frame>
@@ -34,13 +37,15 @@
                     </Frame>
                 </VerticalStackLayout>
 
-                <Grid ColumnDefinitions="*,Auto,*,Auto,*" RowDefinitions="Auto" Padding="0" ColumnSpacing="0" HorizontalOptions="FillAndExpand">
+                <Grid Grid.Row="3" ColumnDefinitions="*,Auto,*,Auto,*" RowDefinitions="Auto" Padding="0" ColumnSpacing="0" HorizontalOptions="FillAndExpand">
                     <Button Text="{x:Static resources:AppResources.ok}" Clicked="OnOkClicked" Grid.Column="1" HorizontalOptions="StartAndExpand"/>
                     <Button Text="{x:Static resources:AppResources.cancel}" Clicked="OnCancleClicked" Grid.Column="3" HorizontalOptions="EndAndExpand"/>
                 </Grid>
-                
-            </VerticalStackLayout>
+            </Grid>
+
+            <ActivityIndicator x:Name="LoadingOverlay" IsVisible="False" IsRunning="True" VerticalOptions="Center" HorizontalOptions="Center" Color="{AppThemeBinding Dark=#ffffff, Light=#2c2c2c}"/>
         </VerticalStackLayout>
+        
     </Border>
 
 
