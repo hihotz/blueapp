@@ -214,6 +214,15 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   재고 관리 페이지과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string inventory_management_page {
+            get {
+                return ResourceManager.GetString("inventory_management_page", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   로딩중과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string loading {
@@ -277,11 +286,29 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   생산 관리 페이지과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string production_management_page {
+            get {
+                return ResourceManager.GetString("production_management_page", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   패스워드가 일치하지 않습니다과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string pw_not_match {
             get {
                 return ResourceManager.GetString("pw_not_match", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   품질 관리 페이지과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string quality_management_page {
+            get {
+                return ResourceManager.GetString("quality_management_page", resourceCulture);
             }
         }
         
