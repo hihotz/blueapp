@@ -31,7 +31,7 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
 
-                        <ScrollView Grid.Row="0" x:Name="graphicsScrollView" Orientation="Horizontal">
+                        <ScrollView Grid.Row="0" x:Name="graphicsScrollView" Orientation="Horizontal" HorizontalScrollBarVisibility="Always">
                             <GraphicsView x:Name="graphicsView" WidthRequest="{Binding GraphWidth}" Drawable="{Binding GraphDrawable}" />
                         </ScrollView>
 
@@ -86,7 +86,7 @@
                                 <ColumnDefinition Width="2*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Frame Grid.Column="0" Padding="0" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="Gray">
+                            <Frame Grid.Column="0" Padding="20,0,0,0"  BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="Gray">
                                 <!-- CollectionView -->
                                 <CollectionView HorizontalOptions="End" x:Name="LogList" HeightRequest="70">
                                     <CollectionView.ItemTemplate>
@@ -97,7 +97,10 @@
                                 </CollectionView>
                             </Frame>
                             <Frame Grid.Column="1" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="Gray">
-                                <Button Text="Start Production" Margin="0,20,0,0" Clicked="OnStartLogClicked" />
+                                <VerticalStackLayout Spacing="5">
+                                    <Button Text="{x:Static resources:AppResources.production_start}" Clicked="OnStartLogClicked" />
+                                    <Button Text="{x:Static resources:AppResources.production_stop}" Clicked="OnStopLogClicked" />
+                                </VerticalStackLayout>
                             </Frame>
                         </Grid>
                     </Grid>

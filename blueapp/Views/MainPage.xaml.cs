@@ -24,13 +24,15 @@ public partial class MainPage : ContentPage
         this.BindingContext = _viewModel;
         LogItems = new ObservableCollection<string>();
         LogList.ItemsSource = LogItems;
+        LogItems.Insert(0, "Application is start : " + DateTime.Now.ToString());
+
+        CreateGraph();
     }
 
-    protected override async void OnAppearing()
+    #region 그래프 스크롤뷰 자동스크롤
+    protected override void OnAppearing()
     {
         base.OnAppearing();
-        // 첫 페이지 로드 
-        await _viewModel.UpdateGraphRecords();
 
         // 그래프 스크롤 뷰를 가장 오른쪽으로 스크롤
         this.Dispatcher.Dispatch(async () =>
@@ -38,13 +40,6 @@ public partial class MainPage : ContentPage
             await graphicsScrollView.ScrollToAsync(graphicsScrollView.ContentSize.Width, 0, true);
         });
     }
-
-    #region 프로젝트 구조도 
-    // MainPage.xaml: 대시보드 및 기본 UI
-    // ProductionPage.xaml: 생산 관리 UI
-    // InventoryPage.xaml: 재고 관리 UI
-    // QualityPage.xaml: 품질 관리 UI
-
     #endregion
 
     #region 페이지 이동
@@ -74,6 +69,11 @@ public partial class MainPage : ContentPage
         try
         {
             await RatingRecord();
+            // 그래프 스크롤 뷰를 가장 오른쪽으로 스크롤
+            this.Dispatcher.Dispatch(async () =>
+            {
+                await graphicsScrollView.ScrollToAsync(graphicsScrollView.ContentSize.Width, 0, true);
+            });
         }
         catch (Exception ex)
         {
@@ -88,13 +88,14 @@ public partial class MainPage : ContentPage
             // 0~100 사이 값인지 확인
             if (IsNumberInRange(Rate.Text))
             {
+                // 평가 기록 남기기
                 var record = new OperationRecord
                 {
                     Rate = int.Parse(Rate.Text),
                 };
-
                 await _databaseService.AddRecordAsync(record);
 
+                // 앱 로그 남기기
                 await _databaseService.AddAppLogAsync(new AppLog
                 {
                     UserName = await SecureStorage.GetAsync("UserName"),
@@ -102,9 +103,13 @@ public partial class MainPage : ContentPage
                     Timestamp = DateTime.Now,
                     Success = "Success"
                 });
+
+                // db 저장 후 텍스트 초기화
                 Rate.Text = "";
                 await DisplayAlert(AppResources.error, AppResources.success, AppResources.ok);
-                
+
+                // 그래프 재생성
+                CreateGraph();
             }
             else
             {
@@ -132,17 +137,22 @@ public partial class MainPage : ContentPage
         // 변환 불가하거나 범위를 벗어나면 false 반환
         return false;
     }
+
+    private async void CreateGraph()
+    {
+        await _viewModel.RefreshGraph();
+    }
     #endregion
 
-    #region 하단 로그 생성
+    #region 생산 시작/중지 버튼
     private void OnStartLogClicked(object sender, EventArgs e)
     {
-        LogItems.Insert(0, "Application is start : " + DateTime.Now.ToString());
+        LogItems.Insert(0, AppResources.application_started + " : " + DateTime.Now.ToString());
     }
 
     private void OnStopLogClicked(object sender, EventArgs e)
     {
-        LogItems.Insert(0, "Production stopped at " + DateTime.Now.ToString());
+        LogItems.Insert(0, AppResources.application_stopped + " : " + DateTime.Now.ToString());
     }
     #endregion
 }

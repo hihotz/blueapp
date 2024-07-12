@@ -61,6 +61,24 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   애플리케이션 시작됨과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string application_started {
+            get {
+                return ResourceManager.GetString("application_started", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   애플리케이션 정지됨과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string application_stopped {
+            get {
+                return ResourceManager.GetString("application_stopped", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   앱 이름과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string appname {
@@ -300,6 +318,24 @@ namespace blueapp.Resources.Localization {
         internal static string production_management_page {
             get {
                 return ResourceManager.GetString("production_management_page", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   생산 시작과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string production_start {
+            get {
+                return ResourceManager.GetString("production_start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   생산 정지과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string production_stop {
+            get {
+                return ResourceManager.GetString("production_stop", resourceCulture);
             }
         }
         

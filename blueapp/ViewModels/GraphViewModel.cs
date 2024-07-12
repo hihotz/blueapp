@@ -14,7 +14,8 @@ namespace blueapp.ViewModels
 {
     public class GraphViewModel : BaseViewModel
     {
-        public AsyncCommand RefreshCommand { get; }
+        // 리프래쉬 커맨드 필요시 사용
+        //public AsyncCommand RefreshCommand { get; }
         private DatabaseService _databaseService;
         public RateGraphDrawable GraphDrawable { get; private set; }
         public ObservableCollection<OperationRecord> GraphRecords { get; private set; }
@@ -24,7 +25,7 @@ namespace blueapp.ViewModels
 
         public GraphViewModel()
         {
-            RefreshCommand = new AsyncCommand(RefreshGraph);
+            //RefreshCommand = new AsyncCommand(RefreshGraph);
             _databaseService = new DatabaseService();
             GraphDrawable = new RateGraphDrawable();
             GraphRecords = new ObservableCollection<OperationRecord>();
@@ -37,10 +38,11 @@ namespace blueapp.ViewModels
             set => SetProperty(ref _isRefreshing, value);
         }
 
-        private async Task RefreshGraph()
+        public async Task RefreshGraph()
         {
             IsRefreshing = true;
 
+            // 그래프 업데이트
             await UpdateGraphRecords();
 
             IsRefreshing = false;
@@ -48,7 +50,7 @@ namespace blueapp.ViewModels
         #endregion
 
         #region 그래프 업데이트
-        public async Task UpdateGraphRecords()
+        private async Task UpdateGraphRecords()
         {
             // 그래프 초기화
             GraphRecords.Clear();
