@@ -8,7 +8,8 @@ namespace blueapp.Data
     public class RateGraphDrawable : IDrawable
     {
         public List<OperationRecord>? Records { get; set; }
-        public Color GraphColor { get; set; } = Color.FromArgb("#fff6ab");   // 기본 색상 검정
+        private Color GraphColor { get; set; } = Color.FromArgb("#fff6ab"); // 그래프 색상 노란색
+        private Color DateColor { get; set; } = Color.FromArgb("#e0d996");  // 날짜 색상 주황색
 
         public void Draw(ICanvas canvas, RectF dirtyRect)
         {
@@ -49,7 +50,7 @@ namespace blueapp.Data
                 float dotLength = 3;
                 float currentY = y;
                 canvas.StrokeSize = 1;
-                canvas.StrokeColor = Colors.Gray;
+                canvas.StrokeColor = GraphColor;
 
                 while (currentY < height + margin * 1.5f)
                 {
@@ -59,8 +60,8 @@ namespace blueapp.Data
 
                 // RequestTime을 그래프 아래에 표시
                 string timeLabel = Records[i].Timestamp.ToString("MM/dd");
-                canvas.FontSize = 10;
-                canvas.FontColor = Colors.DarkGray;
+                canvas.FontSize = 14;
+                canvas.FontColor = DateColor;
                 canvas.DrawString(timeLabel, x, height + margin * 1.5f + 10, HorizontalAlignment.Center);
             }
 

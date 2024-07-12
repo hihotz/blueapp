@@ -11,17 +11,4 @@ public partial class ProductionPage : ContentPage
 		InitializeComponent();
         _viewModel = new GraphViewModel();
     }
-
-    protected override async void OnAppearing()
-    {
-        base.OnAppearing();
-        // 첫 페이지 로드
-        await _viewModel.LoadRecords(0);
-
-        // 그래프 스크롤 뷰를 가장 오른쪽으로 스크롤
-        this.Dispatcher.Dispatch(async () =>
-        {
-            await graphicsScrollView.ScrollToAsync(graphicsScrollView.ContentSize.Width, 0, true);
-        });
-    }
 }
