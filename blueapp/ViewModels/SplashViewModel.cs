@@ -43,7 +43,6 @@ namespace blueapp.ViewModels
             {
                 SecureStorage.Remove("UserPW");
             }
-            
         }
         
         // 서버 체크

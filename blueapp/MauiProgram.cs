@@ -1,4 +1,6 @@
-﻿using CommunityToolkit.Maui;
+﻿using blueapp.Data;
+using blueapp.ViewModels;
+using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 
 namespace blueapp
@@ -17,8 +19,14 @@ namespace blueapp
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            // DatabaseService를 싱글턴으로 등록
+            builder.Services.AddSingleton<DatabaseService>();
+
+            // RecordViewModel을 트랜지언트로 등록
+            builder.Services.AddTransient<GraphViewModel>();
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

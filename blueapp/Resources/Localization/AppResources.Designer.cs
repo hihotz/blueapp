@@ -142,6 +142,15 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   0에서 100 사이의 정수를 입력하세요과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string enter_0_to_100 {
+            get {
+                return ResourceManager.GetString("enter_0_to_100", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   에러과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string error {
@@ -309,6 +318,24 @@ namespace blueapp.Resources.Localization {
         internal static string quality_management_page {
             get {
                 return ResourceManager.GetString("quality_management_page", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   평가과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string rate {
+            get {
+                return ResourceManager.GetString("rate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   기록과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string record {
+            get {
+                return ResourceManager.GetString("record", resourceCulture);
             }
         }
         

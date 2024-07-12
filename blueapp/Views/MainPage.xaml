@@ -5,104 +5,125 @@
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:resources="clr-namespace:blueapp.Resources.Localization"
              xmlns:vm="clr-namespace:blueapp.ViewModels"
-             x:DataType="vm:SettingViewModel"
              BackgroundColor="{DynamicResource DefaultPageBackgroundColor}">
 
-    <ScrollView>
-        <Grid Padding="20" RowSpacing="20" ColumnSpacing="20" >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+    <ContentPage.BindingContext>
+        <vm:GraphViewModel />
+    </ContentPage.BindingContext>
 
-            <!-- 좌측 -->
-            <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="{AppThemeBinding Dark=#289268, Light=#3cde9e}" BorderColor="Gray">
-                <Grid Grid.Row="1" Grid.Column="0" RowSpacing="20" ColumnSpacing="20">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="2*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
+    <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshCommand}">
+        <ScrollView>
+            <Grid Padding="20" RowSpacing="20" ColumnSpacing="20" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-                    <!-- 상단 그래프 -->
-                    <Frame Grid.Row="0" Padding="50" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="Gray">
+                <!-- 좌측 -->
+                <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="{AppThemeBinding Dark=#289268, Light=#3cde9e}" BorderColor="Gray">
+                    <Grid Grid.Row="1" Grid.Column="0" RowSpacing="20" ColumnSpacing="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
 
-                    </Frame>
+                        <ScrollView Grid.Row="0" x:Name="graphicsScrollView" Orientation="Horizontal">
+                            <GraphicsView x:Name="graphicsView" WidthRequest="{Binding GraphWidth}" Drawable="{Binding GraphDrawable}" />
+                        </ScrollView>
 
-                    <!-- 중단 페이지 이동  -->
-                    <Grid Grid.Row="1" RowSpacing="20" ColumnSpacing="20">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
+                        <!-- 중단 페이지 이동  -->
+                        <Grid Grid.Row="1" RowSpacing="20" ColumnSpacing="20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
 
-                        <!-- 생산 관리 페이지 -->
-                        <Frame Grid.Column="0" Padding="0" BackgroundColor="{AppThemeBinding Dark=#9280a3, Light=#e6d9f4}" BorderColor="Gray">
-                            <StackLayout Orientation="Horizontal">
-                                <StackLayout.Behaviors>
-                                    <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#c0a9d7" 
+                            <!-- 생산 관리 페이지 -->
+                            <Frame Grid.Column="0" Padding="0" BackgroundColor="{AppThemeBinding Dark=#9280a3, Light=#e6d9f4}" BorderColor="Gray">
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout.Behaviors>
+                                        <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#c0a9d7" 
                                                            PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnProductionManagementClicked"/>
-                                </StackLayout.Behaviors>
-                                <Label Text="{x:Static resources:AppResources.production_management_page}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                    </StackLayout.Behaviors>
+                                    <Label Text="{x:Static resources:AppResources.production_management_page}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
                                        FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
-                            </StackLayout>
-                        </Frame>
-                        
-                        <!-- 재고 관리 페이지 -->
-                        <Frame Grid.Column="1" Padding="0" BackgroundColor="{AppThemeBinding Dark=#9280a3, Light=#e6d9f4}" BorderColor="Gray">
-                            <StackLayout Orientation="Horizontal">
-                                <StackLayout.Behaviors>
-                                    <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#c0a9d7" 
+                                </StackLayout>
+                            </Frame>
+
+                            <!-- 재고 관리 페이지 -->
+                            <Frame Grid.Column="1" Padding="0" BackgroundColor="{AppThemeBinding Dark=#9280a3, Light=#e6d9f4}" BorderColor="Gray">
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout.Behaviors>
+                                        <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#c0a9d7" 
                                                            PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnInventoryManagementClicked"/>
-                                </StackLayout.Behaviors>
-                                <Label Text="{x:Static resources:AppResources.inventory_management_page}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                    </StackLayout.Behaviors>
+                                    <Label Text="{x:Static resources:AppResources.inventory_management_page}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
                                        FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
-                            </StackLayout>
-                        </Frame>
-                        
-                        <!-- 품질 관리 페이지 -->
-                        <Frame Grid.Column="2" Padding="0" BackgroundColor="{AppThemeBinding Dark=#9280a3, Light=#e6d9f4}" BorderColor="Gray">
-                            <StackLayout Orientation="Horizontal">
-                                <StackLayout.Behaviors>
-                                    <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#c0a9d7" 
+                                </StackLayout>
+                            </Frame>
+
+                            <!-- 품질 관리 페이지 -->
+                            <Frame Grid.Column="2" Padding="0" BackgroundColor="{AppThemeBinding Dark=#9280a3, Light=#e6d9f4}" BorderColor="Gray">
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout.Behaviors>
+                                        <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#c0a9d7" 
                                                            PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnQualityManagementClicked"/>
-                                </StackLayout.Behaviors>
-                                <Label Text="{x:Static resources:AppResources.quality_management_page}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                    </StackLayout.Behaviors>
+                                    <Label Text="{x:Static resources:AppResources.quality_management_page}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
                                        FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+
+                        <!-- 하단 로그바  -->
+                        <Grid Grid.Row="2" RowSpacing="20" ColumnSpacing="20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Frame Grid.Column="0" Padding="0" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="Gray">
+                                <!-- CollectionView -->
+                                <CollectionView HorizontalOptions="End" x:Name="LogList" HeightRequest="70">
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Label Text="{Binding .}" />
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+                            </Frame>
+                            <Frame Grid.Column="1" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="Gray">
+                                <Button Text="Start Production" Margin="0,20,0,0" Clicked="OnStartLogClicked" />
+                            </Frame>
+                        </Grid>
+                    </Grid>
+                </Frame>
+
+                <!-- 우측 -->
+                <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="{AppThemeBinding Dark=#949d0f, Light=#dce916}" BorderColor="Gray">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
+                            <Entry x:Name="Rate" Placeholder="{x:Static resources:AppResources.rate}" BackgroundColor="Transparent" Completed="OnRatingClicked"/>
+                        </Frame>
+                        <Frame CornerRadius="4" HasShadow="True" Padding="0" BorderColor="{AppThemeBinding Dark=Gray, Light=Gray}"
+                           BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" HorizontalOptions="Start">
+                            <StackLayout Orientation="Horizontal" Spacing="10" Padding="15" >
+                                <StackLayout.Behaviors>
+                                    <toolkit:TouchBehavior DefaultAnimationDuration="250"
+                                                       PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnRatingClicked"/>
+                                </StackLayout.Behaviors>
+                                <Label Text="{x:Static resources:AppResources.record}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                   FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                             </StackLayout>
                         </Frame>
-                    </Grid>
+                    </StackLayout>
+                </Frame>
 
-                    <!-- 하단 로그바  -->
-                    <Grid Grid.Row="2" RowSpacing="20" ColumnSpacing="20">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="2*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Frame Grid.Column="0" Padding="0" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="Gray">
-                            <!-- CollectionView -->
-                            <CollectionView HorizontalOptions="End" x:Name="LogList" HeightRequest="70">
-                                <CollectionView.ItemTemplate>
-                                    <DataTemplate>
-                                        <Label Text="{Binding .}" />
-                                    </DataTemplate>
-                                </CollectionView.ItemTemplate>
-                            </CollectionView>
-                        </Frame>
-                        <Frame Grid.Column="1" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="Gray">
-                            <Button Text="Start Production" Margin="0,20,0,0" Clicked="OnStartLogClicked" />
-                        </Frame>
-                    </Grid>
-                </Grid>
-            </Frame>
-
-            <!-- 우측 -->
-            <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="{AppThemeBinding Dark=#949d0f, Light=#dce916}" BorderColor="Gray">
-            </Frame>
-        </Grid>
-    </ScrollView>
+            </Grid>
+        </ScrollView>
+    </RefreshView>
 </ContentPage>

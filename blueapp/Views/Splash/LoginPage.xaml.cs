@@ -17,7 +17,7 @@ public partial class LoginPage : ContentPage
         _loginviewmodel = new LoginViewModel();
         SaveUserNameCheck.IsChecked = Preferences.Get("SaveUserName", false);
         AutoLoginCheck.IsChecked = Preferences.Get("AutoLogin", false);
-        LoadSavedUserName();
+        LoadSavedUserData();
     }
 
     #region 테스트 코드
@@ -37,9 +37,10 @@ public partial class LoginPage : ContentPage
     #endregion
 
     #region 체크박스 유무에 따른 동작
-    private async void LoadSavedUserName()
+    // 앱 실행시 유저 정보 불러오기
+    private async void LoadSavedUserData()
     {
-        // 자동 로그인 체크 시 id, pw 저장
+        // 자동 로그인 체크 시 id, pw 불러오기
         if (AutoLoginCheck.IsChecked)
         {
             try
@@ -65,6 +66,7 @@ public partial class LoginPage : ContentPage
                 await DisplayAlert(AppResources.error, AppResources.error + " : " + ex.Message, AppResources.ok);
             }
         }
+        // ID 저장만 한 경우  
         else if (SaveUserNameCheck.IsChecked)
         {
             try
@@ -150,6 +152,7 @@ public partial class LoginPage : ContentPage
             {
                 // 로그인 성공시에만 체크박스 기능 동작
                 await CheckBox_Check(UsernameEntry.Text, PasswordEntry.Text);
+                await SecureStorage.SetAsync("UserName", UsernameEntry.Text);
 
                 // 페이지 전환 이벤트
                 if (Application.Current != null)
