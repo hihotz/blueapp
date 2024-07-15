@@ -28,6 +28,7 @@ public partial class MainPage : ContentPage
         LogList.ItemsSource = LogItems;
         LogItems.Insert(0, "Application is start : " + DateTime.Now.ToString());
         _viewModel.IsRefreshing = true;
+        InitializeLayout();
     }
 
     #region 그래프 스크롤뷰 자동스크롤
@@ -44,6 +45,15 @@ public partial class MainPage : ContentPage
     #endregion
 
     #region 레이아웃 변경
+    // 초기 레이아웃 상태 로드
+    private void InitializeLayout()
+    {
+        double width = this.Width;
+        double height = this.Height;
+        OnSizeAllocated(width, height);
+    }
+
+    // 창 크기 변동시 사이즈에 맞게 수정
     protected override void OnSizeAllocated(double width, double height)
     {
         base.OnSizeAllocated(width, height);
@@ -55,7 +65,7 @@ public partial class MainPage : ContentPage
                 MainGrid.RowDefinitions.RemoveAt(1); // 두 번째 RowDefinition 제거
 
             if (MainGrid.ColumnDefinitions.Count < 2)
-                MainGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto }); // 두 번째 RowDefinition 추가
+                MainGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star }); // 두 번째 RowDefinition 추가
 
             Grid.SetRow(LeftFrame, 0); // 좌측 Frame
             Grid.SetColumn(LeftFrame, 0);
