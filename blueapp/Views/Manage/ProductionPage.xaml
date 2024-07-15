@@ -7,21 +7,83 @@
              xmlns:vm="clr-namespace:blueapp.ViewModels"
              BackgroundColor="{DynamicResource DefaultPageBackgroundColor}">
 
-    <ContentPage.BindingContext>
-        <vm:GraphViewModel />
-    </ContentPage.BindingContext>
+    <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshCommand}" >
+        <ScrollView>
 
-    <StackLayout HeightRequest="300">
-        <Frame HeightRequest="300" BackgroundColor="GreenYellow">
-            <ScrollView x:Name="graphicsScrollView" Orientation="Horizontal">
-                <GraphicsView x:Name="graphicsView" WidthRequest="{Binding GraphWidth}" Drawable="{Binding GraphDrawable}" />
-            </ScrollView>
-        </Frame>
-    </StackLayout>
-    
-    
-</ContentPage>
+            <Grid x:Name="MainGrid" Padding="20" RowSpacing="20" ColumnSpacing="20" MinimumHeightRequest="400">
+                <Grid.RowDefinitions>
+                    <RowDefinition x:Name="TopRow" Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="LeftColumn" Width="3*"/>
+                    <ColumnDefinition x:Name="RightColumn" Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <!-- 좌측 -->
+                <Frame x:Name="LeftFrame" Grid.Row="0" Grid.Column="0" BackgroundColor="{AppThemeBinding Dark=#289268, Light=#3cde9e}" BorderColor="Gray">
+                    <!-- 상단 입력 entry-->
 
+                    <!-- 하단 CollectionView?-->
+                </Frame>
+
+                <!-- 우측 -->
+                <Frame x:Name="RightFrame" Grid.Row="0" Grid.Column="1" BackgroundColor="{AppThemeBinding Dark=#289268, Light=#3cde9e}" BorderColor="Gray">
+                    <Grid Padding="0" RowSpacing="15" ColumnSpacing="20" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <!-- 버튼 -->
+                        <Frame Grid.Row="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#969174, Light=#fff6c7}">
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout.Behaviors>
+                                    <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#d9ce95" 
+                                                           PressedBackgroundColor="#babfd8" TouchGestureCompleted="AddProduction"/>
+                                </StackLayout.Behaviors>
+                                <Label Text="{x:Static resources:AppResources.info}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                       FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Grid.Row="1" Grid.Column="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#969174, Light=#fff6c7}">
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout.Behaviors>
+                                    <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#d9ce95" 
+                                                           PressedBackgroundColor="#babfd8" TouchGestureCompleted="AddProduction"/>
+                                </StackLayout.Behaviors>
+                                <Label Text="{x:Static resources:AppResources.info}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                       FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Grid.Row="2" Grid.Column="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#969174, Light=#fff6c7}">
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout.Behaviors>
+                                    <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#d9ce95" 
+                                                           PressedBackgroundColor="#babfd8" TouchGestureCompleted="AddProduction"/>
+                                </StackLayout.Behaviors>
+                                <Label Text="{x:Static resources:AppResources.info}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                       FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Grid.Row="3" Grid.Column="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#969174, Light=#fff6c7}">
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout.Behaviors>
+                                    <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#d9ce95" 
+                                                           PressedBackgroundColor="#babfd8" TouchGestureCompleted="AddProduction"/>
+                                </StackLayout.Behaviors>
+                                <Label Text="{x:Static resources:AppResources.info}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                       FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </Frame>
             
-
-    
+            </Grid>
+        </ScrollView>
+    </RefreshView>
+</ContentPage>

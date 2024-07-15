@@ -133,7 +133,7 @@
                                                    PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLogoutClicked"/>
                         </StackLayout.Behaviors>
                         <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
-                           FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                               FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                     </StackLayout>
                 </Frame>
             </Grid>
