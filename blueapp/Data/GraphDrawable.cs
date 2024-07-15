@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace blueapp.Data
 {
-    public class RateGraphDrawable : IDrawable
+    public class GraphDrawable : IDrawable
     {
         public List<OperationRecord>? Records { get; set; }
         private Color GraphColor { get; set; } = Color.FromArgb("#fff6ab"); // 그래프 색상 노란색

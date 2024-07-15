@@ -21,6 +21,7 @@ namespace blueapp
 
             // DatabaseService를 싱글턴으로 등록
             builder.Services.AddSingleton<DatabaseService>();
+            builder.Services.AddSingleton<ProductViewModel>();
 
             // RecordViewModel을 트랜지언트로 등록
             builder.Services.AddTransient<GraphViewModel>();

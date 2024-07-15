@@ -15,9 +15,9 @@ namespace blueapp.ViewModels
     public class GraphViewModel : BaseViewModel
     {
         // 리프래쉬 커맨드 필요시 사용
-        //public AsyncCommand RefreshCommand { get; }
+        public AsyncCommand RefreshCommand { get; }
         private DatabaseService _databaseService;
-        public RateGraphDrawable GraphDrawable { get; private set; }
+        public GraphDrawable GraphDrawable { get; private set; }
         public ObservableCollection<OperationRecord> GraphRecords { get; private set; }
 
         public double GraphWidth => GraphRecords.Count * 50; // 너비를 조정할 속성
@@ -25,9 +25,9 @@ namespace blueapp.ViewModels
 
         public GraphViewModel()
         {
-            //RefreshCommand = new AsyncCommand(RefreshGraph);
+            RefreshCommand = new AsyncCommand(RefreshGraph);
             _databaseService = new DatabaseService();
-            GraphDrawable = new RateGraphDrawable();
+            GraphDrawable = new GraphDrawable();
             GraphRecords = new ObservableCollection<OperationRecord>();
         }
 
@@ -40,17 +40,30 @@ namespace blueapp.ViewModels
 
         public async Task RefreshGraph()
         {
-            IsRefreshing = true;
-
-            // 그래프 업데이트
-            await UpdateGraphRecords();
-
-            IsRefreshing = false;
+            try
+            {
+                // 그래프 업데이트
+                await UpdateGraphRecords();
+            }
+            catch (TaskCanceledException ex)
+            {
+                // TaskCanceledException 처리
+                Debug.WriteLine($"Task was canceled: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                // 일반 예외 처리
+                Debug.WriteLine($"An error occurred: {ex.Message}");
+            }
+            finally
+            {
+                IsRefreshing = false;
+            }
         }
         #endregion
-
+        
         #region 그래프 업데이트
-        private async Task UpdateGraphRecords()
+        public async Task UpdateGraphRecords()
         {
             // 그래프 초기화
             GraphRecords.Clear();
@@ -64,11 +77,15 @@ namespace blueapp.ViewModels
             {
                 GraphRecords.Add(record);
             }
+            DrawGraph();
+        }
 
+        public void DrawGraph()
+        {
             // 그래프 그리기
             GraphDrawable.Records = new List<OperationRecord>(GraphRecords);
             // 그래프 넓이 변경 업데이트
-            OnPropertyChanged(nameof(GraphWidth)); 
+            OnPropertyChanged(nameof(GraphWidth));
         }
         #endregion
     }

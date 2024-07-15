@@ -11,19 +11,20 @@
         <vm:GraphViewModel />
     </ContentPage.BindingContext>
 
-    <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshCommand}">
+    <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshCommand}" >
         <ScrollView>
-            <Grid Padding="20" RowSpacing="20" ColumnSpacing="20" >
+            <Grid x:Name="MainGrid" Padding="20" RowSpacing="20" ColumnSpacing="20" >
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition x:Name="TopRow" Height="*"/>
+                    <RowDefinition x:Name="BottomRow" Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition x:Name="LeftColumn" Width="2*"/>
+                    <ColumnDefinition x:Name="RightColumn" Width="*"/>
                 </Grid.ColumnDefinitions>
 
                 <!-- 좌측 -->
-                <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="{AppThemeBinding Dark=#289268, Light=#3cde9e}" BorderColor="Gray">
+                <Frame x:Name="LeftFrame" Grid.Row="0" Grid.Column="0" BackgroundColor="{AppThemeBinding Dark=#289268, Light=#3cde9e}" BorderColor="Gray">
                     <Grid Grid.Row="1" Grid.Column="0" RowSpacing="20" ColumnSpacing="20">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="2*"/>
@@ -107,13 +108,24 @@
                 </Frame>
 
                 <!-- 우측 -->
-                <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="{AppThemeBinding Dark=#949d0f, Light=#dce916}" BorderColor="Gray">
-                    <StackLayout Orientation="Horizontal">
-                        <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
+                <Frame x:Name="RightFrame" Grid.Column="1" BackgroundColor="{AppThemeBinding Dark=#949d0f, Light=#dce916}" BorderColor="Gray">
+                    <Grid Padding="0" RowSpacing="20" ColumnSpacing="0" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Frame Grid.Row="0" Grid.Column="0" CornerRadius="10" HorizontalOptions="FillAndExpand" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
                             <Entry x:Name="Rate" Placeholder="{x:Static resources:AppResources.rate}" BackgroundColor="Transparent" Completed="OnRatingClicked"/>
                         </Frame>
-                        <Frame CornerRadius="4" HasShadow="True" Padding="0" BorderColor="{AppThemeBinding Dark=Gray, Light=Gray}"
-                           BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" HorizontalOptions="Start">
+
+                        <Frame Grid.Row="0" Grid.Column="1" CornerRadius="4" Padding="0" BorderColor="{AppThemeBinding Dark=Gray, Light=Gray}"
+                                   BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" HorizontalOptions="End">
                             <StackLayout Orientation="Horizontal" Spacing="10" Padding="15" >
                                 <StackLayout.Behaviors>
                                     <toolkit:TouchBehavior DefaultAnimationDuration="250"
@@ -123,7 +135,8 @@
                                    FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                             </StackLayout>
                         </Frame>
-                    </StackLayout>
+
+                    </Grid>
                 </Frame>
 
             </Grid>

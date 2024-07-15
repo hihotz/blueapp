@@ -14,6 +14,7 @@ public partial class MainPage : ContentPage
 {
     private DatabaseService _databaseService;
     private GraphViewModel _viewModel;
+    private ProductViewModel _productViewModel;
     public ObservableCollection<string> LogItems { get; set; }
 
     public MainPage()
@@ -21,12 +22,12 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         _databaseService = new DatabaseService();
         _viewModel = new GraphViewModel();
+        _productViewModel = new ProductViewModel();
         this.BindingContext = _viewModel;
         LogItems = new ObservableCollection<string>();
         LogList.ItemsSource = LogItems;
         LogItems.Insert(0, "Application is start : " + DateTime.Now.ToString());
-
-        CreateGraph();
+        _viewModel.IsRefreshing = true;
     }
 
     #region 그래프 스크롤뷰 자동스크롤
@@ -42,24 +43,62 @@ public partial class MainPage : ContentPage
     }
     #endregion
 
+    #region 레이아웃 변경
+    protected override void OnSizeAllocated(double width, double height)
+    {
+        base.OnSizeAllocated(width, height);
+
+        // 가로 모드 레이아웃
+        if (width > height)
+        {
+            if (MainGrid.RowDefinitions.Count == 2)
+                MainGrid.RowDefinitions.RemoveAt(1); // 두 번째 RowDefinition 제거
+
+            if (MainGrid.ColumnDefinitions.Count < 2)
+                MainGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto }); // 두 번째 RowDefinition 추가
+
+            Grid.SetRow(LeftFrame, 0); // 좌측 Frame
+            Grid.SetColumn(LeftFrame, 0);
+
+            Grid.SetRow(RightFrame, 0); // 우측 Frame
+            Grid.SetColumn(RightFrame, 1);
+        }
+        // 세로 모드 레이아웃
+        else
+        {
+            if (MainGrid.RowDefinitions.Count < 2)
+                MainGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto }); // 두 번째 RowDefinition 추가
+            
+            if (MainGrid.ColumnDefinitions.Count == 2)
+                MainGrid.ColumnDefinitions.RemoveAt(1); // 두 번째 RowDefinition 제거
+
+            Grid.SetRow(LeftFrame, 0); // 상단 Frame
+            Grid.SetColumn(LeftFrame, 0);
+
+            Grid.SetRow(RightFrame, 1); // 하단 Frame
+            Grid.SetColumn(RightFrame, 0);
+        }
+    }
+    #endregion
+
     #region 페이지 이동
     // 생산 관리 페이지
     private async void OnProductionManagementClicked(object sender, EventArgs e)
     {
         // 페이지 이동 
-        await Navigation.PushAsync(new ProductionPage());
+        await Navigation.PushAsync(new ProductionPage(_productViewModel));
     }
 
     // 재고 관리 페이지
     private async void OnInventoryManagementClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new InventoryPage());
+        await Navigation.PushAsync(new InventoryPage(_productViewModel));
     }
 
     // 품질 관리 페이지
     private async void OnQualityManagementClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new QualityPage());
+        await Navigation.PushAsync(new QualityPage(_productViewModel));
     }
     #endregion
 
@@ -109,7 +148,10 @@ public partial class MainPage : ContentPage
                 await DisplayAlert(AppResources.error, AppResources.success, AppResources.ok);
 
                 // 그래프 재생성
-                CreateGraph();
+                _viewModel.IsRefreshing = true;
+                // _viewModel.DrawGraph();
+                // await _viewModel.UpdateGraphRecords();
+                //await _viewModel.RefreshGraph();
             }
             else
             {

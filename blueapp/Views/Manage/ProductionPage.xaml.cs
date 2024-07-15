@@ -5,10 +5,11 @@ namespace blueapp.Views.Manage;
 
 public partial class ProductionPage : ContentPage
 {
-    private GraphViewModel _viewModel;
-    public ProductionPage()
-	{
-		InitializeComponent();
-        _viewModel = new GraphViewModel();
+    ProductViewModel _viewModel;
+    public ProductionPage(ProductViewModel _productViewModel)
+    {
+        InitializeComponent();
+
+        _viewModel = _productViewModel;
     }
 }
