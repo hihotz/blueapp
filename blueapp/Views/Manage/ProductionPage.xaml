@@ -10,7 +10,7 @@
     <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshCommand}" >
         <ScrollView>
 
-            <Grid x:Name="MainGrid" Padding="20" RowSpacing="20" ColumnSpacing="20" MinimumHeightRequest="400">
+            <Grid x:Name="MainGrid" Padding="20" RowSpacing="20" ColumnSpacing="20" >
                 <Grid.RowDefinitions>
                     <RowDefinition x:Name="TopRow" Height="*"/>
                 </Grid.RowDefinitions>
@@ -20,15 +20,15 @@
                 </Grid.ColumnDefinitions>
                 
                 <!-- 좌측 -->
-                <Frame x:Name="LeftFrame" Grid.Row="0" Grid.Column="0" BackgroundColor="{AppThemeBinding Dark=#289268, Light=#3cde9e}" BorderColor="Gray">
+                <Frame Grid.Row="0" Grid.Column="0" x:Name="LeftFrame" MinimumHeightRequest="400" BackgroundColor="{AppThemeBinding Dark=#289268, Light=#3cde9e}" BorderColor="Gray">
                     <!-- 상단 입력 entry-->
 
                     <!-- 하단 CollectionView?-->
                 </Frame>
 
                 <!-- 우측 -->
-                <Frame x:Name="RightFrame" Grid.Row="0" Grid.Column="1" BackgroundColor="{AppThemeBinding Dark=#289268, Light=#3cde9e}" BorderColor="Gray">
-                    <Grid Padding="0" RowSpacing="15" ColumnSpacing="20" >
+                <Frame x:Name="RightFrame" Grid.Row="0" Grid.Column="1" MinimumHeightRequest="200" BackgroundColor="{AppThemeBinding Dark=#289268, Light=#3cde9e}" BorderColor="Gray">
+                    <Grid Padding="0" RowSpacing="5" ColumnSpacing="20" >
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>

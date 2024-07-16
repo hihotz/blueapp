@@ -9,7 +9,7 @@
              BackgroundColor="{DynamicResource DefaultPageBackgroundColor}">
 
     <ScrollView>
-        <Grid Padding="20" RowSpacing="20" ColumnSpacing="20">
+        <Grid x:Name="MainGrid" Padding="20" RowSpacing="20" ColumnSpacing="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -20,31 +20,37 @@
             </Grid.ColumnDefinitions>
 
             <!-- 왼쪽 위 영역 -->
-            <Frame Grid.Row="0" Grid.Column="0" CornerRadius="30" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="Gray">
+            <Frame Grid.Row="0" Grid.Column="0" x:Name="LeftTopFrame" MinimumHeightRequest="150" CornerRadius="30" 
+                   BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="Gray">
+                <ScrollView Orientation="Horizontal">
                 <StackLayout Orientation="Horizontal" Spacing="15">
-                    <Frame WidthRequest="140" HeightRequest="140" VerticalOptions="Center" >
-                        <Image Source="sample.png" Aspect="AspectFill" HeightRequest="140" WidthRequest="120"/>
-                    </Frame>
-                    <VerticalStackLayout Spacing="5">
-                        <Label>
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="{x:Static resources:AppResources.user}" FontAttributes="Bold"/>
-                                    <Span Text=" : " FontAttributes="Bold" />
-                                    <Span x:Name="UserName" FontAttributes="Bold" />
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                        <Label Text="예시 : 생년월일"/>
-                        <Label Text="예시 : 성별"/>
-                        <Label Text="예시 : 주소"/>
-                        <Label Text="예시 : 최종 로그인 시간"/>
-                    </VerticalStackLayout>
-                </StackLayout>
+
+                        <Frame WidthRequest="140" HeightRequest="140" VerticalOptions="Center" >
+                            <Image Source="sample.png" Aspect="AspectFill" HeightRequest="140" WidthRequest="120"/>
+                        </Frame>
+                    
+                        <VerticalStackLayout Spacing="5">
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{x:Static resources:AppResources.user}" FontAttributes="Bold"/>
+                                        <Span Text=" : " FontAttributes="Bold" />
+                                        <Span x:Name="UserName" FontAttributes="Bold" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label Text="예시 : 생년월일"/>
+                            <Label Text="예시 : 성별"/>
+                            <Label Text="예시 : 주소"/>
+                            <Label Text="예시 : 최종 로그인 시간"/>
+                        </VerticalStackLayout>
+
+                    </StackLayout>
+                </ScrollView>
             </Frame>
 
             <!-- 오른쪽 위 영역 -->
-            <Grid Grid.Row="0" Grid.Column="1" RowSpacing="20" ColumnSpacing="20">
+            <Grid Grid.Row="0" Grid.Column="1" x:Name="RightTopGrid" MinimumHeightRequest="150" RowSpacing="20" ColumnSpacing="20">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -107,7 +113,7 @@
             </Grid>
 
             <!-- 왼쪽 아래 영역 -->
-            <Grid Grid.Row="1" Grid.Column="0" ColumnSpacing="20">
+            <Grid Grid.Row="1" Grid.Column="0" x:Name="LeftBottomGrid" MinimumHeightRequest="150"  ColumnSpacing="20">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -139,7 +145,7 @@
             </Grid>
 
             <!-- 오른쪽 아래 영역 -->
-            <Grid Grid.Row="1" Grid.Column="1" RowSpacing="20">
+            <Grid Grid.Row="1" Grid.Column="1" x:Name="RightBottomGrid" MinimumHeightRequest="150" RowSpacing="20">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -169,7 +175,7 @@
                     </StackLayout>
                 </Frame>
             </Grid>
-            
+
         </Grid>
     </ScrollView>
 </ContentPage>
