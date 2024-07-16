@@ -6,12 +6,22 @@ namespace blueapp.Views.Manage;
 public partial class ProductionPage : ContentPage
 {
     ProductViewModel _viewModel;
+
     public ProductionPage(ProductViewModel _productViewModel)
     {
         InitializeComponent();
         _viewModel = _productViewModel;
+        BindingContext = _viewModel;
         InitializeLayout();
     }
+
+    #region 페이지 로드시
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        await _viewModel.LoadProductions();
+    }
+    #endregion
 
     #region 레이아웃 변경
     // 초기 레이아웃 상태 로드
@@ -36,8 +46,8 @@ public partial class ProductionPage : ContentPage
             if (MainGrid.ColumnDefinitions.Count < 2)
                 MainGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star }); // 두 번째 RowDefinition 추가
 
-            Grid.SetRow(LeftFrame, 0); // 좌측 Frame
-            Grid.SetColumn(LeftFrame, 0);
+            Grid.SetRow(LeftGrid, 0); // 좌측 Frame
+            Grid.SetColumn(LeftGrid, 0);
 
             Grid.SetRow(RightFrame, 0); // 우측 Frame
             Grid.SetColumn(RightFrame, 1);
@@ -51,8 +61,8 @@ public partial class ProductionPage : ContentPage
             if (MainGrid.ColumnDefinitions.Count == 2)
                 MainGrid.ColumnDefinitions.RemoveAt(1); // 두 번째 RowDefinition 제거
 
-            Grid.SetRow(LeftFrame, 0); // 상단 Frame
-            Grid.SetColumn(LeftFrame, 0);
+            Grid.SetRow(LeftGrid, 0); // 상단 Frame
+            Grid.SetColumn(LeftGrid, 0);
 
             Grid.SetRow(RightFrame, 1); // 하단 Frame
             Grid.SetColumn(RightFrame, 0);
@@ -63,7 +73,7 @@ public partial class ProductionPage : ContentPage
     #region 버튼 기능
     private void AddProduction(object sender, EventArgs e)
     {
-
+        _viewModel.AddProductionCommand.Execute(null);
     }
     #endregion
 }

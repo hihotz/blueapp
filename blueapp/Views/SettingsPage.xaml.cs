@@ -15,7 +15,7 @@ public partial class SettingsPage : ContentPage
     {
         InitializeComponent();
         _loginviewmodel = new LoginViewModel();
-        _settingviewmodel = new SettingViewModel(); 
+        _settingviewmodel = new SettingViewModel();
         // 다크모드를 구현하기 위해 BindingContext 사용
         this.BindingContext = _settingviewmodel;
         InitializeApp();

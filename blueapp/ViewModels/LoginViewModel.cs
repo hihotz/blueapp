@@ -16,15 +16,15 @@ namespace blueapp.ViewModels
     public class LoginViewModel : BaseViewModel
     {
         private bool _isLoggedIn;
-        private string _loginEndpoint;
-        private string _signupEndpoint;
-        private string _deleteidEndpoint;
-        private string _changepwEndpoint;
+        private readonly string _loginEndpoint;
+        private readonly string _signupEndpoint;
+        private readonly string _deleteidEndpoint;
+        private readonly string _changepwEndpoint;
 
         public LoginViewModel()
         {
             // api 주소 불러오기
-            var (baseUrl, loginEndpoint, signupEndpoint, DeleteIDEndpoint, ChangePWEndpoint) = ApiConfigManager.LoadApiConfig();
+            var (baseUrl, loginEndpoint, signupEndpoint, DeleteIDEndpoint, ChangePWEndpoint) = ApiConfigManager_User.LoadApiConfig();
             _loginEndpoint = $"{baseUrl}{loginEndpoint}";
             _signupEndpoint = $"{baseUrl}{signupEndpoint}";
             _deleteidEndpoint = $"{baseUrl}{DeleteIDEndpoint}";

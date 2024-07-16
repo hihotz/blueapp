@@ -23,12 +23,12 @@
             <Frame Grid.Row="0" Grid.Column="0" x:Name="LeftTopFrame" MinimumHeightRequest="150" CornerRadius="30" 
                    BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="Gray">
                 <ScrollView Orientation="Horizontal">
-                <StackLayout Orientation="Horizontal" Spacing="15">
+                    <StackLayout Orientation="Horizontal" Spacing="15">
 
                         <Frame WidthRequest="140" HeightRequest="140" VerticalOptions="Center" >
                             <Image Source="sample.png" Aspect="AspectFill" HeightRequest="140" WidthRequest="120"/>
                         </Frame>
-                    
+
                         <VerticalStackLayout Spacing="5">
                             <Label>
                                 <Label.FormattedText>
