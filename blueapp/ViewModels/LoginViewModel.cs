@@ -1,14 +1,17 @@
 ﻿using blackapi.Models;
 using blueapp.Data;
+using blueapp.Models;
 using blueapp.Resources.Localization;
 using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using MvvmHelpers;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
+using System.Windows.Input;
 using System.Xml.Linq;
 
 namespace blueapp.ViewModels
@@ -20,16 +23,26 @@ namespace blueapp.ViewModels
         private readonly string _signupEndpoint;
         private readonly string _deleteidEndpoint;
         private readonly string _changepwEndpoint;
+        private readonly LoginService _loginService;
+
+        public ICommand LogoutCommand { get; }
 
         public LoginViewModel()
         {
+            _loginService = new LoginService(new HttpClient());
             // api 주소 불러오기
             var (baseUrl, loginEndpoint, signupEndpoint, DeleteIDEndpoint, ChangePWEndpoint) = ApiConfigManager_User.LoadApiConfig();
             _loginEndpoint = $"{baseUrl}{loginEndpoint}";
             _signupEndpoint = $"{baseUrl}{signupEndpoint}";
             _deleteidEndpoint = $"{baseUrl}{DeleteIDEndpoint}";
             _changepwEndpoint = $"{baseUrl}{ChangePWEndpoint}";
+
+            LogoutCommand = new Command(Logout);
+
+            //LoginAsyncCommand = new Command<Tuple<string, string>>(async (parameters) => await LoginAsync(parameters.Item1, parameters.Item2)); 
+            //AddProductionCommand = new Command(async () => await AddProduction());
         }
+
 
         #region 로그인 기능
         //로그인 유지
@@ -49,28 +62,14 @@ namespace blueapp.ViewModels
                 {
                     return new ApiResponse { StatusCode = 0, Message = AppResources.error + " : " + AppResources.text_is_empty };
                 }
-                var loginData = new
+                var loginData = new LoginModel
                 {
                     username = name,
                     password = pw
                 };
+                
+                var apiResponse = await _loginService.LoginAsync(loginData);
 
-                // 타임아웃 5초
-                var client = new HttpClient { Timeout = TimeSpan.FromSeconds(5) };
-                var json = JsonSerializer.Serialize(loginData);
-                var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-                var response = await client.PostAsync(_loginEndpoint, content);
-                var responseContent = await response.Content.ReadAsStringAsync();
-                // JSON 문자열의 이스케이프 문자 제거
-                var options = new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true,
-                };
-                var apiResponse = JsonSerializer.Deserialize<ApiResponse>(responseContent, options);
-
-                var a = apiResponse?.StatusCode;
-                var b = apiResponse?.Message;
                 if (apiResponse?.StatusCode == 200 && apiResponse != null)
                 {
                     // 로그인 성공
@@ -283,7 +282,7 @@ namespace blueapp.ViewModels
 
         #region 로그아웃 기능
         // 로그아웃 로직 예시
-        public void Logout()
+        private void Logout()
         {
             IsLoggedIn = false;
             SecureStorage.Remove("UserPW");

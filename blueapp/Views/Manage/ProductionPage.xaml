@@ -110,12 +110,13 @@
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout.Behaviors>
                                     <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#d9ce95" 
-                                                       PressedBackgroundColor="#babfd8" TouchGestureCompleted="AddProduction"/>
+                                                       PressedBackgroundColor="#babfd8" Command="{Binding AddProductionCommand}"/>
                                 </StackLayout.Behaviors>
-                                <Label Text="{x:Static resources:AppResources.info}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                <Label Text="테스트 : 샘플 추가하기" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
                                    FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                             </StackLayout>
                         </Frame>
+                        
                         <Frame Grid.Row="1" Grid.Column="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#969174, Light=#fff6c7}">
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout.Behaviors>
@@ -126,6 +127,7 @@
                                        FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                             </StackLayout>
                         </Frame>
+                        
                         <Frame Grid.Row="2" Grid.Column="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#969174, Light=#fff6c7}">
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout.Behaviors>
@@ -136,6 +138,7 @@
                                        FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                             </StackLayout>
                         </Frame>
+                        
                         <Frame Grid.Row="3" Grid.Column="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#969174, Light=#fff6c7}">
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout.Behaviors>
@@ -146,6 +149,7 @@
                                        FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                             </StackLayout>
                         </Frame>
+                        
                         <Frame Grid.Row="4" Grid.Column="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#969174, Light=#fff6c7}">
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout.Behaviors>
@@ -156,6 +160,7 @@
                                        FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                             </StackLayout>
                         </Frame>
+                        
                         <Frame Grid.Row="5" Grid.Column="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#969174, Light=#fff6c7}">
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout.Behaviors>

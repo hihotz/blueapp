@@ -14,11 +14,12 @@ namespace blueapp.ViewModels
     public class ProductViewModel : BaseViewModel
     {
         private readonly ProductionService _productionService;
-
         public ObservableCollection<ProductionModel> Productions { get; }
+        private bool isRefreshing;
+
         public ICommand RefreshCommand { get; }
         public ICommand AddProductionCommand { get; }
-        private bool isRefreshing;
+        
 
         
         public ProductViewModel()
@@ -29,12 +30,15 @@ namespace blueapp.ViewModels
             AddProductionCommand = new Command(async () => await AddProduction());
         }
 
+        #region 리프래쉬
         public bool IsRefreshing
         {
             get => isRefreshing;
             set => SetProperty(ref isRefreshing, value);
         }
+        #endregion
 
+        #region 제품 로드
         public async Task LoadProductions()
         {
             IsRefreshing = true;
@@ -58,7 +62,9 @@ namespace blueapp.ViewModels
                 IsRefreshing = false;
             }
         }
+        #endregion
 
+        #region 제품 추가
         private async Task AddProduction()
         {
             var newProduction = new ProductionModel
@@ -71,5 +77,6 @@ namespace blueapp.ViewModels
             await _productionService.AddItemAsync(newProduction);
             await LoadProductions();
         }
+        #endregion
     }
 }

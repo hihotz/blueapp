@@ -21,10 +21,13 @@ public partial class SettingsPage : ContentPage
         InitializeApp();
         InitializeLayout();
     }
+
+    #region 설정페이지 초기 로드
     public async void InitializeApp()
     {
         UserName.Text = await SecureStorage.GetAsync("UserName");
     }
+    #endregion
 
     #region 레이아웃 변경
     // 초기 레이아웃 상태 로드
@@ -117,7 +120,7 @@ public partial class SettingsPage : ContentPage
         try
         {
             // 로그아웃 처리
-            _loginviewmodel.Logout();
+            _loginviewmodel.LogoutCommand.Execute(null);
             // 페이지 전환 이벤트
             if (Application.Current != null)
             {
@@ -134,17 +137,21 @@ public partial class SettingsPage : ContentPage
     }
     #endregion
 
+    #region 다크모드
     // 다크모드 토글 
     private void OnDarkModeTouchGestureCompleted(object sender, EventArgs e)
     {
         // Switch의 현재 상태를 반전하여 토글 상태를 변경합니다.
         DarkModeToggle.IsToggled = !DarkModeToggle.IsToggled;
     }
+    #endregion
 
+    #region 정보 팝업
     private async void OnInfoClicked(object sender, EventArgs e)
     {
-        // 정보 페이지로 이동
+        // 정보 페이지 팝업 출력
         var infoPopup = new InfoPopup();
         await this.ShowPopupAsync(infoPopup);
     }
+    #endregion
 }

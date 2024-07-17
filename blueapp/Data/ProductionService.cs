@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Json;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,6 +21,8 @@ namespace blueapp.Data
         public ProductionService(HttpClient httpClient)
         {
             _httpClient = httpClient;
+            // 타임아웃 5초
+            _httpClient.Timeout = TimeSpan.FromSeconds(5); 
 
             var (baseUrl, getListEndpoint, getItemEndpoint, addItemEndpoint, updateItemEndpoint, deleteItemEndpoint) = ApiConfigManager_Production.LoadApiConfig();
 
@@ -30,38 +33,151 @@ namespace blueapp.Data
             _deleteItemEndpoint = $"{baseUrl}{deleteItemEndpoint}/";
         }
 
+        // 제품 리스트 불러오기
         public async Task<List<ProductionModel>> GetListAsync()
         {
-            var response = await _httpClient.GetAsync(_getListEndpoint);
-            response.EnsureSuccessStatusCode();
-            var productions = await response.Content.ReadFromJsonAsync<List<ProductionModel>>();
-            return productions ?? new List<ProductionModel>(); // null인 경우 빈 리스트 반환
+            try
+            {
+                var response = await _httpClient.GetAsync(_getListEndpoint);
+                response.EnsureSuccessStatusCode();
+                var productions = await response.Content.ReadFromJsonAsync<List<ProductionModel>>();
+                return productions ?? new List<ProductionModel>(); // null인 경우 빈 리스트 반환
+            }
+            catch (TaskCanceledException ex)
+            {
+                // 타임아웃 처리
+                Console.WriteLine("Request timed out." + ex.Message);
+                return new List<ProductionModel>(); // 타임아웃 발생 시 빈 리스트 반환
+            }
+            catch (HttpRequestException ex) when (ex.InnerException is SocketException)
+            {
+                // 인터넷 연결 문제 처리
+                Console.WriteLine("No internet connection.");
+                return new List<ProductionModel>(); // 인터넷 연결 문제 발생 시 빈 리스트 반환
+            }
+            catch (HttpRequestException ex)
+            {
+                // 다른 HTTP 요청 관련 예외 처리
+                Console.WriteLine("An error occurred: " + ex.Message);
+                return new List<ProductionModel>(); // 오류 발생 시 빈 리스트 반환
+            }
+
         }
 
+        // 제품 리스트 불러오기 - id 값 일치하는 제품
         public async Task<ProductionModel> GetItemAsync(int id)
         {
-            var response = await _httpClient.GetAsync(_getItemEndpoint + id);
-            response.EnsureSuccessStatusCode();
-            var productions = await response.Content.ReadFromJsonAsync<ProductionModel>();
-            return productions ?? new ProductionModel(); // null인 경우 빈 리스트 반환
+            try
+            {
+                var response = await _httpClient.GetAsync(_getItemEndpoint + id);
+                response.EnsureSuccessStatusCode();
+                var productions = await response.Content.ReadFromJsonAsync<ProductionModel>();
+                return productions ?? new ProductionModel(); // null인 경우 빈 리스트 반환
+            }
+            catch (TaskCanceledException ex)
+            {
+                // 타임아웃 처리
+                Console.WriteLine("Request timed out." + ex.Message);
+                return new ProductionModel(); // 타임아웃 발생 시 빈 모델 반환
+            }
+            catch (HttpRequestException ex) when (ex.InnerException is SocketException)
+            {
+                // 인터넷 연결 문제 처리
+                Console.WriteLine("No internet connection.");
+                return new ProductionModel(); // 인터넷 연결 문제 발생 시 빈 모델 반환
+            }
+            catch (HttpRequestException ex)
+            {
+                // 다른 HTTP 요청 관련 예외 처리
+                Console.WriteLine("An error occurred: " + ex.Message);
+                return new ProductionModel(); // 오류 발생 시 빈 모델 반환
+            }
+
         }
 
+        // 제품 추가
         public async Task<bool> AddItemAsync(ProductionModel production)
         {
-            var response = await _httpClient.PostAsJsonAsync(_addItemEndpoint, production);
-            return response.IsSuccessStatusCode;
+            try
+            {
+                var response = await _httpClient.PostAsJsonAsync(_addItemEndpoint, production);
+                return response.IsSuccessStatusCode;
+            }
+            catch (TaskCanceledException ex)
+            {
+                // 타임아웃 처리
+                Console.WriteLine("Request timed out." + ex.Message);
+                return false; // 타임아웃 발생 시 false 반환
+            }
+            catch (HttpRequestException ex) when (ex.InnerException is SocketException)
+            {
+                // 인터넷 연결 문제 처리
+                Console.WriteLine("No internet connection.");
+                return false; // 인터넷 연결 문제 발생 시 false 반환
+            }
+            catch (HttpRequestException ex)
+            {
+                // 다른 HTTP 요청 관련 예외 처리
+                Console.WriteLine("An error occurred: " + ex.Message);
+                return false; // 오류 발생 시 false 반환
+            }
         }
 
+        // 제품 수정
         public async Task<bool> UpdateItemAsync(ProductionModel production)
         {
-            var response = await _httpClient.PutAsJsonAsync(_updateItemEndpoint + production.Id, production);
-            return response.IsSuccessStatusCode;
+            try
+            {
+                var response = await _httpClient.PutAsJsonAsync(_updateItemEndpoint + production.Id, production);
+                return response.IsSuccessStatusCode;
+            }
+            catch (TaskCanceledException ex)
+            {
+                // 타임아웃 처리
+                Console.WriteLine("Request timed out." + ex.Message);
+                return false; // 타임아웃 발생 시 false 반환
+            }
+            catch (HttpRequestException ex) when (ex.InnerException is SocketException)
+            {
+                // 인터넷 연결 문제 처리
+                Console.WriteLine("No internet connection.");
+                return false; // 인터넷 연결 문제 발생 시 false 반환
+            }
+            catch (HttpRequestException ex)
+            {
+                // 다른 HTTP 요청 관련 예외 처리
+                Console.WriteLine("An error occurred: " + ex.Message);
+                return false; // 오류 발생 시 false 반환
+            }
+
         }
 
+        // 제품 삭제
         public async Task<bool> DeleteItemAsync(int id)
         {
-            var response = await _httpClient.DeleteAsync(_deleteItemEndpoint + id);
-            return response.IsSuccessStatusCode;
+            try
+            {
+                var response = await _httpClient.DeleteAsync(_deleteItemEndpoint + id);
+                return response.IsSuccessStatusCode;
+            }
+            catch (TaskCanceledException ex)
+            {
+                // 타임아웃 처리
+                Console.WriteLine("Request timed out." + ex.Message);
+                return false; // 타임아웃 발생 시 false 반환
+            }
+            catch (HttpRequestException ex) when (ex.InnerException is SocketException)
+            {
+                // 인터넷 연결 문제 처리
+                Console.WriteLine("No internet connection.");
+                return false; // 인터넷 연결 문제 발생 시 false 반환
+            }
+            catch (HttpRequestException ex)
+            {
+                // 다른 HTTP 요청 관련 예외 처리
+                Console.WriteLine("An error occurred: " + ex.Message);
+                return false; // 오류 발생 시 false 반환
+            }
         }
     }
 }

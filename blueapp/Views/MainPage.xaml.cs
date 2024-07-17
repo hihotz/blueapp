@@ -31,6 +31,7 @@ public partial class MainPage : ContentPage
         InitializeLayout();
     }
 
+
     #region 그래프 스크롤뷰 자동스크롤
     protected override void OnAppearing()
     {
@@ -52,7 +53,7 @@ public partial class MainPage : ContentPage
         double height = this.Height;
         OnSizeAllocated(width, height);
     }
-
+    
     // 창 크기 변동시 사이즈에 맞게 수정
     protected override void OnSizeAllocated(double width, double height)
     {
@@ -158,7 +159,8 @@ public partial class MainPage : ContentPage
                 await DisplayAlert(AppResources.error, AppResources.success, AppResources.ok);
 
                 // 그래프 재생성
-                _viewModel.IsRefreshing = true;
+                await _viewModel.RefreshCommand.ExecuteAsync();
+                //_viewModel.IsRefreshing = true;
                 // _viewModel.DrawGraph();
                 // await _viewModel.UpdateGraphRecords();
                 //await _viewModel.RefreshGraph();
@@ -188,11 +190,6 @@ public partial class MainPage : ContentPage
         }
         // 변환 불가하거나 범위를 벗어나면 false 반환
         return false;
-    }
-
-    private async void CreateGraph()
-    {
-        await _viewModel.RefreshGraph();
     }
     #endregion
 
