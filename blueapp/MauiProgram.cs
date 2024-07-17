@@ -1,4 +1,4 @@
-﻿using blueapp.Data;
+﻿using blueapp.Service;
 using blueapp.ViewModels;
 using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;

@@ -1,12 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <ApiSettings>
-    <BaseUrl>api 주소</BaseUrl>
-    <LoginEndpoint>api/user/login</LoginEndpoint>
-    <RegisterEndpoint>api/user/register</RegisterEndpoint>
-    <DeleteIDEndpoint>api/user/deleteid</DeleteIDEndpoint>
-    <ChangePWEndpoint>api/user/changepassword</ChangePWEndpoint>
+    <BaseUrl>http://localhost:5014</BaseUrl>
   </ApiSettings>
+  <User>
+    <LoginEndpoint>/api/user/login</LoginEndpoint>
+    <RegisterEndpoint>/api/user/register</RegisterEndpoint>
+    <DeleteIDEndpoint>/api/user/deleteid</DeleteIDEndpoint>
+    <ChangePWEndpoint>/api/user/changepassword</ChangePWEndpoint>
+  </User>
+  <Production>
+    <GetListEndpoint>/api/Production/getlist</GetListEndpoint>
+    <GetItemEndpoint>/api/Production/getitem</GetItemEndpoint>
+    <AddItemEndpoint>/api/Production/additem</AddItemEndpoint>
+    <UpdateItemEndpoint>/api/Production/updateitem</UpdateItemEndpoint>
+    <DeleteItemEndpoint>/api/Production/deleteitem</DeleteItemEndpoint>
+  </Production>
 </configuration>
 <!--속성 - 빌드 작업 : 포함 리소스-->
 <!--로컬환경 구동시 http://localhost:5014/-->

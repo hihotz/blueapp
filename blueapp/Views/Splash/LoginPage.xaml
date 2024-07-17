@@ -28,7 +28,6 @@
                     </VerticalStackLayout>
 
                     <StackLayout Orientation="Horizontal" Spacing="15">
-
                         <VerticalStackLayout Spacing="-15" >
                             <StackLayout Orientation="Horizontal" VerticalOptions="Center">
                                 <CheckBox x:Name="SaveUserNameCheck" VerticalOptions="Center" Color="Blue"/>

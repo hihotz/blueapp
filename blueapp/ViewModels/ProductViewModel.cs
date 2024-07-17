@@ -1,5 +1,5 @@
-﻿using blueapp.Data;
-using blueapp.Models;
+﻿using blueapp.Models;
+using blueapp.Service;
 using MvvmHelpers;
 using System;
 using System.Collections.Generic;
@@ -14,18 +14,16 @@ namespace blueapp.ViewModels
     public class ProductViewModel : BaseViewModel
     {
         private readonly ProductionService _productionService;
-        public ObservableCollection<ProductionModel> Productions { get; }
+        public ObservableCollection<Product_ProductionModel> Productions { get; }
         private bool isRefreshing;
 
         public ICommand RefreshCommand { get; }
         public ICommand AddProductionCommand { get; }
         
-
-        
         public ProductViewModel()
         {
             _productionService = new ProductionService(new HttpClient());
-            Productions = new ObservableCollection<ProductionModel>();
+            Productions = new ObservableCollection<Product_ProductionModel>();
             RefreshCommand = new Command(async () => await LoadProductions());
             AddProductionCommand = new Command(async () => await AddProduction());
         }
@@ -67,7 +65,8 @@ namespace blueapp.ViewModels
         #region 제품 추가
         private async Task AddProduction()
         {
-            var newProduction = new ProductionModel
+            // 임의 제품 추가
+            var newProduction = new Product_ProductionModel
             {
                 ProductName = "New Product",
                 ProductionDate = DateTime.Now,

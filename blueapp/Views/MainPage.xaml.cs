@@ -1,6 +1,6 @@
-using blueapp.Data;
 using blueapp.Models;
 using blueapp.Resources.Localization;
+using blueapp.Service;
 using blueapp.ViewModels;
 using blueapp.Views.Manage;
 using CommunityToolkit.Maui.Alerts;

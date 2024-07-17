@@ -1,6 +1,6 @@
 ﻿using blackapi.Models;
-using blueapp.Data;
 using blueapp.Resources.Localization;
+using blueapp.Service;
 using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using MvvmHelpers;

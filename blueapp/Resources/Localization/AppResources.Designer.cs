@@ -313,6 +313,33 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   새로운 비밀번호과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string password_new {
+            get {
+                return ResourceManager.GetString("password_new", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   새로운 비밀번호 확인과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string password_new_check {
+            get {
+                return ResourceManager.GetString("password_new_check", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   이전 비밀번호과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string password_old {
+            get {
+                return ResourceManager.GetString("password_old", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   제품 이름과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string product_name {

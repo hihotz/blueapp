@@ -29,15 +29,15 @@
 
                 <VerticalStackLayout Grid.Row="2" Spacing="3">
                     <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
-                        <Entry x:Name="OldPasswordEntry" Placeholder="{x:Static resources:AppResources.password}" BackgroundColor="Transparent"
+                        <Entry x:Name="OldPasswordEntry" Placeholder="{x:Static resources:AppResources.password_old}" BackgroundColor="Transparent"
                                IsPassword="True" />
                     </Frame>
                     <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
-                        <Entry x:Name="NewPasswordEntry" Placeholder="{x:Static resources:AppResources.password}" BackgroundColor="Transparent"
+                        <Entry x:Name="NewPasswordEntry" Placeholder="{x:Static resources:AppResources.password_new}" BackgroundColor="Transparent"
                                IsPassword="True" />
                     </Frame>
                     <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
-                        <Entry x:Name="NewPasswordCheckEntry" Placeholder="{x:Static resources:AppResources.password}" BackgroundColor="Transparent"
+                        <Entry x:Name="NewPasswordCheckEntry" Placeholder="{x:Static resources:AppResources.password_new_check}" BackgroundColor="Transparent"
                                IsPassword="True" Completed="OnOkClicked"/>
                     </Frame>
                 </VerticalStackLayout>

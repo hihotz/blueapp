@@ -4,6 +4,7 @@ using System.Windows.Input;
 using blueapp.Data;
 using blueapp.Models;
 using blueapp.Resources.Localization;
+using blueapp.Service;
 using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Views;

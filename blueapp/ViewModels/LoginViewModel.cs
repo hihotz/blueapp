@@ -2,6 +2,7 @@
 using blueapp.Data;
 using blueapp.Models;
 using blueapp.Resources.Localization;
+using blueapp.Service;
 using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using MvvmHelpers;
@@ -38,11 +39,8 @@ namespace blueapp.ViewModels
             _changepwEndpoint = $"{baseUrl}{ChangePWEndpoint}";
 
             LogoutCommand = new Command(Logout);
-
-            //LoginAsyncCommand = new Command<Tuple<string, string>>(async (parameters) => await LoginAsync(parameters.Item1, parameters.Item2)); 
-            //AddProductionCommand = new Command(async () => await AddProduction());
+            // 비동기로 변경시 LogoutCommand = new Command(async () => await Logout());
         }
-
 
         #region 로그인 기능
         //로그인 유지
@@ -62,12 +60,12 @@ namespace blueapp.ViewModels
                 {
                     return new ApiResponse { StatusCode = 0, Message = AppResources.error + " : " + AppResources.text_is_empty };
                 }
-                var loginData = new LoginModel
+                var loginData = new User_LoginModel
                 {
-                    username = name,
-                    password = pw
+                    UserName = name,
+                    Password = pw
                 };
-                
+
                 var apiResponse = await _loginService.LoginAsync(loginData);
 
                 if (apiResponse?.StatusCode == 200 && apiResponse != null)
@@ -108,30 +106,18 @@ namespace blueapp.ViewModels
                 {
                     return new ApiResponse { StatusCode = 0, Message = AppResources.error + " : " + AppResources.text_is_empty };
                 }
-                var loginData = new
+                var registerdata = new User_RegisterModel
                 {
-                    username = name,
-                    password = pw
+                    UserName = name,
+                    Password = pw
                 };
 
-                // 타임아웃 5초
-                var client = new HttpClient { Timeout = TimeSpan.FromSeconds(5) };
-                var json = JsonSerializer.Serialize(loginData);
-                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var apiResponse = await _loginService.RegisterAsync(registerdata);
 
-                var response = await client.PostAsync(_signupEndpoint, content);
-                var responseContent = await response.Content.ReadAsStringAsync();
-                // JSON 문자열의 이스케이프 문자 제거
-                var options = new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true,
-                };
-                var apiResponse = JsonSerializer.Deserialize<ApiResponse>(responseContent, options);
-
-                var a = apiResponse?.StatusCode;
-                var b = apiResponse?.Message;
                 if (apiResponse?.StatusCode == 200 && apiResponse != null)
                 {
+                    // 로그인 성공
+                    IsLoggedIn = true;
                     return apiResponse;
                 }
                 else
@@ -164,27 +150,16 @@ namespace blueapp.ViewModels
                 // name, pw 값이 비어있는지 확인
                 if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(pw))
                 {
-                    return new ApiResponse { StatusCode = 0, Message = AppResources.text_is_empty };
+                    return new ApiResponse { StatusCode = 0, Message = AppResources.error + " : " + AppResources.text_is_empty };
                 }
-                var loginData = new
+                
+                var deleteidData = new User_DeleteID
                 {
-                    username = name,
-                    password = pw
+                    UserName = name,
+                    Password = pw
                 };
 
-                // 타임아웃 5초
-                var client = new HttpClient { Timeout = TimeSpan.FromSeconds(5) };
-                var json = JsonSerializer.Serialize(loginData);
-                var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-                var response = await client.PostAsync(_deleteidEndpoint, content);
-                var responseContent = await response.Content.ReadAsStringAsync();
-                // JSON 문자열의 이스케이프 문자 제거
-                var options = new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true,
-                };
-                var apiResponse = JsonSerializer.Deserialize<ApiResponse>(responseContent, options);
+                var apiResponse = await _loginService.DeleteIDAsync(deleteidData);
 
                 if (apiResponse?.StatusCode == 200 && apiResponse != null)
                 {
@@ -216,42 +191,38 @@ namespace blueapp.ViewModels
         #endregion
 
         #region 비밀번호 수정
-        // 회원탈퇴 로직
+        // 비밀번호 수정 로직
         public async Task<ApiResponse> ChangePWAsync(string oldpw, string newpw, string newpwcheck)
         {
             try
             {
-                // name, pw 값이 비어있는지 확인
+                // id 값이 비어있는지 확인
+                string? userid = await SecureStorage.GetAsync("UserName");
+                if (string.IsNullOrEmpty(userid))
+                {
+                    return new ApiResponse { StatusCode = 0, Message = AppResources.id + AppResources.error };
+                }
+
+                //pw 값이 비어있는지 확인
                 if (string.IsNullOrEmpty(oldpw) || string.IsNullOrEmpty(newpw) || string.IsNullOrEmpty(newpwcheck))
                 {
                     return new ApiResponse { StatusCode = 0, Message = AppResources.text_is_empty };
                 }
+
                 // 새로운 비밀번호를 동일하게 입력했는지 확인
                 if (newpw != newpwcheck)
                 {
                     return new ApiResponse { StatusCode = 0, Message = AppResources.pw_not_match };
                 }
 
-                var loginData = new
+                var changepwData = new User_ChangePW
                 {
-                    username = await SecureStorage.GetAsync("UserName"),
-                    oldpassword = oldpw,
-                    newpassword = newpw
+                    UserName = userid,
+                    OldPassword = oldpw,
+                    NewPassword = newpw
                 };
 
-                // 타임아웃 5초
-                var client = new HttpClient { Timeout = TimeSpan.FromSeconds(5) };
-                var json = JsonSerializer.Serialize(loginData);
-                var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-                var response = await client.PostAsync(_changepwEndpoint, content);
-                var responseContent = await response.Content.ReadAsStringAsync();
-                // JSON 문자열의 이스케이프 문자 제거
-                var options = new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true,
-                };
-                var apiResponse = JsonSerializer.Deserialize<ApiResponse>(responseContent, options);
+                var apiResponse = await _loginService.ChangePWAsync(changepwData);
 
                 if (apiResponse?.StatusCode == 200 && apiResponse != null)
                 {
@@ -281,7 +252,7 @@ namespace blueapp.ViewModels
         #endregion
 
         #region 로그아웃 기능
-        // 로그아웃 로직 예시
+        // 로그아웃 로직
         private void Logout()
         {
             IsLoggedIn = false;

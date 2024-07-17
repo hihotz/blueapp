@@ -201,6 +201,15 @@
   <data name="password" xml:space="preserve">
     <value>비밀번호</value>
   </data>
+  <data name="password_new" xml:space="preserve">
+    <value>새로운 비밀번호</value>
+  </data>
+  <data name="password_new_check" xml:space="preserve">
+    <value>새로운 비밀번호 확인</value>
+  </data>
+  <data name="password_old" xml:space="preserve">
+    <value>이전 비밀번호</value>
+  </data>
   <data name="production_date" xml:space="preserve">
     <value>생산일</value>
   </data>
