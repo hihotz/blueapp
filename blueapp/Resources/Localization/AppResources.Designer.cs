@@ -313,6 +313,24 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   제품 이름과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string product_name {
+            get {
+                return ResourceManager.GetString("product_name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   생산일과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string production_date {
+            get {
+                return ResourceManager.GetString("production_date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   생산 관리 페이지과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string production_management_page {
@@ -354,6 +372,15 @@ namespace blueapp.Resources.Localization {
         internal static string quality_management_page {
             get {
                 return ResourceManager.GetString("quality_management_page", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   수량과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string quantity {
+            get {
+                return ResourceManager.GetString("quantity", resourceCulture);
             }
         }
         

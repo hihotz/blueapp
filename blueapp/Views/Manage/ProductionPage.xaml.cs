@@ -36,35 +36,42 @@ public partial class ProductionPage : ContentPage
     protected override void OnSizeAllocated(double width, double height)
     {
         base.OnSizeAllocated(width, height);
-
+        
         // 가로 모드 레이아웃
         if (width > height)
         {
-            if (MainGrid.RowDefinitions.Count == 2)
+            if (MainGrid.RowDefinitions.Count >= 3)
                 MainGrid.RowDefinitions.RemoveAt(1); // 두 번째 RowDefinition 제거
-
-            if (MainGrid.ColumnDefinitions.Count < 2)
+        
+            if (MainGrid.ColumnDefinitions.Count == 1)
                 MainGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star }); // 두 번째 RowDefinition 추가
-
-            Grid.SetRow(LeftGrid, 0); // 좌측 Frame
-            Grid.SetColumn(LeftGrid, 0);
-
-            Grid.SetRow(RightFrame, 0); // 우측 Frame
+        
+            
+            Grid.SetRow(LeftTopGrid, 0); // 좌측 상단
+            Grid.SetColumn(LeftTopGrid, 0);
+            
+            Grid.SetRow(LeftFrame, 1); // 좌측 Frame
+            Grid.SetColumn(LeftFrame, 0);
+            
+            Grid.SetRow(RightFrame, 1); // 우측 Frame
             Grid.SetColumn(RightFrame, 1);
         }
         // 세로 모드 레이아웃
         else
         {
-            if (MainGrid.RowDefinitions.Count < 2)
-                MainGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto }); // 두 번째 RowDefinition 추가
-
+            if (MainGrid.RowDefinitions.Count < 3)
+                MainGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Star }); // 두 번째 RowDefinition 추가
+            
             if (MainGrid.ColumnDefinitions.Count == 2)
                 MainGrid.ColumnDefinitions.RemoveAt(1); // 두 번째 RowDefinition 제거
-
-            Grid.SetRow(LeftGrid, 0); // 상단 Frame
-            Grid.SetColumn(LeftGrid, 0);
-
-            Grid.SetRow(RightFrame, 1); // 하단 Frame
+            
+            Grid.SetRow(LeftTopGrid, 0); // 좌측 상단
+            Grid.SetColumn(LeftTopGrid, 0);
+            
+            Grid.SetRow(LeftFrame, 1); // 상단 Frame
+            Grid.SetColumn(LeftFrame, 0);
+            
+            Grid.SetRow(RightFrame, 2); // 하단 Frame
             Grid.SetColumn(RightFrame, 0);
         }
     }

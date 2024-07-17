@@ -201,6 +201,9 @@
   <data name="password" xml:space="preserve">
     <value>비밀번호</value>
   </data>
+  <data name="production_date" xml:space="preserve">
+    <value>생산일</value>
+  </data>
   <data name="production_management_page" xml:space="preserve">
     <value>생산 관리 페이지</value>
   </data>
@@ -210,11 +213,17 @@
   <data name="production_stop" xml:space="preserve">
     <value>생산 정지</value>
   </data>
+  <data name="product_name" xml:space="preserve">
+    <value>제품 이름</value>
+  </data>
   <data name="pw_not_match" xml:space="preserve">
     <value>패스워드가 일치하지 않습니다</value>
   </data>
   <data name="quality_management_page" xml:space="preserve">
     <value>품질 관리 페이지</value>
+  </data>
+  <data name="quantity" xml:space="preserve">
+    <value>수량</value>
   </data>
   <data name="rate" xml:space="preserve">
     <value>평가</value>
