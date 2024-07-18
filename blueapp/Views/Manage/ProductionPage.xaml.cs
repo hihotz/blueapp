@@ -1,5 +1,7 @@
 using blueapp.Data;
 using blueapp.ViewModels;
+using blueapp.Views.Manage.Production;
+using CommunityToolkit.Maui.Views;
 
 namespace blueapp.Views.Manage;
 
@@ -78,9 +80,11 @@ public partial class ProductionPage : ContentPage
     #endregion
 
     #region 버튼 기능
-    private void AddProduction(object sender, EventArgs e)
+    private async void AddProduction(object sender, EventArgs e)
     {
-        _viewModel.AddProductionCommand.Execute(null);
+        // 비밀번호 변경 팝업 호출
+        var AdditemPopup = new AdditemPage(_viewModel);
+        await this.ShowPopupAsync(AdditemPopup);
     }
     #endregion
 }

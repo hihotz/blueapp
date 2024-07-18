@@ -14,18 +14,18 @@ namespace blueapp.ViewModels
     public class ProductViewModel : BaseViewModel
     {
         private readonly ProductionService _productionService;
-        public ObservableCollection<Product_ProductionModel> Productions { get; }
+        public ObservableCollection<Product_Production_AdditemModel> Productions { get; }
         private bool isRefreshing;
 
         public ICommand RefreshCommand { get; }
-        public ICommand AddProductionCommand { get; }
+        // public ICommand AddProductionCommand { get; }
         
         public ProductViewModel()
         {
             _productionService = new ProductionService(new HttpClient());
-            Productions = new ObservableCollection<Product_ProductionModel>();
+            Productions = new ObservableCollection<Product_Production_AdditemModel>();
             RefreshCommand = new Command(async () => await LoadProductions());
-            AddProductionCommand = new Command(async () => await AddProduction());
+            // AddProductionCommand = new Command(async () => await AddProduction());
         }
 
         #region 리프래쉬
@@ -63,18 +63,24 @@ namespace blueapp.ViewModels
         #endregion
 
         #region 제품 추가
-        private async Task AddProduction()
+        public async Task<bool> AddProduction(string productname, int count)
         {
-            // 임의 제품 추가
-            var newProduction = new Product_ProductionModel
+            var newProduction = new Product_Production_AdditemModel
             {
-                ProductName = "New Product",
+                ProductName = productname,
                 ProductionDate = DateTime.Now,
-                Quantity = 100
+                Quantity = count
             };
 
-            await _productionService.AddItemAsync(newProduction);
-            await LoadProductions();
+            if (await _productionService.AddItemAsync(newProduction))
+            {
+                await LoadProductions();
+                return true; 
+            }
+            else
+            {
+                return false;
+            }
         }
         #endregion
     }

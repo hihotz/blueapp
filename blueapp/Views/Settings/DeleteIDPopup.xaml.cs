@@ -48,6 +48,8 @@ public partial class DeleteIDPopup : Popup
                     MainText = AppResources.delete_id + AppResources.success,
                     OkText = AppResources.ok
                 };
+
+                // 메인페이지로 이동
                 if (Application.Current?.MainPage !=null)
                 {                     
                     await Application.Current.MainPage.ShowPopupAsync(alertPopup);

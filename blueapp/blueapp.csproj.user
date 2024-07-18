@@ -19,6 +19,9 @@
     <MauiXaml Update="Views\MainPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Views\Manage\Production\AdditemPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Views\Manage\InventoryPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

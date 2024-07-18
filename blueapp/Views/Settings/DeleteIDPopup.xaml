@@ -6,47 +6,52 @@
                xmlns:resources="clr-namespace:blueapp.Resources.Localization"
                Color="{x:Static Colors.Transparent}">
 
-    <Border Padding="20" BackgroundColor="{AppThemeBinding Dark=#1c1c1c, Light=#ffffff}">
-        <!-- Border를 사용하여 모서리를 둥글게 설정 -->
-        <Border.StrokeShape>
-            <RoundRectangle CornerRadius="5"/>
-        </Border.StrokeShape>
+    <Grid>
+        <Border Padding="20" BackgroundColor="{AppThemeBinding Dark=#1c1c1c, Light=#ffffff}">
+            <!-- Border를 사용하여 모서리를 둥글게 설정 -->
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="5"/>
+            </Border.StrokeShape>
 
-        <VerticalStackLayout>
-            <Label Text="{x:Static resources:AppResources.delete_id}" HorizontalOptions="Center" LineBreakMode="WordWrap" />
-            <Grid Padding="20" RowSpacing="5">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <ScrollView Grid.Row="0" MaximumWidthRequest="200" MaximumHeightRequest="150">
-                    <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
-                        <Label x:Name="maintext" Text="{x:Static resources:AppResources.msg_deleteid_confirm}" LineBreakMode="WordWrap" />
-                    </Frame>
-                </ScrollView>
+            <VerticalStackLayout>
+                <Label Text="{x:Static resources:AppResources.delete_id}" HorizontalOptions="Center" LineBreakMode="WordWrap" />
+                <Grid Padding="20" RowSpacing="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <ScrollView Grid.Row="0" MaximumWidthRequest="200" MaximumHeightRequest="150">
+                        <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
+                            <Label x:Name="maintext" Text="{x:Static resources:AppResources.msg_deleteid_confirm}" LineBreakMode="WordWrap" />
+                        </Frame>
+                    </ScrollView>
 
-                <VerticalStackLayout Grid.Row="2" Spacing="3">
-                    <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
-                        <Label x:Name="UsernameEntry" BackgroundColor="Transparent"/>
-                    </Frame>
-                    <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
-                        <Entry x:Name="PasswordEntry" Placeholder="{x:Static resources:AppResources.password}" BackgroundColor="Transparent"
-                           IsPassword="True" Completed="OnOkClicked"/>
-                    </Frame>
-                </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Row="2" Spacing="3">
+                        <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
+                            <Label x:Name="UsernameEntry" BackgroundColor="Transparent"/>
+                        </Frame>
+                        <Frame CornerRadius="10" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}" BorderColor="LightGray" Padding="5">
+                            <Entry x:Name="PasswordEntry" Placeholder="{x:Static resources:AppResources.password}" BackgroundColor="Transparent"
+                                   IsPassword="True" Completed="OnOkClicked"/>
+                        </Frame>
+                    </VerticalStackLayout>
 
-                <Grid Grid.Row="3" ColumnDefinitions="*,Auto,*,Auto,*" RowDefinitions="Auto" Padding="0" ColumnSpacing="0" HorizontalOptions="FillAndExpand">
-                    <Button Text="{x:Static resources:AppResources.ok}" Clicked="OnOkClicked" Grid.Column="1" HorizontalOptions="StartAndExpand"/>
-                    <Button Text="{x:Static resources:AppResources.cancel}" Clicked="OnCancleClicked" Grid.Column="3" HorizontalOptions="EndAndExpand"/>
+                    <Grid Grid.Row="3" Padding="0" ColumnSpacing="0" HorizontalOptions="FillAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Text="{x:Static resources:AppResources.ok}" Clicked="OnOkClicked" HorizontalOptions="Center"/>
+                        <Button Grid.Column="1" Text="{x:Static resources:AppResources.cancel}" Clicked="OnCancleClicked" HorizontalOptions="Center"/>
+                    </Grid>
                 </Grid>
-            </Grid>
-
-            <ActivityIndicator x:Name="LoadingOverlay" IsVisible="False" IsRunning="True" VerticalOptions="Center" HorizontalOptions="Center" Color="{AppThemeBinding Dark=#ffffff, Light=#2c2c2c}"/>
-        </VerticalStackLayout>
-        
-    </Border>
-
-
+            </VerticalStackLayout>
+        </Border>
+        <!-- 로딩 인디케이터 및 반투명 오버레이 -->
+        <Grid x:Name="LoadingOverlay" BackgroundColor="Black" Opacity="0.6" IsVisible="False">
+            <ActivityIndicator IsRunning="True" VerticalOptions="Center" HorizontalOptions="Center" Color="{AppThemeBinding Dark=#ffffff, Light=#2c2c2c}"/>
+        </Grid>
+    </Grid>
 </toolkit:Popup>

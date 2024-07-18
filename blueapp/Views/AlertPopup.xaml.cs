@@ -15,6 +15,7 @@ public partial class AlertPopup : Popup
         OkClicked?.Invoke(sender, e);
         await this.CloseAsync();
     }
+
     private async void OnCancleClicked(object sender, EventArgs e)
     {
         await this.CloseAsync();

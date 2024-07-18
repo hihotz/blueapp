@@ -141,6 +141,9 @@
   <data name="check" xml:space="preserve">
     <value>확인</value>
   </data>
+  <data name="count" xml:space="preserve">
+    <value>개수</value>
+  </data>
   <data name="darkmode" xml:space="preserve">
     <value>다크모드</value>
   </data>
@@ -189,6 +192,9 @@
   <data name="logout" xml:space="preserve">
     <value>로그아웃</value>
   </data>
+  <data name="msg_addproduct_confirm" xml:space="preserve">
+    <value>제품을 추가하시겠습니까?</value>
+  </data>
   <data name="msg_changepw_confirm" xml:space="preserve">
     <value>비밀번호를 변경하시겠습니까?</value>
   </data>
@@ -221,6 +227,9 @@
   </data>
   <data name="production_stop" xml:space="preserve">
     <value>생산 정지</value>
+  </data>
+  <data name="product_add" xml:space="preserve">
+    <value>제품 추가</value>
   </data>
   <data name="product_name" xml:space="preserve">
     <value>제품 이름</value>

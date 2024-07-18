@@ -133,6 +133,15 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   개수과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string count {
+            get {
+                return ResourceManager.GetString("count", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   다크모드과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string darkmode {
@@ -277,6 +286,15 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   제품을 추가하시겠습니까?과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string msg_addproduct_confirm {
+            get {
+                return ResourceManager.GetString("msg_addproduct_confirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   비밀번호를 변경하시겠습니까?과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string msg_changepw_confirm {
@@ -336,6 +354,15 @@ namespace blueapp.Resources.Localization {
         internal static string password_old {
             get {
                 return ResourceManager.GetString("password_old", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   제품 추가과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string product_add {
+            get {
+                return ResourceManager.GetString("product_add", resourceCulture);
             }
         }
         

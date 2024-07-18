@@ -110,7 +110,7 @@
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout.Behaviors>
                                     <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#d9ce95" 
-                                                       PressedBackgroundColor="#babfd8" Command="{Binding AddProductionCommand}"/>
+                                                       PressedBackgroundColor="#babfd8" TouchGestureCompleted="AddProduction"/>
                                 </StackLayout.Behaviors>
                                 <Label Text="테스트 : 샘플 추가하기" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
                                    FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
