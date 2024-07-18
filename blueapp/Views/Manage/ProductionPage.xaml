@@ -38,7 +38,7 @@
 
             <!-- 데이터 출력 부분 -->
             <Frame Grid.Row="1" Grid.Column="0" x:Name="LeftFrame" BackgroundColor="{AppThemeBinding Dark=#289268, Light=#3cde9e}" BorderColor="Transparent">
-                <CollectionView ItemsSource="{Binding Productions}" x:Name="ProductionCollectionView" BackgroundColor="Gray">
+                <CollectionView ItemsSource="{Binding Productions}" ItemSizingStrategy="MeasureFirstItem" x:Name="ProductionCollectionView" BackgroundColor="Gray">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Grid Padding="0" RowSpacing="0" ColumnSpacing="0">
@@ -167,7 +167,7 @@
                                     <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#d9ce95" 
                                                        PressedBackgroundColor="#babfd8" TouchGestureCompleted="AddProduction"/>
                                 </StackLayout.Behaviors>
-                                <Label Text="{x:Static resources:AppResources.info}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                                <Label Text="뒤로가기" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
                                    FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                             </StackLayout>
                         </Frame>

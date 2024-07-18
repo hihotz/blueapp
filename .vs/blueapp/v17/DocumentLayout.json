@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\Github\\blueapp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\views\\splash\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\views\\splash\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\views\\manage\\productionpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\views\\manage\\productionpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Github\\blueapp\\blueapp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:blueapp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\views\\manage\\productionpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\views\\manage\\productionpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\views\\manage\\production\\additempage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\views\\manage\\production\\additempage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\views\\splash\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\views\\splash\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\views\\manage\\production\\additempage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,24 +43,12 @@
       "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\service\\productionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\views\\manage\\productionpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\views\\manage\\productionpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\viewmodels\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\viewmodels\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\views\\splash\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\views\\splash\\registerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\views\\splash\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\views\\splash\\registerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\viewmodels\\settingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,20 +59,12 @@
       "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\views\\settings\\deleteidpopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\views\\manage\\production\\additempage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\views\\manage\\production\\additempage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|C:\\Github\\blueapp\\blueapp\\resources\\localization\\appresources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
       "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\resources\\localization\\appresources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\resources\\config\\apiconfig.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\resources\\config\\apiconfig.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\views\\settings\\deleteidpopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -69,10 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\views\\splash\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\views\\splash\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\views\\settings\\infopopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -151,10 +155,6 @@
       "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\views\\splash\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Github\\blueapp\\blueapp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:blueapp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|c:\\github\\blueapp\\blueapp\\views\\splash\\splashpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E99EB6E6-291E-441F-A94E-28321828A914}|blueapp\\blueapp.csproj|solutionrelative:blueapp\\views\\splash\\splashpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
@@ -166,110 +166,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdditemPage.xaml.cs",
-              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\Manage\\Production\\AdditemPage.xaml.cs",
-              "RelativeDocumentMoniker": "blueapp\\Views\\Manage\\Production\\AdditemPage.xaml.cs",
-              "ToolTip": "C:\\Github\\blueapp\\blueapp\\Views\\Manage\\Production\\AdditemPage.xaml.cs",
-              "RelativeToolTip": "blueapp\\Views\\Manage\\Production\\AdditemPage.xaml.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABsAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T01:47:19.83Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductViewModel.cs",
-              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\ViewModels\\ProductViewModel.cs",
-              "RelativeDocumentMoniker": "blueapp\\ViewModels\\ProductViewModel.cs",
-              "ToolTip": "C:\\Github\\blueapp\\blueapp\\ViewModels\\ProductViewModel.cs",
-              "RelativeToolTip": "blueapp\\ViewModels\\ProductViewModel.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAAEIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T07:58:40.526Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductionService.cs",
-              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Service\\ProductionService.cs",
-              "RelativeDocumentMoniker": "blueapp\\Service\\ProductionService.cs",
-              "ToolTip": "C:\\Github\\blueapp\\blueapp\\Service\\ProductionService.cs",
-              "RelativeToolTip": "blueapp\\Service\\ProductionService.cs",
-              "ViewState": "AQIAAH4AAAAAAAAAAAAAAGgAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T07:53:34.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\ViewModels\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "blueapp\\ViewModels\\LoginViewModel.cs",
-              "ToolTip": "C:\\Github\\blueapp\\blueapp\\ViewModels\\LoginViewModel.cs",
-              "RelativeToolTip": "blueapp\\ViewModels\\LoginViewModel.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAWwGsAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T02:26:08.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProductionPage.xaml",
-              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\Manage\\ProductionPage.xaml",
-              "RelativeDocumentMoniker": "blueapp\\Views\\Manage\\ProductionPage.xaml",
-              "ToolTip": "C:\\Github\\blueapp\\blueapp\\Views\\Manage\\ProductionPage.xaml",
-              "RelativeToolTip": "blueapp\\Views\\Manage\\ProductionPage.xaml",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAAwGUAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-16T08:02:22.615Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "RegisterPage.xaml.cs",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\Splash\\RegisterPage.xaml.cs",
               "RelativeDocumentMoniker": "blueapp\\Views\\Splash\\RegisterPage.xaml.cs",
               "ToolTip": "C:\\Github\\blueapp\\blueapp\\Views\\Splash\\RegisterPage.xaml.cs",
               "RelativeToolTip": "blueapp\\Views\\Splash\\RegisterPage.xaml.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACkAAABDAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAEwEcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-18T05:03:53.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductionPage.xaml.cs",
-              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\Manage\\ProductionPage.xaml.cs",
-              "RelativeDocumentMoniker": "blueapp\\Views\\Manage\\ProductionPage.xaml.cs",
-              "ToolTip": "C:\\Github\\blueapp\\blueapp\\Views\\Manage\\ProductionPage.xaml.cs",
-              "RelativeToolTip": "blueapp\\Views\\Manage\\ProductionPage.xaml.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAAAFUAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T08:09:33.37Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SettingViewModel.cs",
-              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\ViewModels\\SettingViewModel.cs",
-              "RelativeDocumentMoniker": "blueapp\\ViewModels\\SettingViewModel.cs",
-              "ToolTip": "C:\\Github\\blueapp\\blueapp\\ViewModels\\SettingViewModel.cs",
-              "RelativeToolTip": "blueapp\\ViewModels\\SettingViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvxEAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T02:23:17.145Z",
               "EditorCaption": ""
             },
             {
@@ -287,84 +196,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DeleteIDPopup.xaml.cs",
-              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\Settings\\DeleteIDPopup.xaml.cs",
-              "RelativeDocumentMoniker": "blueapp\\Views\\Settings\\DeleteIDPopup.xaml.cs",
-              "ToolTip": "C:\\Github\\blueapp\\blueapp\\Views\\Settings\\DeleteIDPopup.xaml.cs",
-              "RelativeToolTip": "blueapp\\Views\\Settings\\DeleteIDPopup.xaml.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAAAEQAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T01:34:09.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AdditemPage.xaml",
-              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\Manage\\Production\\AdditemPage.xaml",
-              "RelativeDocumentMoniker": "blueapp\\Views\\Manage\\Production\\AdditemPage.xaml",
-              "ToolTip": "C:\\Github\\blueapp\\blueapp\\Views\\Manage\\Production\\AdditemPage.xaml",
-              "RelativeToolTip": "blueapp\\Views\\Manage\\Production\\AdditemPage.xaml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACQAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-18T02:17:56.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AppResources.resx",
-              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Resources\\Localization\\AppResources.resx",
-              "RelativeDocumentMoniker": "blueapp\\Resources\\Localization\\AppResources.resx",
-              "ToolTip": "C:\\Github\\blueapp\\blueapp\\Resources\\Localization\\AppResources.resx",
-              "RelativeToolTip": "blueapp\\Resources\\Localization\\AppResources.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-07-17T01:28:03.448Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ApiConfig.xml",
-              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Resources\\Config\\ApiConfig.xml",
-              "RelativeDocumentMoniker": "blueapp\\Resources\\Config\\ApiConfig.xml",
-              "ToolTip": "C:\\Github\\blueapp\\blueapp\\Resources\\Config\\ApiConfig.xml",
-              "RelativeToolTip": "blueapp\\Resources\\Config\\ApiConfig.xml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-07-17T01:27:57.466Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 1,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "blueapp\\Views\\MainPage.xaml.cs",
               "ToolTip": "C:\\Github\\blueapp\\blueapp\\Views\\MainPage.xaml.cs",
               "RelativeToolTip": "blueapp\\Views\\MainPage.xaml.cs",
-              "ViewState": "AQIAAKMAAAAAAAAAAAAIwL8AAAAVAAAA",
+              "ViewState": "AQIAAIYAAAAAAAAAAAAIwJ8AAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-16T08:13:11.136Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "LoginPage.xaml",
-              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\Splash\\LoginPage.xaml",
-              "RelativeDocumentMoniker": "blueapp\\Views\\Splash\\LoginPage.xaml",
-              "ToolTip": "C:\\Github\\blueapp\\blueapp\\Views\\Splash\\LoginPage.xaml",
-              "RelativeToolTip": "blueapp\\Views\\Splash\\LoginPage.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-16T08:13:23.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 6,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\MainPage.xaml",
               "RelativeDocumentMoniker": "blueapp\\Views\\MainPage.xaml",
@@ -377,7 +222,169 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdditemPage.xaml",
+              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\Manage\\Production\\AdditemPage.xaml",
+              "RelativeDocumentMoniker": "blueapp\\Views\\Manage\\Production\\AdditemPage.xaml",
+              "ToolTip": "C:\\Github\\blueapp\\blueapp\\Views\\Manage\\Production\\AdditemPage.xaml",
+              "RelativeToolTip": "blueapp\\Views\\Manage\\Production\\AdditemPage.xaml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACQAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-18T02:17:56.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductionPage.xaml.cs",
+              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\Manage\\ProductionPage.xaml.cs",
+              "RelativeDocumentMoniker": "blueapp\\Views\\Manage\\ProductionPage.xaml.cs",
+              "ToolTip": "C:\\Github\\blueapp\\blueapp\\Views\\Manage\\ProductionPage.xaml.cs",
+              "RelativeToolTip": "blueapp\\Views\\Manage\\ProductionPage.xaml.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAIwFUAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T08:09:33.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.g.i.cs",
+              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeDocumentMoniker": "blueapp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "ToolTip": "C:\\Github\\blueapp\\blueapp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeToolTip": "blueapp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAIwEoAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T00:58:49.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductionPage.xaml",
+              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\Manage\\ProductionPage.xaml",
+              "RelativeDocumentMoniker": "blueapp\\Views\\Manage\\ProductionPage.xaml",
+              "ToolTip": "C:\\Github\\blueapp\\blueapp\\Views\\Manage\\ProductionPage.xaml",
+              "RelativeToolTip": "blueapp\\Views\\Manage\\ProductionPage.xaml",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAuwDEAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-16T08:02:22.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AdditemPage.xaml.cs",
+              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\Manage\\Production\\AdditemPage.xaml.cs",
+              "RelativeDocumentMoniker": "blueapp\\Views\\Manage\\Production\\AdditemPage.xaml.cs",
+              "ToolTip": "C:\\Github\\blueapp\\blueapp\\Views\\Manage\\Production\\AdditemPage.xaml.cs",
+              "RelativeToolTip": "blueapp\\Views\\Manage\\Production\\AdditemPage.xaml.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAABAwBsAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T01:47:19.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "blueapp\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Github\\blueapp\\blueapp\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "blueapp\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAWwGsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T02:26:08.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductionService.cs",
+              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Service\\ProductionService.cs",
+              "RelativeDocumentMoniker": "blueapp\\Service\\ProductionService.cs",
+              "ToolTip": "C:\\Github\\blueapp\\blueapp\\Service\\ProductionService.cs",
+              "RelativeToolTip": "blueapp\\Service\\ProductionService.cs",
+              "ViewState": "AQIAAHwAAAAAAAAAAABAwGgAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T07:53:34.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductViewModel.cs",
+              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\ViewModels\\ProductViewModel.cs",
+              "RelativeDocumentMoniker": "blueapp\\ViewModels\\ProductViewModel.cs",
+              "ToolTip": "C:\\Github\\blueapp\\blueapp\\ViewModels\\ProductViewModel.cs",
+              "RelativeToolTip": "blueapp\\ViewModels\\ProductViewModel.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAABAwEIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T07:58:40.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SettingViewModel.cs",
+              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\ViewModels\\SettingViewModel.cs",
+              "RelativeDocumentMoniker": "blueapp\\ViewModels\\SettingViewModel.cs",
+              "ToolTip": "C:\\Github\\blueapp\\blueapp\\ViewModels\\SettingViewModel.cs",
+              "RelativeToolTip": "blueapp\\ViewModels\\SettingViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxEAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T02:23:17.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DeleteIDPopup.xaml.cs",
+              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\Settings\\DeleteIDPopup.xaml.cs",
+              "RelativeDocumentMoniker": "blueapp\\Views\\Settings\\DeleteIDPopup.xaml.cs",
+              "ToolTip": "C:\\Github\\blueapp\\blueapp\\Views\\Settings\\DeleteIDPopup.xaml.cs",
+              "RelativeToolTip": "blueapp\\Views\\Settings\\DeleteIDPopup.xaml.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAAAEQAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T01:34:09.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AppResources.resx",
+              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Resources\\Localization\\AppResources.resx",
+              "RelativeDocumentMoniker": "blueapp\\Resources\\Localization\\AppResources.resx",
+              "ToolTip": "C:\\Github\\blueapp\\blueapp\\Resources\\Localization\\AppResources.resx",
+              "RelativeToolTip": "blueapp\\Resources\\Localization\\AppResources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-07-17T01:28:03.448Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 15,
+              "Title": "ApiConfig.xml",
+              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Resources\\Config\\ApiConfig.xml",
+              "RelativeDocumentMoniker": "blueapp\\Resources\\Config\\ApiConfig.xml",
+              "ToolTip": "C:\\Github\\blueapp\\blueapp\\Resources\\Config\\ApiConfig.xml",
+              "RelativeToolTip": "blueapp\\Resources\\Config\\ApiConfig.xml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-07-17T01:27:57.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\Splash\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "blueapp\\Views\\Splash\\LoginPage.xaml",
+              "ToolTip": "C:\\Github\\blueapp\\blueapp\\Views\\Splash\\LoginPage.xaml",
+              "RelativeToolTip": "blueapp\\Views\\Splash\\LoginPage.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-16T08:13:23.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "SettingsPage.xaml",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\SettingsPage.xaml",
               "RelativeDocumentMoniker": "blueapp\\Views\\SettingsPage.xaml",
@@ -385,12 +392,11 @@
               "RelativeToolTip": "blueapp\\Views\\SettingsPage.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-18T02:40:29.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-18T02:40:29.216Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "DeleteIDPopup.xaml",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\Settings\\DeleteIDPopup.xaml",
               "RelativeDocumentMoniker": "blueapp\\Views\\Settings\\DeleteIDPopup.xaml",
@@ -398,12 +404,11 @@
               "RelativeToolTip": "blueapp\\Views\\Settings\\DeleteIDPopup.xaml",
               "ViewState": "AQIAAB0AAAAAAAAAAAAuwDMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-17T07:42:55.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T07:42:55.321Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "InfoPopup.xaml",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\Settings\\InfoPopup.xaml",
               "RelativeDocumentMoniker": "blueapp\\Views\\Settings\\InfoPopup.xaml",
@@ -411,12 +416,11 @@
               "RelativeToolTip": "blueapp\\Views\\Settings\\InfoPopup.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-18T02:22:39.66Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-18T02:22:39.66Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Product_Production_AdditemModel.cs",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Models\\Product_Production_AdditemModel.cs",
               "RelativeDocumentMoniker": "blueapp\\Models\\Product_Production_AdditemModel.cs",
@@ -424,12 +428,11 @@
               "RelativeToolTip": "blueapp\\Models\\Product_Production_AdditemModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvw0AAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T06:16:28.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T06:16:28.682Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "GraphViewModel.cs",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\ViewModels\\GraphViewModel.cs",
               "RelativeDocumentMoniker": "blueapp\\ViewModels\\GraphViewModel.cs",
@@ -437,12 +440,11 @@
               "RelativeToolTip": "blueapp\\ViewModels\\GraphViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T03:47:52.112Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T03:47:52.112Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "LoginService.cs",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Service\\LoginService.cs",
               "RelativeDocumentMoniker": "blueapp\\Service\\LoginService.cs",
@@ -450,12 +452,11 @@
               "RelativeToolTip": "blueapp\\Service\\LoginService.cs",
               "ViewState": "AQIAABkAAAAAAAAAAABAwCIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T05:56:24.06Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T05:56:24.06Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "AlertPopup.xaml.cs",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\AlertPopup.xaml.cs",
               "RelativeDocumentMoniker": "blueapp\\Views\\AlertPopup.xaml.cs",
@@ -463,12 +464,11 @@
               "RelativeToolTip": "blueapp\\Views\\AlertPopup.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvxEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T04:18:19.866Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T04:18:19.866Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "AlertPopup.xaml",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\AlertPopup.xaml",
               "RelativeDocumentMoniker": "blueapp\\Views\\AlertPopup.xaml",
@@ -481,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "ApiConfig.example.xml",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Resources\\Config\\ApiConfig.example.xml",
               "RelativeDocumentMoniker": "blueapp\\Resources\\Config\\ApiConfig.example.xml",
@@ -489,12 +489,11 @@
               "RelativeToolTip": "blueapp\\Resources\\Config\\ApiConfig.example.xml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-07-17T01:27:58.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T01:27:58.715Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "ApiConfigManager_User.cs",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Data\\ApiConfigManager_User.cs",
               "RelativeDocumentMoniker": "blueapp\\Data\\ApiConfigManager_User.cs",
@@ -502,12 +501,11 @@
               "RelativeToolTip": "blueapp\\Data\\ApiConfigManager_User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwkAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T06:46:27.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T06:46:27.771Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "OperationRecord.cs",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Models\\OperationRecord.cs",
               "RelativeDocumentMoniker": "blueapp\\Models\\OperationRecord.cs",
@@ -515,12 +513,11 @@
               "RelativeToolTip": "blueapp\\Models\\OperationRecord.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvxEAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T06:45:02.799Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T06:45:02.799Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "User_LoginModel.cs",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Models\\User_LoginModel.cs",
               "RelativeDocumentMoniker": "blueapp\\Models\\User_LoginModel.cs",
@@ -528,12 +525,11 @@
               "RelativeToolTip": "blueapp\\Models\\User_LoginModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T06:15:39.559Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T06:15:39.559Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "User_RegisterModel.cs",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Models\\User_RegisterModel.cs",
               "RelativeDocumentMoniker": "blueapp\\Models\\User_RegisterModel.cs",
@@ -541,12 +537,11 @@
               "RelativeToolTip": "blueapp\\Models\\User_RegisterModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvw0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T06:44:21.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T06:44:21.981Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "ApiResponse.cs",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Models\\ApiResponse.cs",
               "RelativeDocumentMoniker": "blueapp\\Models\\ApiResponse.cs",
@@ -554,12 +549,11 @@
               "RelativeToolTip": "blueapp\\Models\\ApiResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T08:09:37.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T08:09:37.117Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "AppLog.cs",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Models\\AppLog.cs",
               "RelativeDocumentMoniker": "blueapp\\Models\\AppLog.cs",
@@ -567,12 +561,11 @@
               "RelativeToolTip": "blueapp\\Models\\AppLog.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T06:28:11.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T06:28:11.587Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "User_DeleteID.cs",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Models\\User_DeleteID.cs",
               "RelativeDocumentMoniker": "blueapp\\Models\\User_DeleteID.cs",
@@ -580,12 +573,11 @@
               "RelativeToolTip": "blueapp\\Models\\User_DeleteID.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvw0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T07:49:44.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T07:49:44.771Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "User_ChangePW.cs",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Models\\User_ChangePW.cs",
               "RelativeDocumentMoniker": "blueapp\\Models\\User_ChangePW.cs",
@@ -593,12 +585,11 @@
               "RelativeToolTip": "blueapp\\Models\\User_ChangePW.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T07:00:29.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T07:00:29.14Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "ChangePWPopup.xaml",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\Settings\\ChangePWPopup.xaml",
               "RelativeDocumentMoniker": "blueapp\\Views\\Settings\\ChangePWPopup.xaml",
@@ -606,12 +597,11 @@
               "RelativeToolTip": "blueapp\\Views\\Settings\\ChangePWPopup.xaml",
               "ViewState": "AQIAABgAAAAAAAAAAADwvyUAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-17T07:38:15.24Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T07:38:15.24Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "DatabaseService.cs",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Service\\DatabaseService.cs",
               "RelativeDocumentMoniker": "blueapp\\Service\\DatabaseService.cs",
@@ -619,12 +609,11 @@
               "RelativeToolTip": "blueapp\\Service\\DatabaseService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T07:44:23.241Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T07:44:23.241Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "SplashViewModel.cs",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\ViewModels\\SplashViewModel.cs",
               "RelativeDocumentMoniker": "blueapp\\ViewModels\\SplashViewModel.cs",
@@ -632,24 +621,11 @@
               "RelativeToolTip": "blueapp\\ViewModels\\SplashViewModel.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAADwvxgAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T03:56:04.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T03:56:04.383Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 37,
-              "Title": "App.g.i.cs",
-              "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
-              "RelativeDocumentMoniker": "blueapp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
-              "ToolTip": "C:\\Github\\blueapp\\blueapp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
-              "RelativeToolTip": "blueapp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAWwEoAAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T00:58:49.247Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
               "Title": "LoginPage.xaml.cs",
               "DocumentMoniker": "C:\\Github\\blueapp\\blueapp\\Views\\Splash\\LoginPage.xaml.cs",
               "RelativeDocumentMoniker": "blueapp\\Views\\Splash\\LoginPage.xaml.cs",
@@ -657,8 +633,7 @@
               "RelativeToolTip": "blueapp\\Views\\Splash\\LoginPage.xaml.cs",
               "ViewState": "AQIAABQAAAAAAAAAAAAmwJMAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T04:18:27.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T04:18:27.138Z"
             },
             {
               "$type": "Document",
@@ -670,8 +645,7 @@
               "RelativeToolTip": "blueapp\\Views\\Splash\\SplashPage.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-16T08:13:27.34Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-16T08:13:27.34Z"
             }
           ]
         }

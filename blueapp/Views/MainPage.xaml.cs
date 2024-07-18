@@ -17,12 +17,23 @@ public partial class MainPage : ContentPage
     private ProductViewModel _productViewModel;
     public ObservableCollection<string> LogItems { get; set; }
 
+    // 페이지 
+    private ProductionPage _productionPage;
+    private InventoryPage _inventoryPage;
+    private QualityPage _qualityPage;
+
     public MainPage()
     {
         InitializeComponent();
         _databaseService = new DatabaseService();
         _viewModel = new GraphViewModel();
         _productViewModel = new ProductViewModel();
+
+        // 페이지
+        _productionPage = new ProductionPage(_productViewModel);
+        _inventoryPage = new InventoryPage(_productViewModel);
+        _qualityPage = new QualityPage(_productViewModel);
+
         this.BindingContext = _viewModel;
         LogItems = new ObservableCollection<string>();
         LogList.ItemsSource = LogItems;
@@ -97,19 +108,19 @@ public partial class MainPage : ContentPage
     private async void OnProductionManagementClicked(object sender, EventArgs e)
     {
         // 페이지 이동 
-        await Navigation.PushAsync(new ProductionPage(_productViewModel));
+        await Navigation.PushAsync(_productionPage);
     }
 
     // 재고 관리 페이지
     private async void OnInventoryManagementClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new InventoryPage(_productViewModel));
+        await Navigation.PushAsync(_inventoryPage);
     }
-
+    
     // 품질 관리 페이지
     private async void OnQualityManagementClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new QualityPage(_productViewModel));
+        await Navigation.PushAsync(_qualityPage);
     }
     #endregion
 
