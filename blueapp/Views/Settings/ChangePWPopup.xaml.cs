@@ -9,7 +9,7 @@ namespace blueapp.Views.Settings;
 public partial class ChangePWPopup : Popup
 {
     private LoginViewModel _loginviewmodel;
-    public ChangePWPopup(LoginViewModel loginviewmodel)
+    internal ChangePWPopup(LoginViewModel loginviewmodel)
     {
         InitializeComponent();
         _loginviewmodel = loginviewmodel;
@@ -30,9 +30,9 @@ public partial class ChangePWPopup : Popup
                 // 페이지 전환 이벤트
                 if (Application.Current != null)
                 {
-                    var loginPage = new LoginPage();
-                    Application.Current.MainPage = loginPage;
-                    await loginPage.FadeTo(1, 100);
+                    //var loginPage = new LoginPage();
+                    Application.Current.MainPage = LoginPage.Instance;
+                    await LoginPage.Instance.FadeTo(1, 100);
                 }
 
                 // 회원탈퇴 성공 팝업알림

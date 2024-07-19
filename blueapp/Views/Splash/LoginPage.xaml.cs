@@ -10,8 +10,9 @@ namespace blueapp.Views.Splash;
 public partial class LoginPage : ContentPage
 {
     private LoginViewModel _loginviewmodel;
-
-    public LoginPage()
+    // 싱글톤 인스턴스를 보관할 static 변수
+    private static LoginPage? _instance = null;
+    private LoginPage()
 	{
 		InitializeComponent();
         _loginviewmodel = new LoginViewModel();
@@ -19,6 +20,21 @@ public partial class LoginPage : ContentPage
         AutoLoginCheck.IsChecked = Preferences.Get("AutoLogin", false);
         LoadSavedUserData();
     }
+
+    #region 싱글톤
+    // 싱글톤 인스턴스를 반환하는 메서드
+    public static LoginPage Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = new LoginPage();
+            }
+            return _instance;
+        }
+    }
+     #endregion
 
     #region 테스트 코드
     // 테스트 코드

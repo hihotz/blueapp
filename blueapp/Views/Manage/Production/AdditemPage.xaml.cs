@@ -10,7 +10,7 @@ public partial class AdditemPage : Popup
 {
     private ProductViewModel _productviewmodel;
 
-    public AdditemPage(ProductViewModel productviewmodel)
+    internal AdditemPage(ProductViewModel productviewmodel)
     {
         InitializeComponent();
         _productviewmodel = productviewmodel;

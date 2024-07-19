@@ -4,8 +4,14 @@ namespace blueapp.Views.Settings;
 
 public partial class InfoPopup : Popup
 {
-	public InfoPopup()
+	internal InfoPopup()
 	{
 		InitializeComponent();
-	}
+    }
+
+    // ÆË¾÷ÀÌ ´ÝÈú ¶§ È£ÃâµÇ´Â ¸Þ¼­µå
+    private void ClosePopup(object sender, EventArgs e)
+    {
+        Close();
+    }
 }

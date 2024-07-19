@@ -21,12 +21,12 @@ public partial class AlertPopup : Popup
         await this.CloseAsync();
     }
 
-    public string MainText
+    internal string MainText
     {
         get => maintext.Text;
         set => maintext.Text = value;
     }
-    public string OkText
+    internal string OkText
     {
         get => OK.Text;
         set => OK.Text = value;

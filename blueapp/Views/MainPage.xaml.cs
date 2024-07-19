@@ -15,7 +15,7 @@ public partial class MainPage : ContentPage
     private DatabaseService _databaseService;
     private GraphViewModel _viewModel;
     private ProductViewModel _productViewModel;
-    public ObservableCollection<string> LogItems { get; set; }
+    protected ObservableCollection<string> LogItems { get; set; }
 
     // 페이지 
     private ProductionPage _productionPage;
@@ -41,7 +41,6 @@ public partial class MainPage : ContentPage
         _viewModel.IsRefreshing = true;
         InitializeLayout();
     }
-
 
     #region 그래프 스크롤뷰 자동스크롤
     protected override void OnAppearing()
@@ -107,20 +106,40 @@ public partial class MainPage : ContentPage
     // 생산 관리 페이지
     private async void OnProductionManagementClicked(object sender, EventArgs e)
     {
-        // 페이지 이동 
-        await Navigation.PushAsync(_productionPage);
+        try
+        {
+            await Navigation.PushAsync(_productionPage);
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert(AppResources.error, AppResources.error + " : " + ex.Message, AppResources.ok);
+        }
     }
 
     // 재고 관리 페이지
     private async void OnInventoryManagementClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(_inventoryPage);
+        try
+        {
+            await Navigation.PushAsync(_inventoryPage);
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert(AppResources.error, AppResources.error + " : " + ex.Message, AppResources.ok);
+        }
     }
     
     // 품질 관리 페이지
     private async void OnQualityManagementClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(_qualityPage);
+        try
+        {
+            await Navigation.PushAsync(_qualityPage);
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert(AppResources.error, AppResources.error + " : " + ex.Message, AppResources.ok);
+        }
     }
     #endregion
 

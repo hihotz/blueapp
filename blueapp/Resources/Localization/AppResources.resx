@@ -183,6 +183,9 @@
   <data name="inventory_management_page" xml:space="preserve">
     <value>재고 관리 페이지</value>
   </data>
+  <data name="language" xml:space="preserve">
+    <value>언어</value>
+  </data>
   <data name="loading" xml:space="preserve">
     <value>로딩중</value>
   </data>

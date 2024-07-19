@@ -9,18 +9,18 @@ public partial class ProductionPage : ContentPage
 {
     ProductViewModel _viewModel;
 
-    public ProductionPage(ProductViewModel _productViewModel)
+    internal ProductionPage(ProductViewModel _productViewModel)
     {
         InitializeComponent();
         _viewModel = _productViewModel;
         BindingContext = _viewModel;
+        InitializeApp();
         InitializeLayout();
     }
 
     #region 페이지 로드시
-    protected override async void OnAppearing()
+    private async void InitializeApp()
     {
-        base.OnAppearing();
         await _viewModel.LoadProductions();
     }
     #endregion

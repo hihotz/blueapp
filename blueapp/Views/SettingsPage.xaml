@@ -99,14 +99,14 @@
                     </StackLayout>
                 </Frame>
 
-                <!-- 로그아웃 -->
+                <!-- 언어변경 -->
                 <Frame Grid.Row="1" Grid.Column="1" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#7388bb, Light=#cad9fe}">
                     <StackLayout Orientation="Horizontal">
                         <StackLayout.Behaviors>
                             <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#93aeee" 
-                                                   PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLogoutClicked"/>
+                                                   PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLanguageClicked"/>
                         </StackLayout.Behaviors>
-                        <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                        <Label Text="{x:Static resources:AppResources.language}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
                                 FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                     </StackLayout>
                 </Frame>

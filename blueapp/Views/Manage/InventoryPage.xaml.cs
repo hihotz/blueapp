@@ -5,7 +5,7 @@ namespace blueapp.Views.Manage;
 public partial class InventoryPage : ContentPage
 {
 	ProductViewModel _viewModel;
-	public InventoryPage(ProductViewModel _productViewModel)
+    internal InventoryPage(ProductViewModel _productViewModel)
 	{
 		InitializeComponent();
 
