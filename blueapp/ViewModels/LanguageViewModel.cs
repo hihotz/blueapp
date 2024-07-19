@@ -7,17 +7,21 @@ using System.Linq;
 using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace blueapp.ViewModels
 {
     public class LanguageViewModel : BaseViewModel
     {
         private ResourceManager _resourceManager;
-
+        public ICommand SetLanguageCommand { get; }
+  
         public LanguageViewModel()
         {
             _resourceManager = new ResourceManager("blueapp.Resources.Localization.AppResources", typeof(LanguageViewModel).Assembly);
             CultureInfo.CurrentUICulture = new CultureInfo(Preferences.Get("Language", "ko")); // 기본 언어 설정
+
+            SetLanguageCommand = new Command<int>(SetLanguage);
         }
 
         public string this[string key]
@@ -29,7 +33,8 @@ namespace blueapp.ViewModels
             }
         }
 
-        public void SetLanguage(int selectedIndex)
+        #region 언어설정
+        private void SetLanguage(int selectedIndex)
         {
             Preferences.Set("LanguageCode", selectedIndex);
             switch (selectedIndex)
@@ -43,30 +48,12 @@ namespace blueapp.ViewModels
             }
         }
 
-        public void Change(string code)
+        private void Change(string code)
         {
             Preferences.Set("Language", code);
             CultureInfo.CurrentUICulture = new CultureInfo(code);
             OnPropertyChanged(string.Empty); // 모든 바인딩된 속성 갱신
         }
-
-        // private void ChangeAppLanguage(string languageCode)
-        // {
-        //     CultureInfo.CurrentCulture = new CultureInfo(languageCode);
-        //     CultureInfo.CurrentUICulture = new CultureInfo(languageCode);
-        // 
-        //     if (Application.Current != null)
-        //     {
-        //         Application.Current.MainPage = new AppShell();
-        //         Task.Run(async () =>
-        //         {
-        //             await Application.Current.MainPage.Dispatcher.DispatchAsync(async () =>
-        //             {
-        //                 //SettingsPage로 이동
-        //                 await Shell.Current.GoToAsync("//SettingsPage");
-        //             });
-        //         });
-        //     }
-        // }
+        #endregion
     }
 }

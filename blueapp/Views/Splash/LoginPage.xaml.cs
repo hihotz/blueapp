@@ -27,7 +27,6 @@ public partial class LoginPage : ContentPage
     // 테스트 코드
     private async void OnTestClicked(object sender, EventArgs e)
     {
-        // AppShell로 페이지 전환
         // 페이지 전환 이벤트
         if (Application.Current != null)
         {
@@ -40,19 +39,9 @@ public partial class LoginPage : ContentPage
     #endregion
 
     #region 언어설정
-    // private void OnLanguageClicked(object sender, EventArgs e)
-    // {
-    //     // 언어설정 팝업 호출
-    //     var languagePopup = new LanguagePopup();
-    //     this.ShowPopup(languagePopup);
-    // }
-
     private void OnLanguagePickerSelectedIndexChanged(object sender, EventArgs e)
     {
-        if (_languageviewModel != null)
-        {
-            _languageviewModel.SetLanguage(LanguagePicker.SelectedIndex);
-        }
+        _languageviewModel?.SetLanguageCommand.Execute(LanguagePicker.SelectedIndex);
     }
 
     private async void GoToLoginPage(object sender, EventArgs e)
