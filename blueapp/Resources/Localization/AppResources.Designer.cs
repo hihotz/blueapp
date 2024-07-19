@@ -268,6 +268,15 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   언어 변경과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string language_change {
+            get {
+                return ResourceManager.GetString("language_change", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   로딩중과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string loading {

@@ -186,6 +186,9 @@
   <data name="language" xml:space="preserve">
     <value>hello world</value>
   </data>
+  <data name="language_change" xml:space="preserve">
+    <value>hello world</value>
+  </data>
   <data name="loading" xml:space="preserve">
     <value>hello world</value>
   </data>

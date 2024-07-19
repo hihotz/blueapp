@@ -1,4 +1,5 @@
-﻿using blueapp.Views.Splash;
+﻿using blueapp.ViewModels;
+using blueapp.Views.Splash;
 using System.ComponentModel;
 
 namespace blueapp
@@ -6,10 +7,13 @@ namespace blueapp
     public partial class App : Application, INotifyPropertyChanged
     {
         public static new App? Current => Application.Current as App;
+        public static LanguageViewModel? LanguageViewModel { get; private set; }
+
         public App()
         {
             InitializeComponent();
             LoadPreferences();
+            LanguageViewModel = new LanguageViewModel();
             MainPage = new SplashPage();
         }
 

@@ -104,9 +104,9 @@
                     <StackLayout Orientation="Horizontal">
                         <StackLayout.Behaviors>
                             <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#93aeee" 
-                                                   PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLanguageClicked"/>
+                                                   PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnLogoutClicked"/>
                         </StackLayout.Behaviors>
-                        <Label Text="{x:Static resources:AppResources.language}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                        <Label Text="{x:Static resources:AppResources.logout}" TextColor="{AppThemeBinding Dark=White, Light=Black}" 
                                 FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                     </StackLayout>
                 </Frame>

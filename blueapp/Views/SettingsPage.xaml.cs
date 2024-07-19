@@ -100,15 +100,6 @@ public partial class SettingsPage : ContentPage
     }
     #endregion
 
-    #region 언어설정
-    private void OnLanguageClicked(object sender, EventArgs e)
-    {
-        // 언어설정 팝업 호출
-        var languagePopup = new LanguagePopup();
-        this.ShowPopup(languagePopup);
-    }
-    #endregion
-
     #region 회원정보 관련(비밀번호변경, 회원탈퇴, 로그아웃)
     // 비밀번호변경
     private async void OnChangePasswordClicked(object sender, EventArgs e)
@@ -136,10 +127,10 @@ public partial class SettingsPage : ContentPage
             // 페이지 전환 이벤트
             if (Application.Current != null)
             {
-                //var loginPage = new LoginPage();
+                var loginPage = new LoginPage();
                 await this.FadeTo(0, 100);
-                Application.Current.MainPage = LoginPage.Instance;
-                await LoginPage.Instance.FadeTo(1, 100);
+                Application.Current.MainPage = loginPage;
+                await loginPage.FadeTo(1, 100);
             }
         }
         catch (Exception ex)

@@ -43,7 +43,7 @@
     <MauiXaml Update="Views\Settings\InfoPopup.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Views\Settings\LanguagePopup.xaml">
+    <MauiXaml Update="Views\Splash\LanguagePopup.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Views\Splash\LoginPage.xaml">

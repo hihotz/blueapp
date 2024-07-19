@@ -10,7 +10,7 @@
              BackgroundColor="#a0e2ff">
 
     <Grid>
-        <VerticalStackLayout VerticalOptions="Center" Padding="20">
+        <VerticalStackLayout VerticalOptions="Center" Padding="20" Spacing="5">
             <!--로그인-->
             <Frame MaximumWidthRequest="350" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
 
@@ -67,8 +67,23 @@
                     </StackLayout>
                 </VerticalStackLayout>
             </Frame>
-            <VerticalStackLayout>
-                <Button Text="테스트 버튼" Clicked="OnTestClicked" HorizontalOptions="Center"/>
+            <Frame MaximumWidthRequest="350" Padding="0" BackgroundColor="{AppThemeBinding Dark=#2c2c2c, Light=#ffffff}">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Fill" HorizontalOptions="Fill" Padding="3">
+                    <Picker x:Name="LanguagePicker" HorizontalOptions="FillAndExpand" Title="{x:Static resources:AppResources.language}" SelectedIndexChanged="OnLanguagePickerSelectedIndexChanged">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>한국어</x:String>
+                                <x:String>English</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                        <Picker.SelectedIndex>0</Picker.SelectedIndex>
+                    </Picker>
+                    <Button Text="{x:Static resources:AppResources.language_change}" HorizontalOptions="End" Clicked="GoToLoginPage" />
+                    
+                </StackLayout>
+            </Frame>
+            <VerticalStackLayout MaximumWidthRequest="350">
+                <Button Text="테스트 버튼" Clicked="OnTestClicked" />
             </VerticalStackLayout>
         </VerticalStackLayout>
         

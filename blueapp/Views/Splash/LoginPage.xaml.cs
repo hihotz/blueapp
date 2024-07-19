@@ -10,31 +10,18 @@ namespace blueapp.Views.Splash;
 public partial class LoginPage : ContentPage
 {
     private LoginViewModel _loginviewmodel;
-    // 싱글톤 인스턴스를 보관할 static 변수
-    private static LoginPage? _instance = null;
-    private LoginPage()
-	{
-		InitializeComponent();
+    private LanguageViewModel _languageviewModel;
+
+    public LoginPage()
+    {
+        InitializeComponent();
         _loginviewmodel = new LoginViewModel();
+        _languageviewModel = new LanguageViewModel();
         SaveUserNameCheck.IsChecked = Preferences.Get("SaveUserName", false);
         AutoLoginCheck.IsChecked = Preferences.Get("AutoLogin", false);
         LoadSavedUserData();
+        LoadLanguage();
     }
-
-    #region 싱글톤
-    // 싱글톤 인스턴스를 반환하는 메서드
-    public static LoginPage Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = new LoginPage();
-            }
-            return _instance;
-        }
-    }
-     #endregion
 
     #region 테스트 코드
     // 테스트 코드
@@ -48,6 +35,46 @@ public partial class LoginPage : ContentPage
             await this.FadeTo(0, 100);
             Application.Current.MainPage = appShell;
             await appShell.FadeTo(1, 100);
+        }
+    }
+    #endregion
+
+    #region 언어설정
+    // private void OnLanguageClicked(object sender, EventArgs e)
+    // {
+    //     // 언어설정 팝업 호출
+    //     var languagePopup = new LanguagePopup();
+    //     this.ShowPopup(languagePopup);
+    // }
+
+    private void OnLanguagePickerSelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (_languageviewModel != null)
+        {
+            _languageviewModel.SetLanguage(LanguagePicker.SelectedIndex);
+        }
+    }
+
+    private async void GoToLoginPage(object sender, EventArgs e)
+    {
+        if (Application.Current != null)
+        {
+            var loginPage = new LoginPage();
+            Application.Current.MainPage = loginPage;
+            await loginPage.FadeTo(1, 100);
+        }
+    }
+
+    // 언어 설정 불러오기
+    private void LoadLanguage()
+    {
+        try
+        {
+            LanguagePicker.SelectedIndex = Preferences.Get("LanguageCode", 1);
+        }
+        catch (Exception ex)
+        {
+            DisplayAlert(AppResources.error, AppResources.error + ex.Message, AppResources.ok);
         }
     }
     #endregion
@@ -195,7 +222,7 @@ public partial class LoginPage : ContentPage
         }
     }
     #endregion
-    
+
     #region 회원가입 페이지로 이동
     private async void OnRegisterClicked(object sender, EventArgs e)
     {

@@ -77,10 +77,10 @@ public partial class RegisterPage : ContentPage
             // 페이지 전환 이벤트
             if (Application.Current != null)
             {
-                //var loginPage = new LoginPage();
+                var loginPage = new LoginPage();
                 await this.FadeTo(0, 100);
-                Application.Current.MainPage = LoginPage.Instance;
-                await LoginPage.Instance.FadeTo(1, 100);
+                Application.Current.MainPage = loginPage;
+                await loginPage.FadeTo(1, 100);
             }
         }
         catch (Exception ex)
