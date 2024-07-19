@@ -115,15 +115,6 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
-        ///   비밀번호 변경과(와) 유사한 지역화된 문자열을 찾습니다.
-        /// </summary>
-        internal static string change_password {
-            get {
-                return ResourceManager.GetString("change_password", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   확인과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string check {
@@ -250,7 +241,7 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
-        ///   재고 관리 페이지과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   재고 관리과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string inventory_management_page {
             get {
@@ -331,6 +322,15 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
+        ///   패스워드가 일치하지 않습니다과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string msg_pw_not_match {
+            get {
+                return ResourceManager.GetString("msg_pw_not_match", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   확인과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string ok {
@@ -345,6 +345,15 @@ namespace blueapp.Resources.Localization {
         internal static string password {
             get {
                 return ResourceManager.GetString("password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   비밀번호 변경과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string password_change {
+            get {
+                return ResourceManager.GetString("password_change", resourceCulture);
             }
         }
         
@@ -403,7 +412,7 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
-        ///   생산 관리 페이지과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   생산 관리과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string production_management_page {
             get {
@@ -430,16 +439,7 @@ namespace blueapp.Resources.Localization {
         }
         
         /// <summary>
-        ///   패스워드가 일치하지 않습니다과(와) 유사한 지역화된 문자열을 찾습니다.
-        /// </summary>
-        internal static string pw_not_match {
-            get {
-                return ResourceManager.GetString("pw_not_match", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   품질 관리 페이지과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   품질 관리과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string quality_management_page {
             get {

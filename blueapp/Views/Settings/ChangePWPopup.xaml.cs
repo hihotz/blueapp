@@ -38,7 +38,7 @@ public partial class ChangePWPopup : Popup
                 // È¸¿øÅ»Åð ¼º°ø ÆË¾÷¾Ë¸²
                 var alertPopup = new AlertPopup()
                 {
-                    MainText = AppResources.change_password + AppResources.success,
+                    MainText = AppResources.password_change + AppResources.success,
                     OkText = AppResources.ok
                 };
                 if (Application.Current?.MainPage != null)

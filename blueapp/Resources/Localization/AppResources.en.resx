@@ -118,168 +118,168 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="application_started" xml:space="preserve">
-    <value>hello world</value>
+    <value>Application Started</value>
   </data>
   <data name="application_stopped" xml:space="preserve">
-    <value>hello world</value>
+    <value>Application Stopped</value>
   </data>
   <data name="appname" xml:space="preserve">
-    <value>hello world</value>
+    <value>App Name</value>
   </data>
   <data name="auto" xml:space="preserve">
-    <value>hello world</value>
+    <value>Auto</value>
   </data>
   <data name="auto_login" xml:space="preserve">
-    <value>hello world</value>
+    <value>Auto Login</value>
   </data>
   <data name="cancel" xml:space="preserve">
-    <value>hello world</value>
-  </data>
-  <data name="change_password" xml:space="preserve">
-    <value>hello world</value>
+    <value>Cancel</value>
   </data>
   <data name="check" xml:space="preserve">
-    <value>hello world</value>
+    <value>Check</value>
   </data>
   <data name="count" xml:space="preserve">
-    <value>hello world</value>
+    <value>Count</value>
   </data>
   <data name="darkmode" xml:space="preserve">
-    <value>hello world</value>
+    <value>DarkMode</value>
   </data>
   <data name="db" xml:space="preserve">
-    <value>hello world</value>
+    <value>DB</value>
   </data>
   <data name="delete_id" xml:space="preserve">
-    <value>hello world</value>
+    <value>Delete ID</value>
   </data>
   <data name="enter_0_to_100" xml:space="preserve">
-    <value>hello world</value>
+    <value>Please Enter 0 to 100</value>
   </data>
   <data name="error" xml:space="preserve">
-    <value>hello world</value>
+    <value>Error</value>
   </data>
   <data name="failed" xml:space="preserve">
-    <value>hello world</value>
+    <value>Failed</value>
   </data>
   <data name="framework" xml:space="preserve">
-    <value>hello world</value>
+    <value>Framework</value>
   </data>
   <data name="go_back" xml:space="preserve">
-    <value>hello world</value>
+    <value>Go back</value>
   </data>
   <data name="home" xml:space="preserve">
-    <value>hello world</value>
+    <value>Home</value>
   </data>
   <data name="id" xml:space="preserve">
-    <value>hello world</value>
+    <value>ID</value>
   </data>
   <data name="image" xml:space="preserve">
-    <value>hello world</value>
+    <value>Image</value>
   </data>
   <data name="info" xml:space="preserve">
-    <value>hello world</value>
+    <value>Info</value>
   </data>
   <data name="inventory_management_page" xml:space="preserve">
-    <value>hello world</value>
+    <value>Inventory Manage</value>
   </data>
   <data name="language" xml:space="preserve">
-    <value>hello world</value>
+    <value>Language</value>
   </data>
   <data name="language_change" xml:space="preserve">
-    <value>hello world</value>
+    <value>Language Change</value>
   </data>
   <data name="loading" xml:space="preserve">
-    <value>hello world</value>
+    <value>Loading</value>
   </data>
   <data name="login" xml:space="preserve">
-    <value>hello world</value>
+    <value>Login</value>
   </data>
   <data name="logout" xml:space="preserve">
-    <value>hello world</value>
+    <value>Logout</value>
   </data>
   <data name="msg_addproduct_confirm" xml:space="preserve">
-    <value>hello world</value>
+    <value>Add Product?</value>
   </data>
   <data name="msg_changepw_confirm" xml:space="preserve">
-    <value>hello world</value>
+    <value>Change Password?</value>
   </data>
   <data name="msg_deleteid_confirm" xml:space="preserve">
-    <value>hello world</value>
+    <value>Delete ID?</value>
+  </data>
+  <data name="msg_pw_not_match" xml:space="preserve">
+    <value>Passwords do not match</value>
   </data>
   <data name="ok" xml:space="preserve">
-    <value>hello world</value>
+    <value>OK</value>
   </data>
   <data name="password" xml:space="preserve">
-    <value>hello world</value>
+    <value>Password</value>
+  </data>
+  <data name="password_change" xml:space="preserve">
+    <value>Password Change</value>
   </data>
   <data name="password_new" xml:space="preserve">
-    <value>hello world</value>
+    <value>New Password</value>
   </data>
   <data name="password_new_check" xml:space="preserve">
-    <value>hello world</value>
+    <value>Check New Password </value>
   </data>
   <data name="password_old" xml:space="preserve">
-    <value>hello world</value>
+    <value>Old Password</value>
   </data>
   <data name="production_date" xml:space="preserve">
-    <value>hello world</value>
+    <value>Product Date</value>
   </data>
   <data name="production_management_page" xml:space="preserve">
-    <value>hello world</value>
+    <value>Production Manage</value>
   </data>
   <data name="production_start" xml:space="preserve">
-    <value>hello world</value>
+    <value>Start Production</value>
   </data>
   <data name="production_stop" xml:space="preserve">
-    <value>hello world</value>
+    <value>Stop Production</value>
   </data>
   <data name="product_add" xml:space="preserve">
-    <value>hello world</value>
+    <value>Add Product</value>
   </data>
   <data name="product_name" xml:space="preserve">
-    <value>hello world</value>
-  </data>
-  <data name="pw_not_match" xml:space="preserve">
-    <value>hello world</value>
+    <value>Product Name</value>
   </data>
   <data name="quality_management_page" xml:space="preserve">
-    <value>hello world</value>
+    <value>Quality Manage</value>
   </data>
   <data name="quantity" xml:space="preserve">
-    <value>hello world</value>
+    <value>Quantity</value>
   </data>
   <data name="rate" xml:space="preserve">
-    <value>hello world</value>
+    <value>Rate</value>
   </data>
   <data name="record" xml:space="preserve">
-    <value>hello world</value>
+    <value>Record</value>
   </data>
   <data name="register" xml:space="preserve">
-    <value>hello world</value>
+    <value>Register</value>
   </data>
   <data name="save" xml:space="preserve">
-    <value>hello world</value>
+    <value>Save</value>
   </data>
   <data name="save_id" xml:space="preserve">
-    <value>hello world</value>
+    <value>Save ID</value>
   </data>
   <data name="server" xml:space="preserve">
-    <value>hello world</value>
+    <value>Server</value>
   </data>
   <data name="setting" xml:space="preserve">
-    <value>hello world</value>
+    <value>Setting</value>
   </data>
   <data name="success" xml:space="preserve">
-    <value>hello world</value>
+    <value>Success</value>
   </data>
   <data name="text_is_empty" xml:space="preserve">
-    <value>hello world</value>
+    <value>Text is Empty</value>
   </data>
   <data name="update" xml:space="preserve">
-    <value>hello world</value>
+    <value>Update</value>
   </data>
   <data name="user" xml:space="preserve">
-    <value>hello world</value>
+    <value>User</value>
   </data>
 </root>

@@ -212,7 +212,7 @@ namespace blueapp.ViewModels
                 // 새로운 비밀번호를 동일하게 입력했는지 확인
                 if (newpw != newpwcheck)
                 {
-                    return new ApiResponse { StatusCode = 0, Message = AppResources.pw_not_match };
+                    return new ApiResponse { StatusCode = 0, Message = AppResources.msg_pw_not_match };
                 }
 
                 var changepwData = new User_ChangePW

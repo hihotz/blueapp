@@ -78,7 +78,7 @@
                         </Picker.ItemsSource>
                         <Picker.SelectedIndex>0</Picker.SelectedIndex>
                     </Picker>
-                    <Button Text="{x:Static resources:AppResources.language_change}" HorizontalOptions="End" Clicked="GoToLoginPage" />
+                    <Button Text="{x:Static resources:AppResources.language_change}" HorizontalOptions="EndAndExpand" Clicked="GoToLoginPage" />
                     
                 </StackLayout>
             </Frame>

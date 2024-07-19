@@ -135,9 +135,6 @@
   <data name="cancel" xml:space="preserve">
     <value>취소</value>
   </data>
-  <data name="change_password" xml:space="preserve">
-    <value>비밀번호 변경</value>
-  </data>
   <data name="check" xml:space="preserve">
     <value>확인</value>
   </data>
@@ -181,7 +178,7 @@
     <value>정보</value>
   </data>
   <data name="inventory_management_page" xml:space="preserve">
-    <value>재고 관리 페이지</value>
+    <value>재고 관리</value>
   </data>
   <data name="language" xml:space="preserve">
     <value>언어</value>
@@ -207,11 +204,17 @@
   <data name="msg_deleteid_confirm" xml:space="preserve">
     <value>아이디를 삭제하시겠습니까?</value>
   </data>
+  <data name="msg_pw_not_match" xml:space="preserve">
+    <value>패스워드가 일치하지 않습니다</value>
+  </data>
   <data name="ok" xml:space="preserve">
     <value>확인</value>
   </data>
   <data name="password" xml:space="preserve">
     <value>비밀번호</value>
+  </data>
+  <data name="password_change" xml:space="preserve">
+    <value>비밀번호 변경</value>
   </data>
   <data name="password_new" xml:space="preserve">
     <value>새로운 비밀번호</value>
@@ -226,7 +229,7 @@
     <value>생산일</value>
   </data>
   <data name="production_management_page" xml:space="preserve">
-    <value>생산 관리 페이지</value>
+    <value>생산 관리</value>
   </data>
   <data name="production_start" xml:space="preserve">
     <value>생산 시작</value>
@@ -240,11 +243,8 @@
   <data name="product_name" xml:space="preserve">
     <value>제품 이름</value>
   </data>
-  <data name="pw_not_match" xml:space="preserve">
-    <value>패스워드가 일치하지 않습니다</value>
-  </data>
   <data name="quality_management_page" xml:space="preserve">
-    <value>품질 관리 페이지</value>
+    <value>품질 관리</value>
   </data>
   <data name="quantity" xml:space="preserve">
     <value>수량</value>

@@ -67,7 +67,7 @@
                             <toolkit:TouchBehavior DefaultAnimationDuration="250" HoveredBackgroundColor="#93aeee" 
                                                    PressedBackgroundColor="DarkGray" TouchGestureCompleted="OnChangePasswordClicked"/>
                         </StackLayout.Behaviors>
-                        <Label Text="{x:Static resources:AppResources.change_password}" TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                        <Label Text="{x:Static resources:AppResources.password_change}" TextColor="{AppThemeBinding Dark=White, Light=Black}"
                                FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" />
                     </StackLayout>
                 </Frame>
