@@ -35,63 +35,62 @@ namespace blueapp.Service
         }
 
         // 제품 리스트 불러오기
-        public async Task<List<Product_Production_AdditemModel>> GetListAsync()
+        public async Task<List<Product_Production>> GetListAsync()
         {
             try
             {
                 var response = await _httpClient.GetAsync(_getListEndpoint);
                 response.EnsureSuccessStatusCode();
-                var productions = await response.Content.ReadFromJsonAsync<List<Product_Production_AdditemModel>>();
-                return productions ?? new List<Product_Production_AdditemModel>(); // null인 경우 빈 리스트 반환
+                var productions = await response.Content.ReadFromJsonAsync<List<Product_Production>>();
+                return productions ?? new List<Product_Production>(); // null인 경우 빈 리스트 반환
             }
             catch (TaskCanceledException ex)
             {
                 // 타임아웃 처리
                 Console.WriteLine("Request timed out." + ex.Message);
-                return new List<Product_Production_AdditemModel>(); // 타임아웃 발생 시 빈 리스트 반환
+                return new List<Product_Production>(); // 타임아웃 발생 시 빈 리스트 반환
             }
             catch (HttpRequestException ex) when (ex.InnerException is SocketException)
             {
                 // 인터넷 연결 문제 처리
                 Console.WriteLine("No internet connection.");
-                return new List<Product_Production_AdditemModel>(); // 인터넷 연결 문제 발생 시 빈 리스트 반환
+                return new List<Product_Production>(); // 인터넷 연결 문제 발생 시 빈 리스트 반환
             }
             catch (HttpRequestException ex)
             {
                 // 다른 HTTP 요청 관련 예외 처리
                 Console.WriteLine("An error occurred: " + ex.Message);
-                return new List<Product_Production_AdditemModel>(); // 오류 발생 시 빈 리스트 반환
+                return new List<Product_Production>(); // 오류 발생 시 빈 리스트 반환
             }
-
         }
 
         // 제품 리스트 불러오기 - id 값 일치하는 제품
-        public async Task<Product_Production_AdditemModel> GetItemAsync(int id)
+        public async Task<Product_Production> GetItemAsync(int id)
         {
             try
             {
                 var response = await _httpClient.GetAsync(_getItemEndpoint + id);
                 response.EnsureSuccessStatusCode();
-                var productions = await response.Content.ReadFromJsonAsync<Product_Production_AdditemModel>();
-                return productions ?? new Product_Production_AdditemModel(); // null인 경우 빈 리스트 반환
+                var productions = await response.Content.ReadFromJsonAsync<Product_Production>();
+                return productions ?? new Product_Production(); // null인 경우 빈 리스트 반환
             }
             catch (TaskCanceledException ex)
             {
                 // 타임아웃 처리
                 Console.WriteLine("Request timed out." + ex.Message);
-                return new Product_Production_AdditemModel(); // 타임아웃 발생 시 빈 모델 반환
+                return new Product_Production(); // 타임아웃 발생 시 빈 모델 반환
             }
             catch (HttpRequestException ex) when (ex.InnerException is SocketException)
             {
                 // 인터넷 연결 문제 처리
                 Console.WriteLine("No internet connection.");
-                return new Product_Production_AdditemModel(); // 인터넷 연결 문제 발생 시 빈 모델 반환
+                return new Product_Production(); // 인터넷 연결 문제 발생 시 빈 모델 반환
             }
             catch (HttpRequestException ex)
             {
                 // 다른 HTTP 요청 관련 예외 처리
                 Console.WriteLine("An error occurred: " + ex.Message);
-                return new Product_Production_AdditemModel(); // 오류 발생 시 빈 모델 반환
+                return new Product_Production(); // 오류 발생 시 빈 모델 반환
             }
 
         }
@@ -125,7 +124,7 @@ namespace blueapp.Service
         }
 
         // 제품 수정
-        public async Task<bool> UpdateItemAsync(Product_Production_AdditemModel production)
+        public async Task<bool> UpdateItemAsync(Product_Production production)
         {
             try
             {

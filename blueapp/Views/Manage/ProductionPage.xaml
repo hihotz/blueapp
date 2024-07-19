@@ -50,37 +50,37 @@
                                 </Grid.ColumnDefinitions>
 
                                 <!-- 아이디 -->
-                                <Frame Grid.Column="0" BackgroundColor="Transparent" CornerRadius="0" Padding="3">
+                                <Frame Grid.Column="0" BackgroundColor="Transparent" CornerRadius="0" Padding="0" BindingContext="{Binding .}">
                                     <Frame.Behaviors>
                                         <toolkit:TouchBehavior DefaultAnimationDuration="100" HoveredBackgroundColor="LightPink" 
-                                                                   PressedBackgroundColor="#babfd8"/>
+                                                                   PressedBackgroundColor="#babfd8" TouchGestureCompleted="OnShowClicked"/>
                                     </Frame.Behaviors>
                                     <Label VerticalOptions="Center" Text="{Binding Id}"/>
                                 </Frame>
 
                                 <!-- 제품 이름 -->
-                                <Frame Grid.Column="1" BackgroundColor="Transparent" CornerRadius="0" Padding="0">
+                                <Frame Grid.Column="1" BackgroundColor="Transparent" CornerRadius="0" Padding="0" BindingContext="{Binding .}">
                                     <Frame.Behaviors>
                                         <toolkit:TouchBehavior DefaultAnimationDuration="100" HoveredBackgroundColor="LightPink" 
-                                                                   PressedBackgroundColor="#babfd8"/>
+                                                                   PressedBackgroundColor="#babfd8" TouchGestureCompleted="OnShowClicked"/>
                                     </Frame.Behaviors>
                                     <Label VerticalOptions="Center" Text="{Binding ProductName}"/>
                                 </Frame>
 
                                 <!-- 수량 -->
-                                <Frame Grid.Column="2" BackgroundColor="Transparent" CornerRadius="0" Padding="0">
+                                <Frame Grid.Column="2" BackgroundColor="Transparent" CornerRadius="0" Padding="0" BindingContext="{Binding .}">
                                     <Frame.Behaviors>
                                         <toolkit:TouchBehavior DefaultAnimationDuration="100" HoveredBackgroundColor="LightPink" 
-                                                                   PressedBackgroundColor="#babfd8"/>
+                                                                   PressedBackgroundColor="#babfd8" TouchGestureCompleted="OnShowClicked"/>
                                     </Frame.Behaviors>
                                     <Label VerticalOptions="Center" Text="{Binding Quantity}"/>
                                 </Frame>
 
                                 <!-- 생산일 -->
-                                <Frame Grid.Column="3" BackgroundColor="Transparent" CornerRadius="0" Padding="0">
+                                <Frame Grid.Column="3" BackgroundColor="Transparent" CornerRadius="0" Padding="0" BindingContext="{Binding .}">
                                     <Frame.Behaviors>
                                         <toolkit:TouchBehavior DefaultAnimationDuration="100" HoveredBackgroundColor="LightPink" 
-                                                                   PressedBackgroundColor="#babfd8"/>
+                                                                   PressedBackgroundColor="#babfd8" TouchGestureCompleted="OnShowClicked"/>
                                     </Frame.Behaviors>
                                     <Label VerticalOptions="Center" Text="{Binding ProductionDate}"/>
                                 </Frame>
@@ -116,7 +116,7 @@
                                    FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                             </StackLayout>
                         </Frame>
-                        
+
                         <Frame Grid.Row="1" Grid.Column="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#969174, Light=#fff6c7}">
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout.Behaviors>
@@ -127,7 +127,7 @@
                                        FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                             </StackLayout>
                         </Frame>
-                        
+
                         <Frame Grid.Row="2" Grid.Column="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#969174, Light=#fff6c7}">
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout.Behaviors>
@@ -138,7 +138,7 @@
                                        FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                             </StackLayout>
                         </Frame>
-                        
+
                         <Frame Grid.Row="3" Grid.Column="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#969174, Light=#fff6c7}">
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout.Behaviors>
@@ -149,7 +149,7 @@
                                        FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                             </StackLayout>
                         </Frame>
-                        
+
                         <Frame Grid.Row="4" Grid.Column="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#969174, Light=#fff6c7}">
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout.Behaviors>
@@ -160,7 +160,7 @@
                                        FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
                             </StackLayout>
                         </Frame>
-                        
+
                         <Frame Grid.Row="5" Grid.Column="0" Padding="0" BorderColor="Gray" BackgroundColor="{AppThemeBinding Dark=#969174, Light=#fff6c7}">
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout.Behaviors>

@@ -14,7 +14,7 @@ namespace blueapp.ViewModels
     public class ProductViewModel : BaseViewModel
     {
         private readonly ProductionService _productionService;
-        public ObservableCollection<Product_Production_AdditemModel> Productions { get; }
+        public ObservableCollection<Product_Production> Productions { get; }
         private bool isRefreshing;
 
         public ICommand RefreshCommand { get; }
@@ -23,7 +23,7 @@ namespace blueapp.ViewModels
         public ProductViewModel()
         {
             _productionService = new ProductionService(new HttpClient());
-            Productions = new ObservableCollection<Product_Production_AdditemModel>();
+            Productions = new ObservableCollection<Product_Production>();
             RefreshCommand = new Command(async () => await LoadProductions());
             // AddProductionCommand = new Command(async () => await AddProduction());
         }

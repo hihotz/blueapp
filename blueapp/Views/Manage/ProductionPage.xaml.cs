@@ -1,4 +1,5 @@
 using blueapp.Data;
+using blueapp.Models;
 using blueapp.ViewModels;
 using blueapp.Views.Manage.Production;
 using CommunityToolkit.Maui.Views;
@@ -75,6 +76,22 @@ public partial class ProductionPage : ContentPage
             
             Grid.SetRow(RightFrame, 2); // 하단 Frame
             Grid.SetColumn(RightFrame, 0);
+        }
+    }
+    #endregion
+
+    #region 컬랙션부 요소 클릭
+    private void OnShowClicked(object sender, EventArgs e)
+    {
+        var frame = sender as Frame;
+        var label = frame?.Content as Label;
+        if (label != null)
+        {
+            var item = label.BindingContext as Product_Production;
+            if (item != null)
+            {
+                DisplayAlert("Item Clicked", $"ID: {item.Id}", "OK");
+            }
         }
     }
     #endregion
